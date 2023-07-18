@@ -39,4 +39,4 @@
 :octocat: **Afek Sakaju**
 
 - LinkedIn: [@afeksa](https://www.linkedin.com/in/afeksa/)
-- GitHub: [@afekTheMiniLearner](https://github.com/afekTheMiniLearner)
+- GitHub: [@Afek-Sakaju](https://github.com/Afek-Sakaju)
