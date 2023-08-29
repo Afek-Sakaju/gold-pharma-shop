@@ -8,9 +8,8 @@
   opacity: 0.95;
   border-radius: 10px;
   border: 1px solid rgba(black, 0.2);
-
   cursor: pointer;
-  transition: box-shadow 0.2s ease, transform 0.1s ease, opacity 0.2s ease;
+  transition: 0.2s ease;
 
   &:hover {
     box-shadow: 5px 5px 12px 2px rgba(black, 0.15);
