@@ -23,12 +23,12 @@ export default function Product({
       <section>{productName}</section>
       <section>${price}</section>
       <div className="product-buttons-container">
-        <ActionButton className="product" label="Buy" onClickHandler={onAdd}>
+        <ActionButton className="product-button" label="Buy" onClickHandler={onAdd}>
           <BsCartPlus />
         </ActionButton>
         {!!selectedCount && (
           <ActionButton
-            className="product warning"
+            className="product-button warning"
             label={`Remove (${selectedCount})`}
             onClickHandler={onRemove}
           >
