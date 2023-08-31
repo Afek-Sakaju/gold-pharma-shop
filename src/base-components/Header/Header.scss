@@ -2,6 +2,7 @@
   position: sticky;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   top: 0;
   padding: 0 1em;
   margin-bottom: 10px;
@@ -11,15 +12,16 @@
   border-radius: 0 0 10px 10px;
   background-color: #a3f4a3;
   border: 2px solid rgba(black, 0.3);
+  user-select: none;
+}
 
-  .title {
-    margin-right: auto;
-    user-select: none;
-  }
+.title-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .header-children-container {
   display: flex;
-  margin-left: auto;
   gap: 30px;
 }
