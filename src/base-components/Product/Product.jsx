@@ -13,6 +13,7 @@ export default function Product({
   onClick,
   onRemove,
   price,
+  productImage,
   productName,
   selectedCount,
 }) {
@@ -20,10 +21,18 @@ export default function Product({
 
   return (
     <ContentWrapper className={classes} onClick={onClick}>
-      <section>{productName}</section>
-      <section>${price}</section>
+      <img
+        src={productImage || '/Afek-Sakaju/grocery-store/cucumber.jpg'}
+        alt="Cucumber"
+      />
+      <section className="product-price">${price}</section>
+      <section className="product-name">{productName}</section>
       <div className="product-buttons-container">
-        <ActionButton className="product-button" label="Buy" onClickHandler={onAdd}>
+        <ActionButton
+          className="product-button"
+          label="Buy"
+          onClickHandler={onAdd}
+        >
           <BsCartPlus />
         </ActionButton>
         {!!selectedCount && (
@@ -46,6 +55,7 @@ Product.propTypes = {
   onClick: PropTypes.func,
   onRemove: PropTypes.func,
   price: PropTypes.number,
+  productImage: PropTypes.string,
   productName: PropTypes.string,
   selectedCount: PropTypes.number,
 };
@@ -56,6 +66,7 @@ Product.defaultProps = {
   onClick: undefined,
   onRemove: undefined,
   price: 0,
+  productImage: undefined,
   productName: undefined,
   selectedCount: 0,
 };
