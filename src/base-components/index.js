@@ -1,6 +1,5 @@
 export { default as ActionButton } from './ActionButton/ActionButton';
 export { default as Cart } from './Cart/Cart';
-export { default as ContentWrapper } from './ContentWrapper/ContentWrapper';
 export { default as Header } from './Header/Header';
 export { default as LabeledInput } from './LabeledInput/LabeledInput';
 export { default as Loading } from './Loading/Loading';

@@ -4,7 +4,6 @@ import { BsCartPlus, BsCartDash } from 'react-icons/bs';
 import classNames from 'classnames';
 
 import './Product.scss';
-import ContentWrapper from '../ContentWrapper/ContentWrapper';
 import ActionButton from '../ActionButton/ActionButton';
 
 export default function Product({
@@ -20,7 +19,7 @@ export default function Product({
   const classes = classNames('product', className);
 
   return (
-    <ContentWrapper className={classes} onClick={onClick}>
+    <div className={classes} onClick={onClick} role="none">
       <img
         src={productImage || '/Afek-Sakaju/grocery-store/cucumber.jpg'}
         alt="Cucumber"
@@ -46,7 +45,7 @@ export default function Product({
           </ActionButton>
         )}
       </div>
-    </ContentWrapper>
+    </div>
   );
 }
 

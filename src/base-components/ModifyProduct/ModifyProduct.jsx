@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 import './ModifyProduct.scss';
 import LabeledInput from '../LabeledInput/LabeledInput';
-import ContentWrapper from '../ContentWrapper/ContentWrapper';
 import ActionButton from '../ActionButton/ActionButton';
 
 export default function ModifyProduct({
@@ -30,7 +29,8 @@ export default function ModifyProduct({
   };
 
   return (
-    <ContentWrapper className="product-modifier">
+    <div className="product-modifier">
+      {children}
       <LabeledInput
         label="Product:"
         onChangeHandler={onProductNameChange}
@@ -53,7 +53,7 @@ export default function ModifyProduct({
         style={{ justifyContent: 'center' }}
       />
       {children}
-    </ContentWrapper>
+    </div>
   );
 }
 
