@@ -2,15 +2,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 40px;
-  max-height: 40px;
-  min-width: 180px;
-  padding: 10px;
-  margin: 3px 0;
-
+  height: 40px;
+  width: 49%;
   border: 1px solid rgba(black, 0.3) !important;
-  background-color: #8cff8c;
-  font-size: 1.2em !important;
+  background-color: #92c492;
+  font-size: 0.9em !important;
+  font-weight: bold;
   border-radius: 5px !important;
   box-shadow: 5px 5px 10px 1px rgba(black, 0.15) !important;
   user-select: none;
@@ -20,7 +17,6 @@
   &.modifier {
     min-height: 55px;
     max-height: 55px;
-    min-width: 230px;
 
     @media (min-width: 481px) and (max-width: 767px) {
       min-height: 45px;
@@ -38,7 +34,6 @@
   &.product-button {
     min-height: 40px;
     max-height: 40px;
-    min-width: 180px;
 
     @media (min-width: 1025px) and (max-width: 1280px) {
       min-height: 30px;

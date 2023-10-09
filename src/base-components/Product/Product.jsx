@@ -30,7 +30,7 @@ export default function Product({
       <div className="product-buttons-container">
         <ActionButton
           className="product-button"
-          label="Buy"
+          label="Add to Cart"
           onClickHandler={onAdd}
         >
           <BsCartPlus />

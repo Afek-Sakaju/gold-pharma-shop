@@ -82,10 +82,8 @@
 
 .product-buttons-container {
   display: flex;
-  flex-direction: column;
-  min-height: 85px;
-  height: 85px;
   padding: 10px 0;
+  justify-content: space-between;
 
   @media (min-width: 1025px) and (max-width: 1280px) {
     min-height: 50px;
