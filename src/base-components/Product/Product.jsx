@@ -24,6 +24,7 @@ export default function Product({
       <img
         src={productImage || '/Afek-Sakaju/grocery-store/cucumber.jpg'}
         alt="Cucumber"
+        className="product-image"
       />
       <section className="product-price">${price}</section>
       <section className="product-name">{productName}</section>
