@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { BsShoppingCart, BsCurrencyDollar } from 'react-icons/bs';
+import { BsCart, BsCurrencyDollar } from 'react-icons/bs';
 
 import './ShoppingCart.scss';
 
@@ -8,7 +8,7 @@ export default function ShoppingCart({ totalPrice, totalSelected }) {
   return (
     <div className="cart-container">
       <div>
-        <BsShoppingCart /> {totalSelected}
+        <BsCart /> {totalSelected}
       </div>
       <div>
         <BsCurrencyDollar /> {totalPrice}
