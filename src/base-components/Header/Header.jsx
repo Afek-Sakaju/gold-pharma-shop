@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import './Header.scss';
-import Title from '../Title/Title';
 
 export default function Header({ title, headerIcon, children }) {
   return (
@@ -10,11 +9,11 @@ export default function Header({ title, headerIcon, children }) {
       {headerIcon ? (
         <div className="title-container">
           {headerIcon}
-          <Title title={title} />
+          <h1 className="title">{title} </h1>
         </div>
       ) : (
         <div className="title-container">
-          <Title title={title} />
+          <h1 className="title">{title} </h1>
         </div>
       )}
       {children ? (

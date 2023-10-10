@@ -5,4 +5,3 @@ export { default as LabeledInput } from './LabeledInput/LabeledInput';
 export { default as Loading } from './Loading/Loading';
 export { default as ModifyProduct } from './ModifyProduct/ModifyProduct';
 export { default as Product } from './Product/Product';
-export { default as Title } from './Title/Title';
