@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-import './ProductForm.scss';
 import InputField from '../InputField/InputField';
 import Button from '../Button/Button';
 

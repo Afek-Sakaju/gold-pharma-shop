@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
-import './ProductList.scss';
 import { Loading, Product } from '@base-components';
 import {
   addToShoppingCartAction,
@@ -14,6 +13,7 @@ import {
 } from '@store';
 import { ProductsProxy } from '@utils';
 import CreateProductButton from '../CreateProductButton/CreateProductButton';
+import { ProductListContainer } from './ProductList.styled';
 
 function ProductList({
   initProducts,
@@ -39,7 +39,7 @@ function ProductList({
   }, []);
 
   return isDataFetched ? (
-    <div className="product-list-container">
+    <ProductListContainer>
       <CreateProductButton />
       {products?.map((productData) => {
         const { id, productName, price } = productData;
@@ -56,7 +56,7 @@ function ProductList({
           />
         );
       })}
-    </div>
+    </ProductListContainer>
   ) : (
     <Loading />
   );

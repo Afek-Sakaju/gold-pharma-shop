@@ -1,18 +1,13 @@
-.product-modifier {
+import styled from 'styled-components';
+import Button from '../Button/Button';
+
+export const ProductForm = styled.div`
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   text-align: start;
   box-shadow: 5px 5px 10px -1px rgba(black, 0.15);
   background-color: white;
-
-  &:hover {
-    .create-icon {
-      transform: scaleY(1.02);
-      transform: scaleX(1.01);
-    }
-  }
-
   justify-self: center;
   align-self: center;
   height: 500px;
@@ -21,13 +16,15 @@
   border-radius: 15px;
   border: 1px solid rgba(black, 0.25);
 
-  @media (min-width: 481px) and (max-width: 767px) {
-    width: 350px;
-    padding: 1.7em;
+  &:hover {
+    .create-icon {
+      transform: scaleY(1.02);
+      transform: scaleX(1.01);
+    }
   }
+`;
 
-  @media (max-width: 480px) {
-    width: 250px;
-    padding: 1.4em;
-  }
-}
+export const SubmitButton = styled(Button)`
+    min-height: 55px;
+    max-height: 55px;
+`;

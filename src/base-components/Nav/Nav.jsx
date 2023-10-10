@@ -1,25 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './Nav.scss';
+import {
+  NavContainer,
+  TitleContainer,
+  NavChildrenContainer,
+} from './Nav.styled';
 
 export default function Nav({ title, headerIcon, children }) {
   return (
-    <div className="header-container">
+    <NavContainer>
       {headerIcon ? (
-        <div className="title-container">
+        <TitleContainer>
           {headerIcon}
-          <h1 className="title">{title} </h1>
-        </div>
+          <h1>{title}</h1>
+        </TitleContainer>
       ) : (
-        <div className="title-container">
-          <h1 className="title">{title} </h1>
-        </div>
+        <TitleContainer>
+          <h1>{title}</h1>
+        </TitleContainer>
       )}
       {children ? (
-        <div className="header-children-container">{children}</div>
+        <NavChildrenContainer>{children}</NavChildrenContainer>
       ) : null}
-    </div>
+    </NavContainer>
   );
 }
 

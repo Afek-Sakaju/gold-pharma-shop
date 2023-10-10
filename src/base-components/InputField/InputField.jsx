@@ -1,8 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 
-import './InputField.scss';
+import {
+  Input,
+  InputContainer,
+  InputLabel,
+  PriceInputContainer,
+} from './InputField.styled';
 
 export default function InputField({
   className,
@@ -11,21 +15,31 @@ export default function InputField({
   placeholder,
   type,
   value,
+  isPrice,
 }) {
-  const classes = classNames('labeled-input-container', className);
-
   return (
-    <div className={classes}>
-      <h4>{label} </h4>
-      <div className="input-container">
-        <input
-          onChange={onChangeHandler}
-          placeholder={placeholder}
-          type={type}
-          value={value}
-        />
-      </div>
-    </div>
+    <InputContainer className={className}>
+      <InputLabel>{label} </InputLabel>
+      {isPrice ? (
+        <PriceInputContainer>
+          <Input
+            onChange={onChangeHandler}
+            placeholder={placeholder}
+            type={type}
+            value={value}
+          />
+        </PriceInputContainer>
+      ) : (
+        <InputContainer>
+          <Input
+            onChange={onChangeHandler}
+            placeholder={placeholder}
+            type={type}
+            value={value}
+          />
+        </InputContainer>
+      )}
+    </InputContainer>
   );
 }
 
@@ -36,6 +50,7 @@ InputField.propTypes = {
   placeholder: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   type: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  isPrice: PropTypes.bool,
 };
 
 InputField.defaultProps = {
@@ -45,4 +60,5 @@ InputField.defaultProps = {
   placeholder: '',
   type: 'text',
   value: '',
+  isPrice: undefined,
 };

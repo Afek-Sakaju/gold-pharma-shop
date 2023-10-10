@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 
-import './Button.scss';
+import { StyledButton } from './Button.styled';
 
 export default function Button({
   children,
@@ -12,22 +11,19 @@ export default function Button({
   style,
   type,
 }) {
-  const classes = classNames('action-button-container', className);
-
   return (
-    <button
-      className={classes}
+    <StyledButton
+      className={className}
       onClick={(event) => {
         event.stopPropagation();
         onClickHandler?.();
       }}
       style={style}
-      // eslint-disable-next-line react/button-has-type
       type={type}
     >
       {label}
       {children}
-    </button>
+    </StyledButton>
   );
 }
 

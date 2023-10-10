@@ -1,4 +1,18 @@
-.product {
+import styled from 'styled-components';
+import Button from '../Button/Button';
+
+export const AddProductButton = styled(Button)`
+  min-height: 40px;
+  max-height: 40px;
+`;
+
+export const RemoveProductButton = styled(Button)`
+  min-height: 40px;
+  max-height: 40px;
+  background-color: #fe5a3de3;
+`;
+
+export const ProductContainer = styled.div`
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -20,30 +34,30 @@
     transform: translateY(-1px);
     opacity: 1;
   }
-}
+`;
 
-.product-buttons-container {
+export const ButtonsContainer = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 0 0.5em 0.5em 0.5em;
-}
+`;
 
-.product-name {
+export const ProductName = styled.p`
   height: 36px;
   font-size: 1em;
   user-select: none;
   text-align: center;
   margin-top: 3px;
-}
+`;
 
-.product-price {
+export const ProductPrice = styled.p`
   font-size: 1.4em;
   user-select: none;
-}
+`;
 
-.product-image {
+export const ProductImage = styled.img`
   display: flex;
   width: 70%;
   justify-self: center;
   align-self: center;
-}
+`;

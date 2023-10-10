@@ -1,4 +1,6 @@
-.header-container {
+import styled from 'styled-components';
+
+export const NavContainer = styled.div`
   position: sticky;
   display: flex;
   align-items: center;
@@ -13,15 +15,15 @@
   background-color: white;
   border: 2px solid rgba(black, 0.2);
   user-select: none;
-}
+`;
 
-.title-container {
+export const TitleContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
-}
+`;
 
-.header-children-container {
+export const NavChildrenContainer = styled.div`
   display: flex;
   gap: 30px;
-}
+`;

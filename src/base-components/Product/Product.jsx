@@ -4,10 +4,16 @@ import {
   BsCartPlus as AddToCartIcon,
   BsCartDash as RemoveFromCartIcon,
 } from 'react-icons/bs';
-import classNames from 'classnames';
 
-import './Product.scss';
-import Button from '../Button/Button';
+import {
+  AddProductButton,
+  ButtonsContainer,
+  ProductContainer,
+  ProductImage,
+  ProductName,
+  ProductPrice,
+  RemoveProductButton,
+} from './Product.styled';
 
 export default function Product({
   className,
@@ -19,36 +25,29 @@ export default function Product({
   productName,
   selectedCount,
 }) {
-  const classes = classNames('product', className);
-
   return (
-    <div className={classes} onClick={onClick} role="none">
-      <img
+    <ProductContainer className={className} onClick={onClick} role="none">
+      <ProductImage
         src={productImage || '/Afek-Sakaju/grocery-store/cucumber.jpg'}
         alt="Cucumber"
         className="product-image"
       />
-      <section className="product-price">${price}</section>
-      <section className="product-name">{productName}</section>
-      <div className="product-buttons-container">
-        <Button
-          className="product-button"
-          label="Add to Cart"
-          onClickHandler={onAdd}
-        >
+      <ProductName className="product-price">${price}</ProductName>
+      <ProductPrice className="product-name">{productName}</ProductPrice>
+      <ButtonsContainer>
+        <AddProductButton label="Add to Cart" onClickHandler={onAdd}>
           <AddToCartIcon />
-        </Button>
+        </AddProductButton>
         {!!selectedCount && (
-          <Button
-            className="product-button warning"
+          <RemoveProductButton
             label={`Remove (${selectedCount})`}
             onClickHandler={onRemove}
           >
             <RemoveFromCartIcon />
-          </Button>
+          </RemoveProductButton>
         )}
-      </div>
-    </div>
+      </ButtonsContainer>
+    </ProductContainer>
   );
 }
 
