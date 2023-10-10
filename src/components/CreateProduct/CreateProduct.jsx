@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { v4 as uuid } from 'uuid';
 
 import { ProductsProxy } from '@utils';
-import { ModifyProduct } from '@base-components';
+import { ProductForm } from '@base-components';
 
 export default function CreateProduct({ navigateCB }) {
   const onExecuteHandler = (data) => {
@@ -12,7 +12,7 @@ export default function CreateProduct({ navigateCB }) {
   };
 
   return (
-    <ModifyProduct
+    <ProductForm
       modificationType="post"
       executeButtonLabel="Create product"
       navigateCB={navigateCB}

@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-import './ModifyProduct.scss';
-import LabeledInput from '../LabeledInput/LabeledInput';
-import ActionButton from '../ActionButton/ActionButton';
+import './ProductForm.scss';
+import InputField from '../InputField/InputField';
+import Button from '../Button/Button';
 
-export default function ModifyProduct({
+export default function ProductForm({
   children,
   executeButtonLabel,
   onExecute,
@@ -31,14 +31,14 @@ export default function ModifyProduct({
   return (
     <div className="product-modifier">
       {children}
-      <LabeledInput
+      <InputField
         label="Product:"
         onChangeHandler={onProductNameChange}
         placeholder={productName}
         type="text"
         value={updatedProductName}
       />
-      <LabeledInput
+      <InputField
         className="price"
         label="Price:"
         onChangeHandler={onPriceChange}
@@ -46,7 +46,7 @@ export default function ModifyProduct({
         type="number"
         value={updatedPrice}
       />
-      <ActionButton
+      <Button
         className="modifier"
         label={executeButtonLabel}
         onClickHandler={() => onExecute(data)}
@@ -57,14 +57,14 @@ export default function ModifyProduct({
   );
 }
 
-ModifyProduct.propTypes = {
+ProductForm.propTypes = {
   executeButtonLabel: PropTypes.string,
   onExecute: PropTypes.func,
   price: PropTypes.number,
   productName: PropTypes.string,
 };
 
-ModifyProduct.defaultProps = {
+ProductForm.defaultProps = {
   executeButtonLabel: undefined,
   onExecute: undefined,
   price: 0,

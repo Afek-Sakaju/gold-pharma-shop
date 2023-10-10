@@ -1,11 +1,11 @@
 import React from 'react';
 
-import Header from '../Header';
-import Cart from '@base-components/Cart/Cart';
+import Nav from '../Nav';
+import ShoppingCart from '@base-components/ShoppingCart/ShoppingCart';
 
 export default {
-  title: 'base-components/Header',
-  component: Header,
+  title: 'base-components/Nav',
+  component: Nav,
   decorators: [
     (Story) => (
       <div
@@ -23,9 +23,9 @@ export default {
 };
 
 export const Default = () => (
-  <Header>
-    <Cart />
-  </Header>
+  <Nav>
+    <ShoppingCart />
+  </Nav>
 );
 Default.decorators = [
   (Story) => (
@@ -48,9 +48,9 @@ export const AdjustSize = (props) => (
       border: '2px red solid',
     }}
   >
-    <Header>
-      <Cart />
-    </Header>
+    <Nav>
+      <ShoppingCart />
+    </Nav>
   </div>
 );
 AdjustSize.argTypes = {
@@ -65,9 +65,9 @@ AdjustSize.argTypes = {
 };
 
 const Template = (args) => (
-  <Header {...args}>
-    <Cart />
-  </Header>
+  <Nav {...args}>
+    <ShoppingCart />
+  </Nav>
 );
 
 export const Custom = Template.bind({});

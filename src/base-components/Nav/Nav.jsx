@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './Header.scss';
+import './Nav.scss';
 
-export default function Header({ title, headerIcon, children }) {
+export default function Nav({ title, headerIcon, children }) {
   return (
     <div className="header-container">
       {headerIcon ? (
@@ -23,12 +23,12 @@ export default function Header({ title, headerIcon, children }) {
   );
 }
 
-Header.propTypes = {
+Nav.propTypes = {
   title: PropTypes.string,
   headerIcon: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
 };
 
-Header.defaultProps = {
+Nav.defaultProps = {
   title: undefined,
   headerIcon: undefined,
 };

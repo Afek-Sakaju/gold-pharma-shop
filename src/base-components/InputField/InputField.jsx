@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-import './LabeledInput.scss';
+import './InputField.scss';
 
-export default function LabeledInput({
+export default function InputField({
   className,
   label,
   onChangeHandler,
@@ -29,7 +29,7 @@ export default function LabeledInput({
   );
 }
 
-LabeledInput.propTypes = {
+InputField.propTypes = {
   className: PropTypes.string,
   label: PropTypes.string,
   onChangeHandler: PropTypes.func,
@@ -38,7 +38,7 @@ LabeledInput.propTypes = {
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-LabeledInput.defaultProps = {
+InputField.defaultProps = {
   className: '',
   label: undefined,
   onChangeHandler: undefined,

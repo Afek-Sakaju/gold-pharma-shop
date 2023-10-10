@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-import './ActionButton.scss';
+import './Button.scss';
 
-export default function ActionButton({
+export default function Button({
   children,
   className,
   label,
@@ -31,7 +31,7 @@ export default function ActionButton({
   );
 }
 
-ActionButton.propTypes = {
+Button.propTypes = {
   className: PropTypes.string,
   label: PropTypes.string,
   onClickHandler: PropTypes.func,
@@ -39,7 +39,7 @@ ActionButton.propTypes = {
   type: PropTypes.string,
 };
 
-ActionButton.defaultProps = {
+Button.defaultProps = {
   className: '',
   label: undefined,
   onClickHandler: undefined,

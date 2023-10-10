@@ -2,16 +2,16 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { Cart } from '@base-components';
+import { ShoppingCart } from '@base-components';
 import { getSelectedProductsSelector, getTotalPriceSelector } from '@store';
 
-function CartConnected({ selectedProducts, totalPrice }) {
+function ShoppingCartConnected({ selectedProducts, totalPrice }) {
   const totalSelected = Object.values(selectedProducts).reduce(
     (total, products) => total + products,
     0
   );
 
-  return <Cart totalPrice={totalPrice} totalSelected={totalSelected} />;
+  return <ShoppingCart totalPrice={totalPrice} totalSelected={totalSelected} />;
 }
 
 const mapStateToProps = (state) => ({
@@ -19,4 +19,4 @@ const mapStateToProps = (state) => ({
   totalPrice: getTotalPriceSelector(state),
 });
 
-export default connect(mapStateToProps)(CartConnected);
+export default connect(mapStateToProps)(ShoppingCartConnected);

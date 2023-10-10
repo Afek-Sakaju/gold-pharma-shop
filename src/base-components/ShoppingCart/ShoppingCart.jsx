@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { BsCart, BsCurrencyDollar } from 'react-icons/bs';
+import { BsShoppingCart, BsCurrencyDollar } from 'react-icons/bs';
 
-import './Cart.scss';
+import './ShoppingCart.scss';
 
-export default function Cart({totalPrice, totalSelected }) {
+export default function ShoppingCart({ totalPrice, totalSelected }) {
   return (
     <div className="cart-container">
       <div>
-        <BsCart /> {totalSelected}
+        <BsShoppingCart /> {totalSelected}
       </div>
       <div>
         <BsCurrencyDollar /> {totalPrice}
@@ -17,12 +17,12 @@ export default function Cart({totalPrice, totalSelected }) {
   );
 }
 
-Cart.propTypes = {
+ShoppingCart.propTypes = {
   totalPrice: PropTypes.number,
   totalSelected: PropTypes.number,
 };
 
-Cart.defaultProps = {
+ShoppingCart.defaultProps = {
   totalPrice: 0,
   totalSelected: 0,
 };

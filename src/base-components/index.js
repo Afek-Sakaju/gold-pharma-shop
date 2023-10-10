@@ -1,7 +1,7 @@
-export { default as ActionButton } from './ActionButton/ActionButton';
-export { default as Cart } from './Cart/Cart';
-export { default as Header } from './Header/Header';
-export { default as LabeledInput } from './LabeledInput/LabeledInput';
+export { default as Button } from './Button/Button';
+export { default as ShoppingCart } from './ShoppingCart/ShoppingCart';
+export { default as Nav } from './Nav/Nav';
+export { default as InputField } from './InputField/InputField';
 export { default as Loading } from './Loading/Loading';
-export { default as ModifyProduct } from './ModifyProduct/ModifyProduct';
+export { default as ProductForm } from './ProductForm/ProductForm';
 export { default as Product } from './Product/Product';

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { ProductsProxy } from '@utils';
-import { ActionButton, ModifyProduct } from '@base-components';
+import { Button, ProductForm } from '@base-components';
 
 export default function EditProduct({ id, navigateCB, price, productName }) {
   const onExecuteHandler = (data) => {
@@ -11,7 +11,7 @@ export default function EditProduct({ id, navigateCB, price, productName }) {
   };
 
   return (
-    <ModifyProduct
+    <ProductForm
       executeButtonLabel="Update product"
       id={id}
       modificationType="put"
@@ -19,13 +19,13 @@ export default function EditProduct({ id, navigateCB, price, productName }) {
       price={price}
       productName={productName}
     >
-      <ActionButton
+      <Button
         className="modifier warning"
         label="Delete product"
         onClickHandler={() => ProductsProxy.delete(id) && navigateCB?.()}
         style={{ justifyContent: 'center' }}
       />
-    </ModifyProduct>
+    </ProductForm>
   );
 }
 

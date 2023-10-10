@@ -1,18 +1,18 @@
 import React from 'react';
 import { PiStorefrontBold as StoreIcon } from 'react-icons/pi';
 
-import { CartConnected, ProductList } from '@components';
-import { Header } from '@base-components';
+import { ShoppingCartConnected, ProductList } from '@components';
+import { Nav } from '@base-components';
 
 export default function StoreHomePage() {
   return (
     <div>
-      <Header
+      <Nav
         title="Prime choice grocery store"
         headerIcon={<StoreIcon size={50} />}
       >
-        <CartConnected />
-      </Header>
+        <ShoppingCartConnected />
+      </Nav>
       <ProductList />
     </div>
   );

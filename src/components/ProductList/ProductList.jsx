@@ -6,11 +6,11 @@ import { useNavigate } from 'react-router-dom';
 import './ProductList.scss';
 import { Loading, Product } from '@base-components';
 import {
-  addToCartAction,
+  addToShoppingCartAction,
   getProductsSelector,
   getSelectedProductsSelector,
   initProductsAction,
-  removeFromCartAction,
+  removeFromShoppingCartAction,
 } from '@store';
 import { ProductsProxy } from '@utils';
 import CreateProductButton from '../CreateProductButton/CreateProductButton';
@@ -72,10 +72,10 @@ const mapDispatchToProps = (dispatch) => ({
     dispatch(initProductsAction({ products: newProducts }));
   },
   onAdd: (id) => {
-    dispatch(addToCartAction({ id }));
+    dispatch(addToShoppingCartAction({ id }));
   },
   onRemove: (id) => {
-    dispatch(removeFromCartAction({ id }));
+    dispatch(removeFromShoppingCartAction({ id }));
   },
 });
 

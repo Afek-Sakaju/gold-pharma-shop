@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 
-import { Header, Loading } from '@base-components';
+import { Nav, Loading } from '@base-components';
 import { EditProduct } from '@components';
 import { ProductsProxy } from '@utils';
 
@@ -29,7 +29,7 @@ export default function ProductEditorPage() {
 
   return isDataFetched ? (
     <div className="product-modifier-container">
-      <Header title="Edit product:" />
+      <Nav title="Edit product:" />
       <EditProduct
         id={id}
         productName={productData.current.productName}

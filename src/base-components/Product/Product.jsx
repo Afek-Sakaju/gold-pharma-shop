@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { BsCartPlus, BsCartDash } from 'react-icons/bs';
+import { BsShoppingCartPlus, BsShoppingCartDash } from 'react-icons/bs';
 import classNames from 'classnames';
 
 import './Product.scss';
-import ActionButton from '../ActionButton/ActionButton';
+import Button from '../Button/Button';
 
 export default function Product({
   className,
@@ -28,21 +28,21 @@ export default function Product({
       <section className="product-price">${price}</section>
       <section className="product-name">{productName}</section>
       <div className="product-buttons-container">
-        <ActionButton
+        <Button
           className="product-button"
-          label="Add to Cart"
+          label="Add to ShoppingCart"
           onClickHandler={onAdd}
         >
-          <BsCartPlus />
-        </ActionButton>
+          <BsShoppingCartPlus />
+        </Button>
         {!!selectedCount && (
-          <ActionButton
+          <Button
             className="product-button warning"
             label={`Remove (${selectedCount})`}
             onClickHandler={onRemove}
           >
-            <BsCartDash />
-          </ActionButton>
+            <BsShoppingCartDash />
+          </Button>
         )}
       </div>
     </div>

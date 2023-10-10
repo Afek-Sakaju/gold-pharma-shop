@@ -11,7 +11,7 @@ const productSlice = createSlice({
     initProducts(state, action) {
       state.productList = action.payload.products;
     },
-    addToCart(state, action) {
+    addToShoppingCart(state, action) {
       const { id } = action.payload;
 
       const { price } = state.productList.find((p) => p.id === id);
@@ -22,7 +22,7 @@ const productSlice = createSlice({
         Number(state.totalPrice + +price).toFixed(2)
       );
     },
-    removeFromCart(state, action) {
+    removeFromShoppingCart(state, action) {
       const { id } = action.payload;
       const { price } = state.productList.find((p) => p.id === id);
 
@@ -39,8 +39,8 @@ const productSlice = createSlice({
 
 export const {
   initProducts: initProductsAction,
-  addToCart: addToCartAction,
-  removeFromCart: removeFromCartAction,
+  addToShoppingCart: addToShoppingCartAction,
+  removeFromShoppingCart: removeFromShoppingCartAction,
 } = productSlice.actions;
 
 export default productSlice;
