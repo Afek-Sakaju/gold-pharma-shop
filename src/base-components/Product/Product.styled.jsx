@@ -83,6 +83,11 @@ export const RemoveProductButton = styled(Button)`
     0px 2.5px 5px rgba(254, 90, 61, 0.1);
   font-size: 1.1em;
   white-space: pre;
+
+  &.disabled {
+    cursor: default;
+    opacity: 0.6;
+  }
 `;
 
 export const SelectedCount = styled.p`
