@@ -2,10 +2,11 @@ import styled from 'styled-components';
 import Button from '../Button/Button';
 
 export const ProductContainer = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 200px;
-  height: 260px;
+  height: 265px;
   flex: 1 1 auto;
   border: 1px solid rgba(black, 0.2);
   border-radius: 74% 26% 68% 32% / 26% 66% 34% 74%;
@@ -27,8 +28,8 @@ export const ProductContentContainer = styled.div`
 `;
 
 export const ButtonsContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
+  position: relative;
+  min-width: 100%;
 `;
 
 export const ProductName = styled.p`
@@ -52,6 +53,9 @@ export const ProductImage = styled.img`
 `;
 
 export const AddProductButton = styled(Button)`
+  position: absolute;
+  top: -1.6px;
+  left: 103px;
   justify-content: space-between;
   gap: 10px;
   padding: 8px;
@@ -65,14 +69,26 @@ export const AddProductButton = styled(Button)`
 `;
 
 export const RemoveProductButton = styled(Button)`
-  max-width: 49%;
-  height: 40px;
+  position: absolute;
+  top: -1.6px;
+  left: 57px;
   justify-content: space-between;
-  background-color: #fe5a3de3;
-  font-size: 0.9em;
-  border: 1px solid black;
-
-  border-radius: 5px;
-  box-shadow: 5px 5px 10px 1px rgba(black, 0.15);
+  gap: 10px;
+  padding: 8px;
+  color: #fe5a3de3;
+  background-color: #fafafa;
+  border: 1px solid #fe5a3de3;
+  border-radius: 74% 26% 68% 32% / 24% 59% 41% 76%;
+  box-shadow: 0px 2.5px 5px rgba(254, 90, 61, 0.2),
+    0px 2.5px 5px rgba(254, 90, 61, 0.1);
+  font-size: 1.1em;
   white-space: pre;
+`;
+
+export const SelectedCount = styled.p`
+  position: absolute;
+  top: -11px;
+  right: 50px;
+  font-size: 0.95em;
+  color: #787878;
 `;

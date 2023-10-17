@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
@@ -14,6 +15,7 @@ import {
   ProductPrice,
   RemoveProductButton,
   ProductContentContainer,
+  SelectedCount,
 } from './Product.styled';
 
 export default function Product({
@@ -28,6 +30,7 @@ export default function Product({
 }) {
   return (
     <ProductContainer className={className} onClick={onClick} role="none">
+      {!!selectedCount && <SelectedCount>({selectedCount})</SelectedCount>}
       <ProductImage
         src={productImage || '/Afek-Sakaju/grocery-store/cucumber.jpg'}
         alt="Cucumber"
@@ -37,17 +40,14 @@ export default function Product({
         <ProductName className="product-name">{productName}</ProductName>
         <ProductPrice className="product-price">${price}</ProductPrice>
         <ButtonsContainer>
-          <AddProductButton label="Add to Cart" onClickHandler={onAdd}>
+          <AddProductButton onClickHandler={onAdd}>
             <AddToCartIcon />
           </AddProductButton>
-          {!!selectedCount && (
-            <RemoveProductButton
-              label={`Remove (${selectedCount})`}
-              onClickHandler={onRemove}
-            >
-              <RemoveFromCartIcon />
-            </RemoveProductButton>
-          )}
+          <RemoveProductButton
+            onClickHandler={() => !!selectedCount && onRemove()}
+          >
+            <RemoveFromCartIcon />
+          </RemoveProductButton>
         </ButtonsContainer>
       </ProductContentContainer>
     </ProductContainer>
