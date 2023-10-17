@@ -17,4 +17,4 @@ export const MOCK_PRODUCTS = [
   },
 ];
 
-export const SERVER_URL = process.env.REACT_APP_DB_URL
+export const SERVER_URL = process.env.REACT_APP_DB_URL;

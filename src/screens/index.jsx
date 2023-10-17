@@ -9,7 +9,7 @@ import {
 import HomePage from './HomePage/HomePage';
 import ProductEditorPage from './ProductEditorPage/ProductEditorPage';
 import ProductCreatorPage from './ProductCreatorPage/ProductCreatorPage';
-import './index.scss';
+import './index.css';
 
 export default function Router() {
   return (

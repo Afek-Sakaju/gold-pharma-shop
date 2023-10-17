@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import Product from '@base-components';
+import { Product } from '@base-components';
 import { CreateIcon } from './CreateProductButton.styled';
 
 export default function CreateProductButton() {
