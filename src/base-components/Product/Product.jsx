@@ -13,6 +13,7 @@ import {
   ProductName,
   ProductPrice,
   RemoveProductButton,
+  ProductContentContainer,
 } from './Product.styled';
 
 export default function Product({
@@ -32,21 +33,23 @@ export default function Product({
         alt="Cucumber"
         className="product-image"
       />
-      <ProductName className="product-price">${price}</ProductName>
-      <ProductPrice className="product-name">{productName}</ProductPrice>
-      <ButtonsContainer>
-        <AddProductButton label="Add to Cart" onClickHandler={onAdd}>
-          <AddToCartIcon />
-        </AddProductButton>
-        {!!selectedCount && (
-          <RemoveProductButton
-            label={`Remove (${selectedCount})`}
-            onClickHandler={onRemove}
-          >
-            <RemoveFromCartIcon />
-          </RemoveProductButton>
-        )}
-      </ButtonsContainer>
+      <ProductContentContainer>
+        <ProductName className="product-name">{productName}</ProductName>
+        <ProductPrice className="product-price">${price}</ProductPrice>
+        <ButtonsContainer>
+          <AddProductButton label="Add to Cart" onClickHandler={onAdd}>
+            <AddToCartIcon />
+          </AddProductButton>
+          {!!selectedCount && (
+            <RemoveProductButton
+              label={`Remove (${selectedCount})`}
+              onClickHandler={onRemove}
+            >
+              <RemoveFromCartIcon />
+            </RemoveProductButton>
+          )}
+        </ButtonsContainer>
+      </ProductContentContainer>
     </ProductContainer>
   );
 }

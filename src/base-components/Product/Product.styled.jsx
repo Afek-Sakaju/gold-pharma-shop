@@ -1,24 +1,10 @@
 import styled from 'styled-components';
 import Button from '../Button/Button';
 
-export const AddProductButton = styled(Button)`
-  min-height: 40px;
-  max-height: 40px;
-`;
-
-export const RemoveProductButton = styled(Button)`
-  min-height: 40px;
-  max-height: 40px;
-  background-color: #fe5a3de3;
-`;
-
 export const ProductContainer = styled.div`
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
-  text-align: center;
-  gap: 10px;
-  width: 230px;
+  width: 200px;
   flex: 1 1 auto;
   border: 1px solid rgba(black, 0.2);
   border-radius: 10px;
@@ -36,23 +22,27 @@ export const ProductContainer = styled.div`
   }
 `;
 
+export const ProductContentContainer = styled.div`
+  padding: 0 0.6em 0.6em 0.6em;
+  text-align: center;
+`;
+
 export const ButtonsContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 0 0.5em 0.5em 0.5em;
 `;
 
 export const ProductName = styled.p`
-  height: 36px;
-  font-size: 1em;
+  margin: 0;
+  font-size: 0.9em;
   user-select: none;
-  text-align: center;
-  margin-top: 3px;
+  text-transform: capitalize;
 `;
 
 export const ProductPrice = styled.p`
-  font-size: 1.4em;
+  font-size: 1em;
   user-select: none;
+  margin: 10px 0;
 `;
 
 export const ProductImage = styled.img`
@@ -60,4 +50,13 @@ export const ProductImage = styled.img`
   width: 70%;
   justify-self: center;
   align-self: center;
+`;
+
+export const AddProductButton = styled(Button)`
+  height: 40px;
+`;
+
+export const RemoveProductButton = styled(Button)`
+  height: 40px;
+  background-color: #fe5a3de3;
 `;
