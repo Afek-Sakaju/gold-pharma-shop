@@ -2,12 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import {
-  CartInnerContainer,
+  SelectedItemsContainer,
   CartContainer,
   CartIcon,
-  CartTotalItems,
-  //	CartPriceInnerContainer,
-  CartTotalPrice,
+  TotalSelected,
+  TotalPrice,
   DollarSign,
 } from './ShoppingCart.styled';
 
@@ -15,11 +14,11 @@ export default function ShoppingCart({ totalPrice, totalSelected }) {
   return (
     <CartContainer>
       <DollarSign>$</DollarSign>
-      <CartTotalPrice>{totalPrice}</CartTotalPrice>
-      <CartInnerContainer>
+      <TotalPrice>{totalPrice}</TotalPrice>
+      <SelectedItemsContainer>
         <CartIcon />
-        <CartTotalItems>{totalSelected}</CartTotalItems>
-      </CartInnerContainer>
+        <TotalSelected>{totalSelected}</TotalSelected>
+      </SelectedItemsContainer>
     </CartContainer>
   );
 }

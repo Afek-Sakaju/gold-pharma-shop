@@ -1,31 +1,21 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import {
-  NavContainer,
-  TitleContainer,
-  ShopLogo,
-  NavChildrenContainer,
-} from './Nav.styled';
+import { NavContainer, NavLogo, NavChildrenContainer } from './Nav.styled';
 
-export default function Nav({ title, headerIcon, children }) {
+export default function Nav({ logoUrl, children }) {
   return (
     <NavContainer>
-      <ShopLogo src="/Afek-Sakaju/grocery-store/shop-logo.png" alt="Logo" />
-      {children ? (
-        <NavChildrenContainer>{children}</NavChildrenContainer>
-      ) : null}
+      <NavLogo src={logoUrl} alt="Logo" />
+      {children && <NavChildrenContainer>{children}</NavChildrenContainer>}
     </NavContainer>
   );
 }
 
 Nav.propTypes = {
-  title: PropTypes.string,
-  headerIcon: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
+  logoUrl: PropTypes.string,
 };
 
 Nav.defaultProps = {
-  title: undefined,
-  headerIcon: undefined,
+  logoUrl: undefined,
 };

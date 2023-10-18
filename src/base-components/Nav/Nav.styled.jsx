@@ -17,25 +17,12 @@ export const NavContainer = styled.div`
   user-select: none;
 `;
 
-export const TitleContainer = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-left: 20px;
-`;
-
 export const NavChildrenContainer = styled.div`
-  display: flex;
-  gap: 30px;
   margin-right: 20px;
 `;
 
-export const ShopLogo = styled.img`
+export const NavLogo = styled.img`
   width: 130px;
-  display: flex;
-  justify-self: center;
-  align-self: center;
   margin-left: 18px;
-  margin-bottom: 8px;
-  transition: transform 0.25s ease-in-out;
+  padding-bottom: 8px;
 `;

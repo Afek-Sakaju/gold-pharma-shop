@@ -1,5 +1,4 @@
 import React from 'react';
-import { PiStorefrontBold as StoreIcon } from 'react-icons/pi';
 
 import { ShoppingCartConnected, ProductList } from '@components';
 import { Nav } from '@base-components';
@@ -7,7 +6,7 @@ import { Nav } from '@base-components';
 export default function StoreHomePage() {
   return (
     <div>
-      <Nav headerIcon={<StoreIcon size={50} />}>
+      <Nav logoUrl="/Afek-Sakaju/grocery-store/shop-logo.png">
         <ShoppingCartConnected />
       </Nav>
       <ProductList />
