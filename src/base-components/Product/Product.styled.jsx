@@ -82,7 +82,6 @@ export const RemoveProductButton = styled(Button)`
   box-shadow: 0px 2.5px 5px rgba(254, 90, 61, 0.2),
     0px 2.5px 5px rgba(254, 90, 61, 0.1);
   font-size: 1.1em;
-  white-space: pre;
 
   &.disabled {
     cursor: default;
