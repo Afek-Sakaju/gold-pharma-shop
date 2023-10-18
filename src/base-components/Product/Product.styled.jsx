@@ -135,6 +135,7 @@ export const SelectedCount = styled.p`
   position: absolute;
   top: -11px;
   right: 50px;
+  z-index: 2;
   font-size: 0.95em;
   color: #787878;
 `;
