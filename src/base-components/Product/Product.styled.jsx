@@ -96,6 +96,12 @@ export const AddProductButton = styled(Button)`
   box-shadow: 0px 2.5px 5px rgba(19, 105, 10, 0.2),
     0px 2.5px 5px rgba(19, 105, 10, 0.1);
   font-size: 1.1em;
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: 0px 3px 6px rgba(19, 105, 10, 0.3),
+      0px 3px 6px rgba(19, 105, 10, 0.2);
+  }
 `;
 
 export const RemoveProductButton = styled(Button)`
@@ -112,6 +118,12 @@ export const RemoveProductButton = styled(Button)`
   box-shadow: 0px 2.5px 5px rgba(254, 90, 61, 0.2),
     0px 2.5px 5px rgba(254, 90, 61, 0.1);
   font-size: 1.1em;
+  transition: box-shadow 0.3s ease;
+
+  &:hover:not(.disabled) {
+    box-shadow: 0px 3px 6px rgba(254, 90, 61, 0.3),
+      0px 3px 6px rgba(254, 90, 61, 0.2);
+  }
 
   &.disabled {
     cursor: default;
