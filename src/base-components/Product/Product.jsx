@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
-  BsCartPlus as AddToCartIcon,
-  BsCartDash as RemoveFromCartIcon,
-} from 'react-icons/bs';
+  LiaCartPlusSolid as AddToCartIcon,
+  LiaCartArrowDownSolid as RemoveFromCartIcon,
+} from 'react-icons/lia';
 
 import {
   AddProductButton,

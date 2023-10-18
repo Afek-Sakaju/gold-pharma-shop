@@ -88,14 +88,14 @@ export const AddProductButton = styled(Button)`
   left: 103px;
   justify-content: space-between;
   gap: 10px;
-  padding: 8px;
+  padding: 5.5px;
   color: #13690a;
   background-color: #fafafa;
   border: 1px solid #13690ac8;
   border-radius: 74% 26% 68% 32% / 24% 59% 41% 76%;
   box-shadow: 0px 2.5px 5px rgba(19, 105, 10, 0.2),
     0px 2.5px 5px rgba(19, 105, 10, 0.1);
-  font-size: 1.1em;
+  font-size: 1.4em;
   transition: box-shadow 0.3s ease;
 
   &:hover {
@@ -110,14 +110,14 @@ export const RemoveProductButton = styled(Button)`
   left: 57px;
   justify-content: space-between;
   gap: 10px;
-  padding: 8px;
+  padding: 5.5px;
   color: #fe5a3de3;
   background-color: #fafafa;
   border: 1px solid #fe5a3de3;
   border-radius: 74% 26% 68% 32% / 24% 59% 41% 76%;
   box-shadow: 0px 2.5px 5px rgba(254, 90, 61, 0.2),
     0px 2.5px 5px rgba(254, 90, 61, 0.1);
-  font-size: 1.1em;
+  font-size: 1.4em;
   transition: box-shadow 0.3s ease;
 
   &:hover:not(.disabled) {
