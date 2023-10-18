@@ -2,18 +2,18 @@ import styled from 'styled-components';
 
 export const NavContainer = styled.div`
   position: sticky;
+  top: 0;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  top: 0;
-  padding: 0 1em;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   z-index: 3;
 
-  box-shadow: 5px 5px 10px -1px rgba(black, 0.15);
-  border-radius: 0 0 7px 7px;
   background-color: white;
-  border: 2px solid rgba(black, 0.2);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   user-select: none;
 `;
 
@@ -21,9 +21,21 @@ export const TitleContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
+  margin-left: 20px;
 `;
 
 export const NavChildrenContainer = styled.div`
   display: flex;
   gap: 30px;
+  margin-right: 20px;
+`;
+
+export const ShopLogo = styled.img`
+  width: 130px;
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  margin-left: 18px;
+  margin-bottom: 8px;
+  transition: transform 0.25s ease-in-out;
 `;

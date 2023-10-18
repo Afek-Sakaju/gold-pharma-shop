@@ -9,9 +9,13 @@ html,
   background-color: #d8d8d8;
 }
 
+@font-face {
+  font-family: 'AmazonEmber';
+  src: url(./assets/fonts/Amazon_Ember_V2.ttf);
+}
+
 body {
-  font-family: 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'AmazonEmber', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: flex;
@@ -19,4 +23,5 @@ body {
   align-items: center;
   flex-direction: column;
   margin: 0 5px;
+  overflow-x: hidden;
 }

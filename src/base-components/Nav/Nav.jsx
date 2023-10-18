@@ -1,25 +1,18 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import PropTypes from 'prop-types';
 
 import {
   NavContainer,
   TitleContainer,
+  ShopLogo,
   NavChildrenContainer,
 } from './Nav.styled';
 
 export default function Nav({ title, headerIcon, children }) {
   return (
     <NavContainer>
-      {headerIcon ? (
-        <TitleContainer>
-          {headerIcon}
-          <h1>{title}</h1>
-        </TitleContainer>
-      ) : (
-        <TitleContainer>
-          <h1>{title}</h1>
-        </TitleContainer>
-      )}
+      <ShopLogo src="/Afek-Sakaju/grocery-store/shop-logo.png" alt="Logo" />
       {children ? (
         <NavChildrenContainer>{children}</NavChildrenContainer>
       ) : null}
