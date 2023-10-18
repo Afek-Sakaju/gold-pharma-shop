@@ -5,7 +5,8 @@ export const ProductContainer = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 200px;
+  min-width: 250px;
+  max-width: 250px;
   height: 265px;
   flex: 1 1 auto;
   border: 1px solid rgba(black, 0.2);
@@ -59,7 +60,7 @@ export const ProductName = styled.p`
     height: 1px;
     border-radius: 4px;
     background-color: #4e97207b;
-    bottom: -3px;
+    bottom: 0;
     left: 0;
     transform-origin: right;
     transform: scaleX(0);
@@ -70,12 +71,13 @@ export const ProductName = styled.p`
 export const ProductPrice = styled.p`
   font-size: 1em;
   user-select: none;
-  margin: 8.5px 0;
+  margin-top: 4px;
+  margin-bottom: 5px;
 `;
 
 export const ProductImage = styled.img`
   display: flex;
-  width: 70%;
+  width: 60%;
   height: 60%;
   justify-self: center;
   align-self: center;

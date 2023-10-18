@@ -5,6 +5,6 @@ export const ProductListContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 0 7px 12px 7px;
+  padding: 15px 60px;
   gap: 20px;
 `;
