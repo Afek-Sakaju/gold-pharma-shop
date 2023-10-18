@@ -14,10 +14,22 @@ export const ProductContainer = styled.div`
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-  transition: all 0.2s ease;
   user-select: none;
   cursor: pointer;
   overflow: hidden;
+
+  &:hover {
+    .product-image {
+      transform: scale(1.1);
+    }
+
+    .product-name {
+      &::before {
+        transform-origin: left;
+        transform: scaleX(1);
+      }
+    }
+  }
 `;
 
 export const ProductContentContainer = styled.div`
@@ -25,6 +37,7 @@ export const ProductContentContainer = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 0 0.7em 0.8em 0.7em;
+  z-index: 2;
 `;
 
 export const ButtonsContainer = styled.div`
@@ -33,10 +46,25 @@ export const ButtonsContainer = styled.div`
 `;
 
 export const ProductName = styled.p`
+  position: relative;
   margin: 0;
   font-size: 0.9em;
   user-select: none;
   text-transform: capitalize;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    border-radius: 4px;
+    background-color: #4e97207b;
+    bottom: -3px;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+  }
 `;
 
 export const ProductPrice = styled.p`
@@ -48,8 +76,10 @@ export const ProductPrice = styled.p`
 export const ProductImage = styled.img`
   display: flex;
   width: 70%;
+  height: 60%;
   justify-self: center;
   align-self: center;
+  transition: transform 0.3s ease-in-out;
 `;
 
 export const AddProductButton = styled(Button)`

@@ -8,7 +8,7 @@ export const NavContainer = styled.div`
   top: 0;
   padding: 0 1em;
   margin-bottom: 10px;
-  z-index: 1;
+  z-index: 3;
 
   box-shadow: 5px 5px 10px -1px rgba(black, 0.15);
   border-radius: 0 0 7px 7px;
