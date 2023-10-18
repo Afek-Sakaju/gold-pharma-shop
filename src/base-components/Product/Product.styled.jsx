@@ -20,7 +20,7 @@ export const ProductContainer = styled.div`
 
   &:hover {
     .product-image {
-      transform: scale(1.1);
+      transform: scale(1.2);
     }
 
     .product-name {
@@ -79,7 +79,7 @@ export const ProductImage = styled.img`
   height: 60%;
   justify-self: center;
   align-self: center;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.25s ease-in-out;
 `;
 
 export const AddProductButton = styled(Button)`
@@ -96,9 +96,12 @@ export const AddProductButton = styled(Button)`
   box-shadow: 0px 2.5px 5px rgba(19, 105, 10, 0.2),
     0px 2.5px 5px rgba(19, 105, 10, 0.1);
   font-size: 1.4em;
-  transition: box-shadow 0.3s ease;
+  transition: 0.3s ease-in-out;
 
   &:hover {
+    color: #fafafa;
+    background-color: #13690ac8;
+    border: 1px solid #13690a;
     box-shadow: 0px 3px 6px rgba(19, 105, 10, 0.3),
       0px 3px 6px rgba(19, 105, 10, 0.2);
   }
@@ -111,16 +114,19 @@ export const RemoveProductButton = styled(Button)`
   justify-content: space-between;
   gap: 10px;
   padding: 5.5px;
-  color: #fe5a3de3;
+  color: #fe5a3d;
   background-color: #fafafa;
   border: 1px solid #fe5a3de3;
   border-radius: 74% 26% 68% 32% / 24% 59% 41% 76%;
   box-shadow: 0px 2.5px 5px rgba(254, 90, 61, 0.2),
     0px 2.5px 5px rgba(254, 90, 61, 0.1);
   font-size: 1.4em;
-  transition: box-shadow 0.3s ease;
+  transition: 0.3s ease-in-out;
 
   &:hover:not(.disabled) {
+    color: #fafafa;
+    background-color: #fe5a3de3;
+    border: 1px solid #fe5a3d;
     box-shadow: 0px 3px 6px rgba(254, 90, 61, 0.3),
       0px 3px 6px rgba(254, 90, 61, 0.2);
   }
