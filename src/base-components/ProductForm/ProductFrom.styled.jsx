@@ -33,7 +33,7 @@ export const InputField = styled.input`
   width: 180px;
   border: unset;
   outline: none;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #ffbd59c9;
   padding: 5px;
   font-size: 0.9em;
 `;
@@ -42,11 +42,31 @@ export const PriceInputWrapper = styled.div`
   display: flex;
   align-items: center;
   font-size: 1.2em;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #ffbd59c9;
 `;
 
 export const SubmitButton = styled(Button)`
-  min-height: 55px;
-  max-height: 55px;
+  display: flex;
   justify-content: center;
+  align-items: center;
+  border-radius: 74% 26% 68% 32% / 26% 66% 34% 74%;
+  height: 70px;
+  width: 70px;
+
+  color: #e29d34d4;
+  background-color: #fafafa;
+  border: 1px solid #e7a138d7;
+  border-radius: 74% 26% 68% 32% / 24% 59% 41% 76%;
+  box-shadow: 0px 2.5px 5px rgba(255, 188, 88, 0.2),
+    0px 2.5px 5px rgba(255, 188, 88, 0.1);
+  font-size: 1.15em;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    color: #ffffff;
+    background-color: #ffbd59;
+    border: 1px solid #ffbc58d6;
+    box-shadow: 0px 3px 6px rgba(255, 188, 88, 0.4),
+      0px 3px 6px rgba(255, 188, 88, 0.3);
+  }
 `;

@@ -25,7 +25,7 @@ export default function ProductForm({
   const onPriceChange = (event) => {
     const price = +event.target.value;
     const isValidPrice =
-      typeof price === 'number' && price >= 0 && price <= 1000;
+      typeof price === 'number' && price >= 0 && price <= 999;
     setUpdatedPrice((prevPrice) => (isValidPrice ? price : prevPrice));
   };
 
@@ -37,7 +37,6 @@ export default function ProductForm({
   return (
     <FormContainer>
       <InputField
-        label="Product:"
         onChange={onProductNameChange}
         placeholder={productName}
         type="text"
@@ -46,7 +45,6 @@ export default function ProductForm({
       <PriceInputWrapper>
         $
         <PriceInputField
-          className="price"
           onChange={onPriceChange}
           placeholder={productPrice}
           type="text"
@@ -71,7 +69,7 @@ ProductForm.propTypes = {
 
 ProductForm.defaultProps = {
   onSubmit: undefined,
-  productName: 'Product name',
+  productName: 'Enter Product Name',
   productPrice: 0,
   submitButtonLabel: undefined,
 };

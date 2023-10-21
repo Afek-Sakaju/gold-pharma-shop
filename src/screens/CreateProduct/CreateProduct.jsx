@@ -19,10 +19,7 @@ export default function CreateProduct() {
       <Nav logoUrl="/Afek-Sakaju/grocery-store/shop-logo.png">
         <PageTitle>Product Creation</PageTitle>
       </Nav>
-      <ProductForm
-        submitButtonLabel="Create product"
-        onSubmit={onSubmitHandler}
-      />
+      <ProductForm submitButtonLabel="Create" onSubmit={onSubmitHandler} />
     </div>
   );
 }
