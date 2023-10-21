@@ -32,7 +32,7 @@ export default function Product({
       {!!selectedCount && <SelectedCount>({selectedCount})</SelectedCount>}
       <ProductImage
         src={productImage || '/Afek-Sakaju/grocery-store/cucumber.jpg'}
-        alt="Cucumber"
+        alt="Product Image"
         className="product-image"
       />
       <ProductContentContainer>
