@@ -12,11 +12,9 @@ export default function EditProduct({ id, navigateCB, price, productName }) {
 
   return (
     <ProductForm
-      executeButtonLabel="Update product"
-      id={id}
-      modificationType="put"
-      onExecute={onExecuteHandler}
-      price={price}
+      submitButtonLabel="Update product"
+      onSubmit={onExecuteHandler}
+      productPrice={price}
       productName={productName}
     >
       <Button

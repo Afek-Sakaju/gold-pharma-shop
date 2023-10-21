@@ -8,15 +8,14 @@ import {
 
 import HomePage from './HomePage/HomePage';
 import ProductEditorPage from './ProductEditorPage/ProductEditorPage';
-import ProductCreatorPage from './ProductCreatorPage/ProductCreatorPage';
-import './index.css';
+import CreateProduct from './CreateProduct/CreateProduct';
 
 export default function Router() {
   return (
     <BrowserRouter>
       <Switch>
         <Route path="/" element={<HomePage />} />
-        <Route path="/product/new" element={<ProductCreatorPage />} />
+        <Route path="/product/new" element={<CreateProduct />} />
         <Route path="/product/:id" element={<ProductEditorPage />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Switch>

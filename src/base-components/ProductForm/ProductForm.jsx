@@ -1,25 +1,32 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-import InputField from '../InputField/InputField';
-import Button from '../Button/Button';
+import {
+  FormContainer,
+  SubmitButton,
+  InputField,
+  PriceInputWrapper,
+  PriceInputField,
+} from './ProductFrom.styled';
 
 export default function ProductForm({
   children,
-  executeButtonLabel,
-  onExecute,
-  price,
+  onSubmit,
   productName,
+  productPrice,
+  submitButtonLabel,
 }) {
   const [updatedProductName, setUpdatedProductName] = useState(undefined);
-  const [updatedPrice, setUpdatedPrice] = useState(price);
+  const [updatedPrice, setUpdatedPrice] = useState(productPrice);
 
   const onProductNameChange = (event) => {
     setUpdatedProductName(event.target.value);
   };
   const onPriceChange = (event) => {
-    const p = event.target.value;
-    setUpdatedPrice(p < 0 ? 0 : p);
+    const price = +event.target.value;
+    const isValidPrice =
+      typeof price === 'number' && price >= 0 && price <= 1000;
+    setUpdatedPrice((prevPrice) => (isValidPrice ? price : prevPrice));
   };
 
   const data = {
@@ -28,44 +35,43 @@ export default function ProductForm({
   };
 
   return (
-    <div className="product-modifier">
-      {children}
+    <FormContainer>
       <InputField
         label="Product:"
-        onChangeHandler={onProductNameChange}
+        onChange={onProductNameChange}
         placeholder={productName}
         type="text"
         value={updatedProductName}
       />
-      <InputField
-        className="price"
-        label="Price:"
-        onChangeHandler={onPriceChange}
-        placeholder={price}
-        type="number"
-        value={updatedPrice}
-      />
-      <Button
-        className="modifier"
-        label={executeButtonLabel}
-        onClickHandler={() => onExecute(data)}
-        style={{ justifyContent: 'center' }}
+      <PriceInputWrapper>
+        $
+        <PriceInputField
+          className="price"
+          onChange={onPriceChange}
+          placeholder={productPrice}
+          type="text"
+          value={updatedPrice}
+        />
+      </PriceInputWrapper>
+      <SubmitButton
+        label={submitButtonLabel}
+        onClickHandler={() => onSubmit(data)}
       />
       {children}
-    </div>
+    </FormContainer>
   );
 }
 
 ProductForm.propTypes = {
-  executeButtonLabel: PropTypes.string,
-  onExecute: PropTypes.func,
-  price: PropTypes.number,
+  onSubmit: PropTypes.func,
   productName: PropTypes.string,
+  productPrice: PropTypes.number,
+  submitButtonLabel: PropTypes.string,
 };
 
 ProductForm.defaultProps = {
-  executeButtonLabel: undefined,
-  onExecute: undefined,
-  price: 0,
+  onSubmit: undefined,
   productName: 'Product name',
+  productPrice: 0,
+  submitButtonLabel: undefined,
 };

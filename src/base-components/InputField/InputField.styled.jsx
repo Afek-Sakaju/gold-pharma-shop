@@ -17,6 +17,7 @@ export const PriceInputContainer = styled.div`
   width: 100%;
   margin-right: auto;
   position: relative;
+
   &::after {
     content: '$';
     color: green;
@@ -34,7 +35,7 @@ export const Input = styled.input`
   padding: 10px;
 `;
 
-export const InputLabel = styled.input`
+export const InputLabel = styled.p`
   word-wrap: break-word;
   user-select: none;
 `;
