@@ -33,7 +33,7 @@ export const InputField = styled.input`
   width: 180px;
   border: unset;
   outline: none;
-  border-bottom: 1px solid #ffbd59c9;
+  border-bottom: 1px solid #ffbd59;
   padding: 5px;
   font-size: 0.9em;
 `;
@@ -42,7 +42,19 @@ export const PriceInputWrapper = styled.div`
   display: flex;
   align-items: center;
   font-size: 1.2em;
-  border-bottom: 1px solid #ffbd59c9;
+  border-bottom: 1px solid #ffbd59;
+`;
+
+export const ImageInputDisplay = styled.img`
+  width: 270px;
+  height: 270px;
+`;
+
+export const ImageInput = styled.label`
+  padding: 5px 10px;
+  background-color: unset;
+  border: 1px solid #ffbd59;
+  border-radius: 5px;
 `;
 
 export const SubmitButton = styled(Button)`
