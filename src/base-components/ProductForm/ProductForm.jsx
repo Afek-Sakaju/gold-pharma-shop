@@ -18,7 +18,7 @@ export default function ProductForm({
   productPrice,
   submitButtonLabel,
 }) {
-  const [updatedProductName, setUpdatedProductName] = useState(undefined);
+  const [updatedProductName, setUpdatedProductName] = useState(productName);
   const [updatedPrice, setUpdatedPrice] = useState(productPrice);
   const [updatedImage, setUpdatedImage] = useState('');
 
@@ -71,7 +71,7 @@ export default function ProductForm({
       </ImageInput>
       <InputField
         onChange={onProductNameChange}
-        placeholder={productName}
+        placeholder="Enter Product Name"
         type="text"
         value={updatedProductName}
       />

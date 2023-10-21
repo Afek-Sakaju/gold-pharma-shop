@@ -2,7 +2,7 @@
   "ProductsData": [
     {
       "productName": "Beef tallow",
-      "price": "90",
+      "price": 123,
       "id": "81ff8102-d0dc-4ce1-b944-3a0b4c787c1b"
     },
     {
@@ -36,9 +36,9 @@
       "price": 58
     },
     {
-      "id": "144f885a-af86-4791-a7d4-11a8dd963b9f",
       "productName": "Relish",
-      "price": 79
+      "price": 79,
+      "id": "144f885a-af86-4791-a7d4-11a8dd963b9f"
     },
     {
       "id": "32875f39-aced-4ed6-a157-e4cfcf7b6126",
