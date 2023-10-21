@@ -2,13 +2,13 @@ import styled from 'styled-components';
 import Button from '../Button/Button';
 
 export const FormContainer = styled.div`
-  margin: 60px auto;
+  width: 600px;
+  height: 560px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  padding: 40px 0;
   align-items: center;
-  width: 600px;
-  height: 600px;
+  margin: 60px auto;
   border: 1px solid rgba(black, 0.2);
   border-radius: 74% 26% 68% 32% / 26% 66% 34% 74%;
   background-color: white;
@@ -33,16 +33,18 @@ export const InputField = styled.input`
   width: 180px;
   border: unset;
   outline: none;
-  border-bottom: 1px solid #ffbd59;
+  border-bottom: 1px solid #e29d34d4;
   padding: 5px;
   font-size: 0.9em;
+  margin: 40px 0;
 `;
 
 export const PriceInputWrapper = styled.div`
   display: flex;
   align-items: center;
   font-size: 1.2em;
-  border-bottom: 1px solid #ffbd59;
+  border-bottom: 1px solid #e29d34d4;
+  margin-bottom: 40px;
 `;
 
 export const ImageInputDisplay = styled.img`
@@ -53,8 +55,9 @@ export const ImageInputDisplay = styled.img`
 export const ImageInput = styled.label`
   padding: 5px 10px;
   background-color: unset;
-  border: 1px solid #ffbd59;
-  border-radius: 5px;
+  border-bottom: 1px solid #e29d34d4;
+  cursor: pointer;
+  margin-top: 6px;
 `;
 
 export const SubmitButton = styled(Button)`
