@@ -8,6 +8,5 @@ export const ProductListContainer = styled.div`
   padding: 15px 60px;
   gap: 20px;
   overflow-y: auto;
-
   -webkit-transform: translateZ(0);
 `;
