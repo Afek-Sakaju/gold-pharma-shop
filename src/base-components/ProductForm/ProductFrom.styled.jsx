@@ -17,10 +17,6 @@ export const FormContainer = styled.div`
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   user-select: none;
   overflow: hidden;
-
-  .empty-value {
-    color: grey;
-  }
 `;
 
 export const InputField = styled.input`
@@ -31,6 +27,10 @@ export const InputField = styled.input`
   border-bottom: 1px solid #e29d34d4;
   outline: none;
   font-size: 1.1em;
+
+  &.empty-value {
+    border-color: lightgray;
+  }
 `;
 
 export const PriceInputWrapper = styled.div`
@@ -39,6 +39,10 @@ export const PriceInputWrapper = styled.div`
   margin-bottom: 40px;
   border-bottom: 1px solid #e29d34d4;
   font-size: 1.4em;
+
+  &.empty-value {
+    border-color: lightgray;
+  }
 `;
 
 export const PriceInputField = styled.input`
@@ -49,6 +53,10 @@ export const PriceInputField = styled.input`
   font-size: 1em;
   text-align: center;
   margin-top: 2px;
+
+  &.empty-value {
+    color: grey;
+  }
 `;
 
 export const ImageInputDisplay = styled.img`
@@ -67,6 +75,11 @@ export const ImageInput = styled.label`
   border-bottom: 1px solid #e29d34d4;
   font-size: 1.1em;
   cursor: pointer;
+
+  &.empty-value {
+    color: grey;
+    border-color: lightgray;
+  }
 `;
 
 export const SubmitButton = styled(Button)`

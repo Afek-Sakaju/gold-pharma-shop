@@ -81,8 +81,9 @@ export default function ProductForm({
         placeholder="Enter Product Name"
         type="text"
         value={updatedProductName}
+        className={`${isNameEmpty ? 'empty-value' : ''}`}
       />
-      <PriceInputWrapper>
+      <PriceInputWrapper className={`${isPriceEmpty ? 'empty-value' : ''}`}>
         $
         <PriceInputField
           onChange={onPriceChange}
