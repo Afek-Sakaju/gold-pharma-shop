@@ -13,6 +13,7 @@ export default function EditProduct() {
   const [productData, setProductData] = useState({
     productName: null,
     price: null,
+    productImage: null,
   });
 
   const onSubmitHandler = (data) => {
@@ -23,8 +24,8 @@ export default function EditProduct() {
   useEffect(() => {
     ProductsProxy.getData(id)
       .then((data) => {
-        const { productName, price } = data;
-        setProductData({ productName, price });
+        const { productName, price, productImage } = data;
+        setProductData({ productName, price, productImage });
         setIsDataFetched(true);
       })
       .catch(() => {});
@@ -42,6 +43,7 @@ export default function EditProduct() {
         onSubmit={onSubmitHandler}
         productPrice={+productData.price}
         productName={productData.productName}
+        productImage={productData.productImage}
       />
     </div>
   ) : (

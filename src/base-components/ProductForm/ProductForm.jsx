@@ -107,7 +107,7 @@ ProductForm.propTypes = {
   onSubmit: PropTypes.func,
   productName: PropTypes.string,
   productPrice: PropTypes.number,
-  productImage: '',
+  productImage: PropTypes.string,
   submitButtonLabel: PropTypes.string,
 };
 
