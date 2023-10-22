@@ -27,6 +27,7 @@ export const InputField = styled.input`
   border-bottom: 1px solid #e29d34d4;
   outline: none;
   font-size: 1.1em;
+  transition: border-color 0.3s ease-in-out;
 
   &.empty-value {
     border-color: lightgray;
@@ -39,6 +40,7 @@ export const PriceInputWrapper = styled.div`
   margin-bottom: 40px;
   border-bottom: 1px solid #e29d34d4;
   font-size: 1.4em;
+  transition: border-color 0.3s ease-in-out;
 
   &.empty-value {
     border-color: lightgray;
@@ -65,6 +67,7 @@ export const ImageInputDisplay = styled.img`
   max-width: 270px;
   max-height: 261px;
   z-index: 1;
+  transition: transform 0.3s ease-in-out;
 
   &:hover {
     transform: scale(1.17);
@@ -81,6 +84,7 @@ export const ImageInput = styled.label`
   border-bottom: 1px solid #e29d34d4;
   font-size: 1.1em;
   cursor: pointer;
+  transition: border-color 0.3s ease-in-out;
 
   &.empty-value {
     color: grey;
@@ -93,8 +97,8 @@ export const SubmitButton = styled(Button)`
   justify-content: center;
   align-items: center;
   border-radius: 74% 26% 68% 32% / 26% 66% 34% 74%;
-  min-height: 69px;
-  width: 73px;
+  min-height: 70px;
+  width: 75px;
   color: #e29d34d4;
   background-color: #fafafa;
   border: 1px solid #e7a138d7;
