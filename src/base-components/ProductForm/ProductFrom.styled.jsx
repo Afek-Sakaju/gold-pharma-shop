@@ -53,8 +53,10 @@ export const PriceInputWrapper = styled.div`
 `;
 
 export const ImageInputDisplay = styled.img`
-  width: 270px;
-  height: 270px;
+  min-width: 270px;
+  min-height: 270px;
+  max-width: 270px;
+  max-height: 270px;
   font-size: 0.9em;
 `;
 
