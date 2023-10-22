@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
 export const NavContainer = styled.div`
-  position: sticky;
-  top: 0;
   width: 100vw;
   display: flex;
   align-items: center;

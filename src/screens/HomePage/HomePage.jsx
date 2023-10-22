@@ -5,7 +5,7 @@ import { Nav } from '@base-components';
 
 export default function StoreHomePage() {
   return (
-    <div>
+    <div style={{ display: 'flex', flexDirection: 'column' }}>
       <Nav logoUrl="/Afek-Sakaju/grocery-store/shop-logo.png">
         <ShoppingCartConnected />
       </Nav>
