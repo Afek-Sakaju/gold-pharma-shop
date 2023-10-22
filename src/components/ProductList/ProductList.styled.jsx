@@ -9,6 +9,5 @@ export const ProductListContainer = styled.div`
   gap: 20px;
   overflow-y: auto;
 
-  -webkit-overflow-scrolling: touch;
   -webkit-transform: translateZ(0);
 `;
