@@ -25,3 +25,7 @@ body {
   margin: 0 5px;
   overflow-x: hidden;
 }
+
+body * {
+  font-family: 'AmazonEmber', sans-serif;
+}

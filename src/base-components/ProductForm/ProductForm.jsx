@@ -61,11 +61,19 @@ export default function ProductForm({
     productImage: updatedImage,
   };
 
+  const isImageEmpty =
+    updatedImage === '/Afek-Sakaju/grocery-store/cucumber.jpg';
+  const isPriceEmpty = !updatedPrice;
+  const isNameEmpty = !updatedProductName;
+  const isFormMissingInput = isNameEmpty || isPriceEmpty || isImageEmpty;
   return (
     <FormContainer>
       <ImageInputDisplay src={updatedImage} alt="Product Image" />
-      <ImageInput htmlFor="upload-image">
-        Upload Image
+      <ImageInput
+        htmlFor="upload-image"
+        className={`${isImageEmpty ? 'empty-value' : ''}`}
+      >
+        {isImageEmpty ? 'Upload Product Image' : 'Change Product Image'}
         <input id="upload-image" hidden type="file" onChange={onImageChange} />
       </ImageInput>
       <InputField
@@ -81,11 +89,13 @@ export default function ProductForm({
           placeholder={productPrice}
           type="text"
           value={updatedPrice}
+          className={`${isPriceEmpty ? 'empty-value' : ''}`}
         />
       </PriceInputWrapper>
       <SubmitButton
         label={submitButtonLabel}
-        onClickHandler={() => onSubmit(data)}
+        className={`${isFormMissingInput ? 'disabled' : ''}`}
+        onClickHandler={() => !isFormMissingInput && onSubmit(data)}
       />
       {children}
     </FormContainer>
@@ -102,7 +112,7 @@ ProductForm.propTypes = {
 
 ProductForm.defaultProps = {
   onSubmit: undefined,
-  productName: 'Enter Product Name',
+  productName: '',
   productPrice: 0,
   productImage: '/Afek-Sakaju/grocery-store/cucumber.jpg',
   submitButtonLabel: undefined,

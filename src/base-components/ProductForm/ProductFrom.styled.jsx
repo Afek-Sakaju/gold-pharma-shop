@@ -17,6 +17,10 @@ export const FormContainer = styled.div`
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   user-select: none;
   overflow: hidden;
+
+  .empty-value {
+    color: grey;
+  }
 `;
 
 export const PriceInputField = styled.input`
@@ -30,34 +34,38 @@ export const PriceInputField = styled.input`
 `;
 
 export const InputField = styled.input`
-  width: 180px;
-  border: unset;
-  outline: none;
-  border-bottom: 1px solid #e29d34d4;
-  padding: 5px;
-  font-size: 0.9em;
+  width: 160px;
+  padding: 5px 15px;
   margin: 40px 0;
+
+  border: unset;
+  border-bottom: 1px solid #e29d34d4;
+  outline: none;
+  font-size: 1em;
 `;
 
 export const PriceInputWrapper = styled.div`
   display: flex;
   align-items: center;
-  font-size: 1.2em;
-  border-bottom: 1px solid #e29d34d4;
   margin-bottom: 40px;
+  border-bottom: 1px solid #e29d34d4;
+  font-size: 1.2em;
 `;
 
 export const ImageInputDisplay = styled.img`
   width: 270px;
   height: 270px;
+  font-size: 0.9em;
 `;
 
 export const ImageInput = styled.label`
-  padding: 5px 10px;
+  width: 190px;
+  text-align: center;
+  padding-bottom: 5px;
+  margin-top: 6px;
   background-color: unset;
   border-bottom: 1px solid #e29d34d4;
   cursor: pointer;
-  margin-top: 6px;
 `;
 
 export const SubmitButton = styled(Button)`
@@ -67,7 +75,6 @@ export const SubmitButton = styled(Button)`
   border-radius: 74% 26% 68% 32% / 26% 66% 34% 74%;
   height: 70px;
   width: 70px;
-
   color: #e29d34d4;
   background-color: #fafafa;
   border: 1px solid #e7a138d7;
@@ -77,11 +84,16 @@ export const SubmitButton = styled(Button)`
   font-size: 1.15em;
   transition: 0.2s ease-in-out;
 
-  &:hover {
+  &:hover:not(.disabled) {
     color: #ffffff;
     background-color: #ffbd59;
     border: 1px solid #ffbc58d6;
     box-shadow: 0px 3px 6px rgba(255, 188, 88, 0.4),
       0px 3px 6px rgba(255, 188, 88, 0.3);
+  }
+
+  &.disabled {
+    cursor: default;
+    opacity: 0.6;
   }
 `;
