@@ -61,16 +61,22 @@ export const PriceInputField = styled.input`
 
 export const ImageInputDisplay = styled.img`
   min-width: 270px;
-  min-height: 270px;
+  min-height: 261px;
   max-width: 270px;
-  max-height: 270px;
+  max-height: 261px;
+  z-index: 1;
+
+  &:hover {
+    transform: scale(1.17);
+  }
 `;
 
 export const ImageInput = styled.label`
   width: 190px;
   text-align: center;
   padding-bottom: 5px;
-  margin-top: 6px;
+  margin-top: 15px;
+  z-index: 2;
   background-color: unset;
   border-bottom: 1px solid #e29d34d4;
   font-size: 1.1em;
