@@ -49,7 +49,7 @@ export const PriceInputField = styled.input`
   width: 40px;
   border: unset;
   outline: none;
-  padding: 0 5px;
+  padding: 0 11.5px 0 4px;
   font-size: 1em;
   text-align: center;
   margin-top: 2px;
