@@ -6,9 +6,10 @@
       "id": "81ff8102-d0dc-4ce1-b944-3a0b4c787c1b"
     },
     {
-      "id": "a707701a-3570-482a-8ec3-bb1fa888bcb7",
       "productName": "Cucumber",
-      "price": 4
+      "price": 4,
+      "productImage": "blob:http://localhost:3000/b4a9e54f-373d-4142-adfd-e877862cd6cc",
+      "id": "a707701a-3570-482a-8ec3-bb1fa888bcb7"
     },
     {
       "productName": "Strawberries",
@@ -18,7 +19,8 @@
     },
     {
       "productName": "Bread - Endaglish Muffin",
-      "price": "68",
+      "price": 68,
+      "productImage": "blob:http://localhost:3000/f37e8873-3746-43bd-bcb1-63fbddce0988",
       "id": "ee017ab4-9325-4b25-be27-b1fca1d7b8ca"
     },
     {

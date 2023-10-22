@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
+import { removeBgFromImage } from '@utils';
 import {
   FormContainer,
   SubmitButton,
@@ -23,21 +24,6 @@ export default function ProductForm({
   const [updatedPrice, setUpdatedPrice] = useState(productPrice);
   const [updatedImage, setUpdatedImage] = useState(productImage);
 
-  const convertBase64 = (file) => {
-    return new Promise((resolve, reject) => {
-      const fileReader = new FileReader();
-      fileReader.readAsDataURL(file);
-
-      fileReader.onload = () => {
-        resolve(fileReader.result);
-      };
-
-      fileReader.onerror = (error) => {
-        reject(error);
-      };
-    });
-  };
-
   const onProductNameChange = (event) => {
     setUpdatedProductName(event.target.value);
   };
@@ -50,9 +36,9 @@ export default function ProductForm({
   };
 
   const onImageChange = async (event) => {
-    const file = event.target.files[0];
-    const ImageBase64 = await convertBase64(file);
-    setUpdatedImage(ImageBase64);
+    const [image] = event.target.files;
+    const removedBgImage = await removeBgFromImage(image);
+    setUpdatedImage(removedBgImage);
   };
 
   const data = {
