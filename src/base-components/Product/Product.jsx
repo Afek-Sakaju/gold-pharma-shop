@@ -31,7 +31,7 @@ export default function Product({
     <ProductContainer className={className} onClick={onClick} role="none">
       {!!selectedCount && <SelectedCount>({selectedCount})</SelectedCount>}
       <ProductImage
-        src={productImage || '/Afek-Sakaju/grocery-store/cucumber.jpg'}
+        src={productImage}
         alt="Product Image"
         className="product-image"
       />
@@ -72,7 +72,7 @@ Product.defaultProps = {
   onClick: undefined,
   onRemove: undefined,
   price: 0,
-  productImage: undefined,
+  productImage: '/Afek-Sakaju/grocery-store/cucumber.jpg',
   productName: undefined,
   selectedCount: 0,
 };

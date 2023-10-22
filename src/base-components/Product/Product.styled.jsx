@@ -5,9 +5,9 @@ export const ProductContainer = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  min-width: 250px;
-  max-width: 250px;
-  height: 265px;
+  min-width: 255px;
+  max-width: 255px;
+  height: 270px;
   flex: 1 1 auto;
   border: 1px solid rgba(black, 0.2);
   border-radius: 74% 26% 68% 32% / 26% 66% 34% 74%;
@@ -21,7 +21,7 @@ export const ProductContainer = styled.div`
 
   &:hover {
     .product-image {
-      transform: scale(1.2);
+      transform: scale(1.17);
     }
 
     .product-name {
@@ -37,7 +37,7 @@ export const ProductContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 0.7em 0.8em 0.7em;
+  padding: 0.3em 0.7em 0.8em 0.7em;
   z-index: 2;
 `;
 

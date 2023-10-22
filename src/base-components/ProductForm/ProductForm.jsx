@@ -16,11 +16,12 @@ export default function ProductForm({
   onSubmit,
   productName,
   productPrice,
+  productImage,
   submitButtonLabel,
 }) {
   const [updatedProductName, setUpdatedProductName] = useState(productName);
   const [updatedPrice, setUpdatedPrice] = useState(productPrice);
-  const [updatedImage, setUpdatedImage] = useState('');
+  const [updatedImage, setUpdatedImage] = useState(productImage);
 
   const convertBase64 = (file) => {
     return new Promise((resolve, reject) => {
@@ -57,14 +58,12 @@ export default function ProductForm({
   const data = {
     productName: updatedProductName || productName,
     price: updatedPrice,
+    productImage: updatedImage,
   };
 
   return (
     <FormContainer>
-      <ImageInputDisplay
-        src={updatedImage || '/Afek-Sakaju/grocery-store/cucumber.jpg'}
-        alt="Product Image"
-      />
+      <ImageInputDisplay src={updatedImage} alt="Product Image" />
       <ImageInput htmlFor="upload-image">
         Upload Image
         <input id="upload-image" hidden type="file" onChange={onImageChange} />
@@ -97,6 +96,7 @@ ProductForm.propTypes = {
   onSubmit: PropTypes.func,
   productName: PropTypes.string,
   productPrice: PropTypes.number,
+  productImage: '',
   submitButtonLabel: PropTypes.string,
 };
 
@@ -104,5 +104,6 @@ ProductForm.defaultProps = {
   onSubmit: undefined,
   productName: 'Enter Product Name',
   productPrice: 0,
+  productImage: '/Afek-Sakaju/grocery-store/cucumber.jpg',
   submitButtonLabel: undefined,
 };

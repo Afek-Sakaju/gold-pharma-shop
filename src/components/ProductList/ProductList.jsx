@@ -42,7 +42,7 @@ function ProductList({
     <ProductListContainer>
       <CreateProductButton />
       {products?.map((productData) => {
-        const { id, productName, price } = productData;
+        const { id, productName, productImage, price } = productData;
 
         return (
           <Product
@@ -50,8 +50,9 @@ function ProductList({
             onAdd={() => onAdd(id)}
             onClick={() => navigate(`/product/${id}`)}
             onRemove={() => onRemove(id)}
-            price={+price}
             productName={productName}
+            price={+price}
+            productImage={productImage}
             selectedCount={selectedProducts[id] ?? 0}
           />
         );
