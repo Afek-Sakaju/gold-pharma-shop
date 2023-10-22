@@ -5,9 +5,9 @@ export const ProductContainer = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  min-width: 255px;
-  max-width: 255px;
-  height: 270px;
+  min-width: 260px;
+  max-width: 260px;
+  height: 275px;
   flex: 1 1 auto;
   border: 1px solid rgba(black, 0.2);
   border-radius: 74% 26% 68% 32% / 26% 66% 34% 74%;
@@ -87,7 +87,7 @@ export const ProductImage = styled.img`
 export const AddProductButton = styled(Button)`
   position: absolute;
   top: -1.6px;
-  left: 103px;
+  left: 122px;
   justify-content: space-between;
   gap: 10px;
   padding: 5.5px;
@@ -98,7 +98,7 @@ export const AddProductButton = styled(Button)`
   box-shadow: 0px 2.5px 5px rgba(19, 105, 10, 0.2),
     0px 2.5px 5px rgba(19, 105, 10, 0.1);
   font-size: 1.4em;
-  transition: 0.3s ease-in-out;
+  transition: 0.23s ease-in-out;
 
   &:hover {
     color: #fafafa;
@@ -112,7 +112,7 @@ export const AddProductButton = styled(Button)`
 export const RemoveProductButton = styled(Button)`
   position: absolute;
   top: -1.6px;
-  left: 57px;
+  left: 74px;
   justify-content: space-between;
   gap: 10px;
   padding: 5.5px;
@@ -123,7 +123,7 @@ export const RemoveProductButton = styled(Button)`
   box-shadow: 0px 2.5px 5px rgba(254, 90, 61, 0.2),
     0px 2.5px 5px rgba(254, 90, 61, 0.1);
   font-size: 1.4em;
-  transition: 0.3s ease-in-out;
+  transition: 0.23s ease-in-out;
 
   &:hover:not(.disabled) {
     color: #fafafa;
