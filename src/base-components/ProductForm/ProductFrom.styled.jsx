@@ -87,8 +87,8 @@ export const SubmitButton = styled(Button)`
   justify-content: center;
   align-items: center;
   border-radius: 74% 26% 68% 32% / 26% 66% 34% 74%;
-  height: 70px;
-  width: 70px;
+  min-height: 69px;
+  width: 73px;
   color: #e29d34d4;
   background-color: #fafafa;
   border: 1px solid #e7a138d7;
