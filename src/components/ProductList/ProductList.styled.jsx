@@ -10,4 +10,12 @@ export const ProductListContainer = styled.div`
   overflow-y: auto;
   transform: translateZ(0);
   -webkit-transform: translateZ(0);
+
+  &::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: grey;
+  }
 `;
