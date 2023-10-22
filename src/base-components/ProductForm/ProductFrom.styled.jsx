@@ -23,25 +23,14 @@ export const FormContainer = styled.div`
   }
 `;
 
-export const PriceInputField = styled.input`
-  width: 30px;
-  border: unset;
-  outline: none;
-  padding: 0 5px;
-  font-size: 0.9em;
-  text-align: center;
-  margin-top: 3px;
-`;
-
 export const InputField = styled.input`
-  width: 160px;
-  padding: 5px 15px;
-  margin: 40px 0;
-
+  width: 177px;
+  margin: 36px 0;
+  padding: 5px 6.5px;
   border: unset;
   border-bottom: 1px solid #e29d34d4;
   outline: none;
-  font-size: 1em;
+  font-size: 1.1em;
 `;
 
 export const PriceInputWrapper = styled.div`
@@ -49,7 +38,17 @@ export const PriceInputWrapper = styled.div`
   align-items: center;
   margin-bottom: 40px;
   border-bottom: 1px solid #e29d34d4;
-  font-size: 1.2em;
+  font-size: 1.4em;
+`;
+
+export const PriceInputField = styled.input`
+  width: 40px;
+  border: unset;
+  outline: none;
+  padding: 0 5px;
+  font-size: 1em;
+  text-align: center;
+  margin-top: 2px;
 `;
 
 export const ImageInputDisplay = styled.img`
@@ -57,7 +56,6 @@ export const ImageInputDisplay = styled.img`
   min-height: 270px;
   max-width: 270px;
   max-height: 270px;
-  font-size: 0.9em;
 `;
 
 export const ImageInput = styled.label`
@@ -67,6 +65,7 @@ export const ImageInput = styled.label`
   margin-top: 6px;
   background-color: unset;
   border-bottom: 1px solid #e29d34d4;
+  font-size: 1.1em;
   cursor: pointer;
 `;
 
