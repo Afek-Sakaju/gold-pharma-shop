@@ -1,3 +1,11 @@
+export const blobToBase64 = (blob) => {
+  return new Promise((resolve) => {
+    const reader = new FileReader();
+    reader.onloadend = () => resolve(reader.result);
+    reader.readAsDataURL(blob);
+  });
+};
+
 // eslint-disable-next-line import/prefer-default-export
 export const removeBgFromImage = async (image) => {
   const formData = new FormData();
@@ -13,8 +21,8 @@ export const removeBgFromImage = async (image) => {
   })
     .then((res) => res.blob())
     .then((blob) => {
-      const url = URL.createObjectURL(blob);
-      return url;
+      const imageBase64 = blobToBase64(blob);
+      return imageBase64;
     })
     .catch((e) => console.log(e));
 
