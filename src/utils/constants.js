@@ -26,7 +26,7 @@ export const TEXT_CONTENT = {
   EDIT_PAGE_TITLE: 'Product Edit Mode',
 };
 
-export const CLASSES = {
+export const COMPONENTS_CLASSES = {
   PRODUCT_IMAGE: 'product-image',
   PRODUCT_NAME: 'product-name',
   DISABLED_BUTTON: 'disabled-button',
@@ -36,4 +36,8 @@ export const CLASSES = {
 export const IMAGES_ALTS = {
   SHOP_LOGO: 'Shop-Logo',
   PRODUCT_IMAGE: 'Product-Image',
+};
+
+export const COMPONENTS_IDS = {
+  UPLOAD_IMAGE_BUTTON: 'upload-image',
 };

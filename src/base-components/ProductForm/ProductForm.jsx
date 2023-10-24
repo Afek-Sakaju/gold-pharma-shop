@@ -5,8 +5,9 @@ import {
   removeBgFromImage,
   CURRENCY_SIGN,
   PLACEHOLDER_PRODUCT_IMAGE,
-  CLASSES,
+  COMPONENTS_CLASSES,
   IMAGES_ALTS,
+  COMPONENTS_IDS,
 } from '@utils';
 import {
   FormContainer,
@@ -61,21 +62,30 @@ export default function ProductForm({
     <FormContainer>
       <ImageInputDisplay src={updatedImage} alt={IMAGES_ALTS.PRODUCT_IMAGE} />
       <ImageInput
-        htmlFor="upload-image"
-        className={`${isImageEmpty ? CLASSES.EMPTY_INPUT_VALUE : ''}`}
+        htmlFor={COMPONENTS_IDS.UPLOAD_IMAGE_BUTTON}
+        className={`${
+          isImageEmpty ? COMPONENTS_CLASSES.EMPTY_INPUT_VALUE : ''
+        }`}
       >
         {isImageEmpty ? 'Upload Product Image' : 'Change Product Image'}
-        <input id="upload-image" hidden type="file" onChange={onImageChange} />
+        <input
+          id={COMPONENTS_IDS.UPLOAD_IMAGE_BUTTON}
+          hidden
+          type="file"
+          onChange={onImageChange}
+        />
       </ImageInput>
       <InputField
         onChange={onProductNameChange}
         placeholder="Enter Product Name"
         type="text"
         value={updatedProductName}
-        className={`${isNameEmpty ? CLASSES.EMPTY_INPUT_VALUE : ''}`}
+        className={`${isNameEmpty ? COMPONENTS_CLASSES.EMPTY_INPUT_VALUE : ''}`}
       />
       <PriceInputWrapper
-        className={`${isPriceEmpty ? CLASSES.EMPTY_INPUT_VALUE : ''}`}
+        className={`${
+          isPriceEmpty ? COMPONENTS_CLASSES.EMPTY_INPUT_VALUE : ''
+        }`}
       >
         {CURRENCY_SIGN}
         <PriceInputField
@@ -83,12 +93,16 @@ export default function ProductForm({
           placeholder={productPrice}
           type="text"
           value={updatedPrice}
-          className={`${isPriceEmpty ? CLASSES.EMPTY_INPUT_VALUE : ''}`}
+          className={`${
+            isPriceEmpty ? COMPONENTS_CLASSES.EMPTY_INPUT_VALUE : ''
+          }`}
         />
       </PriceInputWrapper>
       <SubmitButton
         label={submitButtonLabel}
-        className={`${isFormMissingInput ? CLASSES.DISABLED_BUTTON : ''}`}
+        className={`${
+          isFormMissingInput ? COMPONENTS_CLASSES.DISABLED_BUTTON : ''
+        }`}
         onClickHandler={() => !isFormMissingInput && onSubmit(data)}
       />
       {children}

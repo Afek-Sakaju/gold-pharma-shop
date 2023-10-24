@@ -8,7 +8,7 @@ import {
 import {
   CURRENCY_SIGN,
   PLACEHOLDER_PRODUCT_IMAGE,
-  CLASSES,
+  COMPONENTS_CLASSES,
   IMAGES_ALTS,
 } from '@utils';
 import {
@@ -39,10 +39,10 @@ export default function Product({
       <ProductImage
         src={productImage}
         alt={IMAGES_ALTS.PRODUCT_IMAGE}
-        className={CLASSES.PRODUCT_IMAGE}
+        className={COMPONENTS_CLASSES.PRODUCT_IMAGE}
       />
       <ProductContentContainer>
-        <ProductName className={CLASSES.PRODUCT_NAME}>
+        <ProductName className={COMPONENTS_CLASSES.PRODUCT_NAME}>
           {productName}
         </ProductName>
         <ProductPrice>{`${CURRENCY_SIGN} ${price}`}</ProductPrice>
@@ -53,7 +53,9 @@ export default function Product({
           <RemoveProductButton
             onClickHandler={() => !!selectedCount && onRemove()}
             // eslint-disable-next-line no-extra-boolean-cast
-            className={`${!!selectedCount ? '' : CLASSES.DISABLED_BUTTON}`}
+            className={`${
+              !!selectedCount ? '' : COMPONENTS_CLASSES.DISABLED_BUTTON
+            }`}
           >
             <RemoveFromCartIcon />
           </RemoveProductButton>

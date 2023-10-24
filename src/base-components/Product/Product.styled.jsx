@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { CLASSES } from '@utils';
+import { COMPONENTS_CLASSES } from '@utils';
 import Button from '../Button/Button';
 
 export const ProductContainer = styled.div`
@@ -127,7 +127,7 @@ export const RemoveProductButton = styled(Button)`
   font-size: 1.4em;
   transition: 0.23s ease-in-out;
 
-  &:hover:not(${CLASSES.DISABLED_BUTTON}) {
+  &:hover:not(${COMPONENTS_CLASSES.DISABLED_BUTTON}) {
     color: #fafafa;
     background-color: #fe5a3de3;
     border: 1px solid #fe5a3d;
