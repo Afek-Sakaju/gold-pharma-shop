@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-import { removeBgFromImage } from '@utils';
+import { removeBgFromImage, CURRENCY_SIGN } from '@utils';
 import {
   FormContainer,
   SubmitButton,
@@ -70,7 +70,7 @@ export default function ProductForm({
         className={`${isNameEmpty ? 'empty-value' : ''}`}
       />
       <PriceInputWrapper className={`${isPriceEmpty ? 'empty-value' : ''}`}>
-        $
+        {CURRENCY_SIGN}
         <PriceInputField
           onChange={onPriceChange}
           placeholder={productPrice}

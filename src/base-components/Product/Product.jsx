@@ -5,6 +5,7 @@ import {
   LiaCartArrowDownSolid as RemoveFromCartIcon,
 } from 'react-icons/lia';
 
+import { CURRENCY_SIGN } from '@utils';
 import {
   AddProductButton,
   ButtonsContainer,
@@ -37,7 +38,7 @@ export default function Product({
       />
       <ProductContentContainer>
         <ProductName className="product-name">{productName}</ProductName>
-        <ProductPrice className="product-price">${price}</ProductPrice>
+        <ProductPrice className="product-price">{`${CURRENCY_SIGN} ${price}`}</ProductPrice>
         <ButtonsContainer>
           <AddProductButton onClickHandler={onAdd}>
             <AddToCartIcon />

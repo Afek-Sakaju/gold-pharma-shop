@@ -30,7 +30,7 @@ export const TotalPrice = styled.p`
   font-size: 1.35em;
 `;
 
-export const DollarSign = styled.p`
+export const CurrencySign = styled.p`
   margin: 0;
   margin-right: 3px;
   color: #ffbd59;

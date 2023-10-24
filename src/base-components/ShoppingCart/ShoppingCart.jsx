@@ -1,19 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { CURRENCY_SIGN } from '@utils';
 import {
   SelectedItemsContainer,
   CartContainer,
   CartIcon,
   TotalSelected,
   TotalPrice,
-  DollarSign,
+  CurrencySign,
 } from './ShoppingCart.styled';
 
 export default function ShoppingCart({ totalPrice, totalSelected }) {
   return (
     <CartContainer>
-      <DollarSign>$</DollarSign>
+      <CurrencySign>{CURRENCY_SIGN}</CurrencySign>
       <TotalPrice>{totalPrice}</TotalPrice>
       <SelectedItemsContainer>
         <CartIcon />

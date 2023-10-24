@@ -20,3 +20,5 @@ export const TEXT_CONTENT = {
   CREATE_NEW_PRODUCT_BUTTON: 'Add product',
   EDIT_PAGE_TITLE: 'Product Edit Mode',
 };
+
+export const CURRENCY_SIGN = '$';
