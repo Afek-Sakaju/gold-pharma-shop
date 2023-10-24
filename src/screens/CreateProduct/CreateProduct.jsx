@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { v4 as uuid } from 'uuid';
 
 import { Nav, ProductForm } from '@base-components';
-import { ProductsProxy } from '@utils';
+import { ProductsProxy, LOGO_SRC } from '@utils';
 import { PageTitle } from './CreateProduct.styled';
 
 export default function CreateProduct() {
@@ -16,7 +16,7 @@ export default function CreateProduct() {
 
   return (
     <div>
-      <Nav logoUrl="/Afek-Sakaju/grocery-store/shop-logo.png">
+      <Nav logoUrl={LOGO_SRC}>
         <PageTitle>Product Creation</PageTitle>
       </Nav>
       <ProductForm submitButtonLabel="Create" onSubmit={onSubmitHandler} />
