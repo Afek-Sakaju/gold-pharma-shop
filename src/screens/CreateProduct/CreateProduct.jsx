@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { v4 as uuid } from 'uuid';
 
 import { Nav, ProductForm } from '@base-components';
-import { ProductsProxy, LOGO_SRC, BUTTONS_LABELS } from '@utils';
+import { ProductsProxy, LOGO_SRC, BUTTONS_LABELS, NAV_PATHS } from '@utils';
 import { PageTitle } from './CreateProduct.styled';
 
 export default function CreateProduct() {
@@ -11,7 +11,7 @@ export default function CreateProduct() {
 
   const onSubmitHandler = (data) => {
     const isCreated = ProductsProxy?.post({ id: uuid(), ...data });
-    if (isCreated) navigate('/');
+    if (isCreated) navigate(NAV_PATHS.AFTER_PRODUCT_CREATION);
   };
 
   return (

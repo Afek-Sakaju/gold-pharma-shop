@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 
 import { ProductForm, Nav, Loading } from '@base-components';
-import { ProductsProxy, LOGO_SRC, BUTTONS_LABELS } from '@utils';
+import { ProductsProxy, LOGO_SRC, BUTTONS_LABELS, NAV_PATHS } from '@utils';
 import { PageTitle } from './EditProduct.styled';
 
 export default function EditProduct() {
@@ -18,7 +18,7 @@ export default function EditProduct() {
 
   const onSubmitHandler = (data) => {
     const isUpdated = ProductsProxy?.put(data, id);
-    if (isUpdated) navigate('/');
+    if (isUpdated) navigate(NAV_PATHS.AFTER_PRODUCT_UPDATE);
   };
 
   useEffect(() => {

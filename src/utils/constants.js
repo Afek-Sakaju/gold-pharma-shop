@@ -4,6 +4,13 @@ export const SERVER_URL = process.env.REACT_APP_DB_URL;
 export const LOGO_SRC = '/Afek-Sakaju/grocery-store/shop-logo.png';
 
 export const BUTTONS_LABELS = {
-  EDIT_PAGE_SUBMIT: 'Update',
   CREATE_PAGE_SUBMIT: 'Create',
+  EDIT_PAGE_SUBMIT: 'Update',
+};
+
+export const NAV_PATHS = {
+  AFTER_PRODUCT_CREATION: '/',
+  AFTER_PRODUCT_UPDATE: '/',
+  CREATE_NEW_PRODUCT_PAGE: '/product/new',
+  PRODUCT_PATH: '/product',
 };

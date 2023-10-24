@@ -11,7 +11,7 @@ import {
   initProductsAction,
   removeFromShoppingCartAction,
 } from '@store';
-import { ProductsProxy } from '@utils';
+import { ProductsProxy, NAV_PATHS } from '@utils';
 import CreateProductButton from '../CreateProductButton/CreateProductButton';
 import { ProductListContainer } from './ProductList.styled';
 
@@ -48,7 +48,7 @@ function ProductList({
           <Product
             key={id}
             onAdd={() => onAdd(id)}
-            onClick={() => navigate(`/product/${id}`)}
+            onClick={() => navigate(`${NAV_PATHS.PRODUCT_PATH}/${id}`)}
             onRemove={() => onRemove(id)}
             productName={productName}
             price={+price}
