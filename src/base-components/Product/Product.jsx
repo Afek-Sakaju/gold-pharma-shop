@@ -32,32 +32,51 @@ export default function Product({
   productImage,
   productName,
   selectedCount,
+  shouldDisplayButtons,
+  shouldDisplayPrice,
+  shouldDisplayName,
+  shouldDisplayImage,
+  children,
 }) {
+  const shouldDisplayProductContent =
+    shouldDisplayPrice || shouldDisplayName || shouldDisplayButtons;
+
   return (
     <ProductContainer className={className} onClick={onClick} role="none">
       {!!selectedCount && <SelectedCount>({selectedCount})</SelectedCount>}
-      <ProductImage
-        src={productImage}
-        alt={IMAGES_ALTS.PRODUCT_IMAGE}
-        className={COMPONENTS_CLASSES.PRODUCT_IMAGE}
-      />
-      <ProductContentContainer>
-        <ProductName className={COMPONENTS_CLASSES.PRODUCT_NAME}>
-          {productName}
-        </ProductName>
-        <ProductPrice>{`${CURRENCY_SIGN} ${price}`}</ProductPrice>
-        <ButtonsContainer>
-          <AddProductButton onClickHandler={onAdd}>
-            <AddToCartIcon />
-          </AddProductButton>
-          <RemoveProductButton
-            onClickHandler={() => !!selectedCount && onRemove()}
-            isDisabledButton={selectedCount === 0}
-          >
-            <RemoveFromCartIcon />
-          </RemoveProductButton>
-        </ButtonsContainer>
-      </ProductContentContainer>
+      {shouldDisplayImage && (
+        <ProductImage
+          src={productImage}
+          alt={IMAGES_ALTS.PRODUCT_IMAGE}
+          className={COMPONENTS_CLASSES.PRODUCT_IMAGE}
+        />
+      )}
+      {shouldDisplayProductContent && (
+        <ProductContentContainer>
+          {shouldDisplayName && (
+            <ProductName className={COMPONENTS_CLASSES.PRODUCT_NAME}>
+              {productName}
+            </ProductName>
+          )}
+          {shouldDisplayPrice && (
+            <ProductPrice>{`${CURRENCY_SIGN} ${price}`}</ProductPrice>
+          )}
+          {shouldDisplayButtons && (
+            <ButtonsContainer>
+              <AddProductButton onClickHandler={onAdd}>
+                <AddToCartIcon />
+              </AddProductButton>
+              <RemoveProductButton
+                onClickHandler={() => !!selectedCount && onRemove()}
+                isDisabledButton={selectedCount === 0}
+              >
+                <RemoveFromCartIcon />
+              </RemoveProductButton>
+            </ButtonsContainer>
+          )}
+          {children}
+        </ProductContentContainer>
+      )}
     </ProductContainer>
   );
 }
@@ -71,6 +90,10 @@ Product.propTypes = {
   productImage: PropTypes.string,
   productName: PropTypes.string,
   selectedCount: PropTypes.number,
+  shouldDisplayButtons: PropTypes.bool,
+  shouldDisplayPrice: PropTypes.bool,
+  shouldDisplayName: PropTypes.bool,
+  shouldDisplayImage: PropTypes.bool,
 };
 
 Product.defaultProps = {
@@ -82,4 +105,8 @@ Product.defaultProps = {
   productImage: PLACEHOLDER_PRODUCT_IMAGE,
   productName: undefined,
   selectedCount: 0,
+  shouldDisplayButtons: true,
+  shouldDisplayPrice: true,
+  shouldDisplayName: true,
+  shouldDisplayImage: true,
 };
