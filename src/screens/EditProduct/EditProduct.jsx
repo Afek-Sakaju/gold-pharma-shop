@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 
 import { ProductForm, Nav, Loading } from '@base-components';
-import { ProductsProxy, LOGO_SRC } from '@utils';
+import { ProductsProxy, LOGO_SRC, BUTTONS_LABELS } from '@utils';
 import { PageTitle } from './EditProduct.styled';
 
 export default function EditProduct() {
@@ -34,12 +34,12 @@ export default function EditProduct() {
   }, []);
 
   return isDataFetched ? (
-    <div className="product-modifier-container">
+    <div>
       <Nav logoUrl={LOGO_SRC}>
         <PageTitle>Product Edit Mode</PageTitle>
       </Nav>
       <ProductForm
-        submitButtonLabel="Update"
+        submitButtonLabel={BUTTONS_LABELS.EDIT_PAGE_SUBMIT}
         onSubmit={onSubmitHandler}
         productPrice={+productData.price}
         productName={productData.productName}
