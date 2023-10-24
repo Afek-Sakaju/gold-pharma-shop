@@ -14,3 +14,8 @@ export const NAV_PATHS = {
   CREATE_NEW_PRODUCT_PAGE: '/product/new',
   PRODUCT_PATH: '/product',
 };
+
+export const TITLES_TEXT_CONTENT = {
+  CREATE_PAGE: 'Product Creation Mode',
+  EDIT_PAGE: 'Product Edit Mode',
+};

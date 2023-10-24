@@ -2,7 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 
 import { ProductForm, Nav, Loading } from '@base-components';
-import { ProductsProxy, LOGO_SRC, BUTTONS_LABELS, NAV_PATHS } from '@utils';
+import {
+  ProductsProxy,
+  LOGO_SRC,
+  BUTTONS_LABELS,
+  NAV_PATHS,
+  TITLES_TEXT_CONTENT,
+} from '@utils';
 import { PageTitle } from './EditProduct.styled';
 
 export default function EditProduct() {
@@ -36,7 +42,7 @@ export default function EditProduct() {
   return isDataFetched ? (
     <div>
       <Nav logoUrl={LOGO_SRC}>
-        <PageTitle>Product Edit Mode</PageTitle>
+        <PageTitle>{TITLES_TEXT_CONTENT.EDIT_PAGE}</PageTitle>
       </Nav>
       <ProductForm
         submitButtonLabel={BUTTONS_LABELS.EDIT_PAGE_SUBMIT}
