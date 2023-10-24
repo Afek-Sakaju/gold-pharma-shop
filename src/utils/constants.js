@@ -4,7 +4,7 @@ export const REMOVE_BG_API_KEY = process.env.REACT_APP_REMOVE_BG_API_KEY;
 
 export const LOGO_SRC = '/Afek-Sakaju/grocery-store/shop-logo.png';
 export const PLACEHOLDER_PRODUCT_IMAGE =
-  '/Afek-Sakaju/grocery-store/products-images/product-image-placeholder.png';
+  '/Afek-Sakaju/grocery-store/products-images/placeholder-product-image.png';
 
 export const CURRENCY_SIGN = '$';
 export const MIN_PRODUCT_PRICE = 0;
