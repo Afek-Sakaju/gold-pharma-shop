@@ -32,8 +32,6 @@ export const TEXT_CONTENT = {
 export const COMPONENTS_CLASSES = {
   PRODUCT_IMAGE: 'product-image',
   PRODUCT_NAME: 'product-name',
-  DISABLED_BUTTON: 'disabled-button',
-  EMPTY_INPUT_VALUE: 'empty-input-value',
 };
 
 export const IMAGES_ALTS = {
