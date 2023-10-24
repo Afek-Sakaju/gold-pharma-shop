@@ -24,6 +24,9 @@ export const TEXT_CONTENT = {
   CREATE_PAGE_TITLE: 'Product Creation Mode',
   CREATE_NEW_PRODUCT_BUTTON: 'Add product',
   EDIT_PAGE_TITLE: 'Product Edit Mode',
+  UPLOAD_PRODUCT_IMAGE_BUTTON: 'Upload Product Image',
+  CHANGE_PRODUCT_IMAGE_BUTTON: 'Change Product Image',
+  PRODUCT_NAME_INPUT: 'Enter Product Name',
 };
 
 export const COMPONENTS_CLASSES = {

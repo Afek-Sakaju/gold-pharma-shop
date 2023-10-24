@@ -52,8 +52,8 @@ export default function Product({
           </AddProductButton>
           <RemoveProductButton
             onClickHandler={() => !!selectedCount && onRemove()}
-            // eslint-disable-next-line no-extra-boolean-cast
             className={`${
+              // eslint-disable-next-line no-extra-boolean-cast
               !!selectedCount ? '' : COMPONENTS_CLASSES.DISABLED_BUTTON
             }`}
           >

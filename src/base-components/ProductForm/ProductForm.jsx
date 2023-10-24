@@ -8,6 +8,7 @@ import {
   COMPONENTS_CLASSES,
   IMAGES_ALTS,
   COMPONENTS_IDS,
+  TEXT_CONTENT,
 } from '@utils';
 import {
   FormContainer,
@@ -67,7 +68,9 @@ export default function ProductForm({
           isImageEmpty ? COMPONENTS_CLASSES.EMPTY_INPUT_VALUE : ''
         }`}
       >
-        {isImageEmpty ? 'Upload Product Image' : 'Change Product Image'}
+        {isImageEmpty
+          ? TEXT_CONTENT.UPLOAD_PRODUCT_IMAGE_BUTTON
+          : TEXT_CONTENT.CHANGE_PRODUCT_IMAGE_BUTTON}
         <input
           id={COMPONENTS_IDS.UPLOAD_IMAGE_BUTTON}
           hidden
@@ -77,7 +80,7 @@ export default function ProductForm({
       </ImageInput>
       <InputField
         onChange={onProductNameChange}
-        placeholder="Enter Product Name"
+        placeholder={TEXT_CONTENT.PRODUCT_NAME_INPUT}
         type="text"
         value={updatedProductName}
         className={`${isNameEmpty ? COMPONENTS_CLASSES.EMPTY_INPUT_VALUE : ''}`}
