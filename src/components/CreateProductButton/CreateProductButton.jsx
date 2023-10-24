@@ -11,7 +11,7 @@ export default function CreateProductButton() {
   return (
     <Product onClick={() => navigate(NAV_PATHS.CREATE_NEW_PRODUCT_PAGE)}>
       <section>{TEXT_CONTENT.CREATE_NEW_PRODUCT_BUTTON}</section>
-      <CreateIcon size="4em" className="create-icon" />
+      <CreateIcon size="4em" />
     </Product>
   );
 }

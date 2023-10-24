@@ -25,3 +25,15 @@ export const TEXT_CONTENT = {
   CREATE_NEW_PRODUCT_BUTTON: 'Add product',
   EDIT_PAGE_TITLE: 'Product Edit Mode',
 };
+
+export const CLASSES = {
+  PRODUCT_IMAGE: 'product-image',
+  PRODUCT_NAME: 'product-name',
+  DISABLED_BUTTON: 'disabled-button',
+  EMPTY_INPUT_VALUE: 'empty-input-value',
+};
+
+export const IMAGES_ALTS = {
+  SHOP_LOGO: 'Shop-Logo',
+  PRODUCT_IMAGE: 'Product-Image',
+};

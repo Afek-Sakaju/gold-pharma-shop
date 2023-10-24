@@ -5,7 +5,12 @@ import {
   LiaCartArrowDownSolid as RemoveFromCartIcon,
 } from 'react-icons/lia';
 
-import { CURRENCY_SIGN, PLACEHOLDER_PRODUCT_IMAGE } from '@utils';
+import {
+  CURRENCY_SIGN,
+  PLACEHOLDER_PRODUCT_IMAGE,
+  CLASSES,
+  IMAGES_ALTS,
+} from '@utils';
 import {
   AddProductButton,
   ButtonsContainer,
@@ -33,12 +38,14 @@ export default function Product({
       {!!selectedCount && <SelectedCount>({selectedCount})</SelectedCount>}
       <ProductImage
         src={productImage}
-        alt="Product Image"
-        className="product-image"
+        alt={IMAGES_ALTS.PRODUCT_IMAGE}
+        className={CLASSES.PRODUCT_IMAGE}
       />
       <ProductContentContainer>
-        <ProductName className="product-name">{productName}</ProductName>
-        <ProductPrice className="product-price">{`${CURRENCY_SIGN} ${price}`}</ProductPrice>
+        <ProductName className={CLASSES.PRODUCT_NAME}>
+          {productName}
+        </ProductName>
+        <ProductPrice>{`${CURRENCY_SIGN} ${price}`}</ProductPrice>
         <ButtonsContainer>
           <AddProductButton onClickHandler={onAdd}>
             <AddToCartIcon />
@@ -46,7 +53,7 @@ export default function Product({
           <RemoveProductButton
             onClickHandler={() => !!selectedCount && onRemove()}
             // eslint-disable-next-line no-extra-boolean-cast
-            className={`${!!selectedCount ? '' : 'disabled'}`}
+            className={`${!!selectedCount ? '' : CLASSES.DISABLED_BUTTON}`}
           >
             <RemoveFromCartIcon />
           </RemoveProductButton>

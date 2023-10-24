@@ -5,6 +5,8 @@ import {
   removeBgFromImage,
   CURRENCY_SIGN,
   PLACEHOLDER_PRODUCT_IMAGE,
+  CLASSES,
+  IMAGES_ALTS,
 } from '@utils';
 import {
   FormContainer,
@@ -57,10 +59,10 @@ export default function ProductForm({
   const isFormMissingInput = isNameEmpty || isPriceEmpty || isImageEmpty;
   return (
     <FormContainer>
-      <ImageInputDisplay src={updatedImage} alt="Product Image" />
+      <ImageInputDisplay src={updatedImage} alt={IMAGES_ALTS.PRODUCT_IMAGE} />
       <ImageInput
         htmlFor="upload-image"
-        className={`${isImageEmpty ? 'empty-value' : ''}`}
+        className={`${isImageEmpty ? CLASSES.EMPTY_INPUT_VALUE : ''}`}
       >
         {isImageEmpty ? 'Upload Product Image' : 'Change Product Image'}
         <input id="upload-image" hidden type="file" onChange={onImageChange} />
@@ -70,21 +72,23 @@ export default function ProductForm({
         placeholder="Enter Product Name"
         type="text"
         value={updatedProductName}
-        className={`${isNameEmpty ? 'empty-value' : ''}`}
+        className={`${isNameEmpty ? CLASSES.EMPTY_INPUT_VALUE : ''}`}
       />
-      <PriceInputWrapper className={`${isPriceEmpty ? 'empty-value' : ''}`}>
+      <PriceInputWrapper
+        className={`${isPriceEmpty ? CLASSES.EMPTY_INPUT_VALUE : ''}`}
+      >
         {CURRENCY_SIGN}
         <PriceInputField
           onChange={onPriceChange}
           placeholder={productPrice}
           type="text"
           value={updatedPrice}
-          className={`${isPriceEmpty ? 'empty-value' : ''}`}
+          className={`${isPriceEmpty ? CLASSES.EMPTY_INPUT_VALUE : ''}`}
         />
       </PriceInputWrapper>
       <SubmitButton
         label={submitButtonLabel}
-        className={`${isFormMissingInput ? 'disabled' : ''}`}
+        className={`${isFormMissingInput ? CLASSES.DISABLED_BUTTON : ''}`}
         onClickHandler={() => !isFormMissingInput && onSubmit(data)}
       />
       {children}
