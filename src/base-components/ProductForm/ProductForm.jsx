@@ -5,7 +5,6 @@ import {
   removeBgFromImage,
   CURRENCY_SIGN,
   PLACEHOLDER_PRODUCT_IMAGE,
-  COMPONENTS_CLASSES,
   IMAGES_ALTS,
   COMPONENTS_IDS,
   TEXT_CONTENT,
@@ -64,9 +63,7 @@ export default function ProductForm({
       <ImageInputDisplay src={updatedImage} alt={IMAGES_ALTS.PRODUCT_IMAGE} />
       <ImageInput
         htmlFor={COMPONENTS_IDS.UPLOAD_IMAGE_BUTTON}
-        className={`${
-          isImageEmpty ? COMPONENTS_CLASSES.EMPTY_INPUT_VALUE : ''
-        }`}
+        emptyInputValue={isImageEmpty}
       >
         {isImageEmpty
           ? TEXT_CONTENT.UPLOAD_PRODUCT_IMAGE_BUTTON
@@ -83,29 +80,21 @@ export default function ProductForm({
         placeholder={TEXT_CONTENT.PRODUCT_NAME_INPUT}
         type="text"
         value={updatedProductName}
-        className={`${isNameEmpty ? COMPONENTS_CLASSES.EMPTY_INPUT_VALUE : ''}`}
+        emptyInputValue={isNameEmpty}
       />
-      <PriceInputWrapper
-        className={`${
-          isPriceEmpty ? COMPONENTS_CLASSES.EMPTY_INPUT_VALUE : ''
-        }`}
-      >
+      <PriceInputWrapper emptyInputValue={isPriceEmpty}>
         {CURRENCY_SIGN}
         <PriceInputField
           onChange={onPriceChange}
           placeholder={productPrice}
           type="text"
           value={updatedPrice}
-          className={`${
-            isPriceEmpty ? COMPONENTS_CLASSES.EMPTY_INPUT_VALUE : ''
-          }`}
+          emptyInputValue={isPriceEmpty}
         />
       </PriceInputWrapper>
       <SubmitButton
         label={submitButtonLabel}
-        className={`${
-          isFormMissingInput ? COMPONENTS_CLASSES.DISABLED_BUTTON : ''
-        }`}
+        disabledButton={isFormMissingInput}
         onClickHandler={() => !isFormMissingInput && onSubmit(data)}
       />
       {children}

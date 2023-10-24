@@ -52,10 +52,7 @@ export default function Product({
           </AddProductButton>
           <RemoveProductButton
             onClickHandler={() => !!selectedCount && onRemove()}
-            className={`${
-              // eslint-disable-next-line no-extra-boolean-cast
-              !!selectedCount ? '' : COMPONENTS_CLASSES.DISABLED_BUTTON
-            }`}
+            disabledButton={selectedCount === 0}
           >
             <RemoveFromCartIcon />
           </RemoveProductButton>

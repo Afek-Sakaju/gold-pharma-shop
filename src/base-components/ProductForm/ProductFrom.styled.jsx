@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-import { COMPONENTS_CLASSES } from '@utils';
 import Button from '../Button/Button';
 
 export const FormContainer = styled.div`
@@ -31,9 +30,11 @@ export const InputField = styled.input`
   font-size: 1.1em;
   transition: border-color 0.3s ease-in-out;
 
-  &.${COMPONENTS_CLASSES.EMPTY_INPUT_VALUE} {
+  ${({ emptyInputValue }) =>
+    emptyInputValue &&
+    `
     border-color: lightgray;
-  }
+  `}
 `;
 
 export const PriceInputWrapper = styled.div`
@@ -44,9 +45,11 @@ export const PriceInputWrapper = styled.div`
   font-size: 1.4em;
   transition: border-color 0.3s ease-in-out;
 
-  &.${COMPONENTS_CLASSES.EMPTY_INPUT_VALUE} {
+  ${({ emptyInputValue }) =>
+    emptyInputValue &&
+    `
     border-color: lightgray;
-  }
+  `}
 `;
 
 export const PriceInputField = styled.input`
@@ -58,9 +61,11 @@ export const PriceInputField = styled.input`
   text-align: center;
   margin-top: 2px;
 
-  &.${COMPONENTS_CLASSES.EMPTY_INPUT_VALUE} {
+  ${({ emptyInputValue }) =>
+    emptyInputValue &&
+    `
     color: grey;
-  }
+  `}
 `;
 
 export const ImageInputDisplay = styled.img`
@@ -88,10 +93,12 @@ export const ImageInput = styled.label`
   cursor: pointer;
   transition: border-color 0.3s ease-in-out;
 
-  &.${COMPONENTS_CLASSES.EMPTY_INPUT_VALUE} {
+  ${({ emptyInputValue }) =>
+    emptyInputValue &&
+    `
     color: grey;
     border-color: lightgray;
-  }
+  `}
 `;
 
 export const SubmitButton = styled(Button)`
@@ -110,16 +117,22 @@ export const SubmitButton = styled(Button)`
   font-size: 1.15em;
   transition: 0.2s ease-in-out;
 
-  &:hover:not(.${COMPONENTS_CLASSES.DISABLED_BUTTON}) {
+  ${({ disabledButton }) =>
+    !disabledButton &&
+    `
+    &:hover {
     color: #ffffff;
     background-color: #ffbd59;
     border: 1px solid #ffbc58d6;
     box-shadow: 0px 3px 6px rgba(255, 188, 88, 0.4),
       0px 3px 6px rgba(255, 188, 88, 0.3);
   }
+  `}
 
-  &.${COMPONENTS_CLASSES.DISABLED_BUTTON} {
+  ${({ disabledButton }) =>
+    disabledButton &&
+    `
     cursor: default;
     opacity: 0.6;
-  }
+  `}
 `;
