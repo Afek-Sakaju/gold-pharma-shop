@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import {
-  removeBgFromImage,
-  CURRENCY_SIGN,
-  PLACEHOLDER_PRODUCT_IMAGE,
-  IMAGES_ALTS,
   COMPONENTS_IDS,
+  CURRENCY_SIGN,
+  IMAGES_ALTS,
+  isProductPriceValid,
+  PLACEHOLDER_PRODUCT_IMAGE,
+  removeBgFromImage,
   TEXT_CONTENT,
 } from '@utils';
 import {
@@ -37,8 +38,8 @@ export default function ProductForm({
 
   const onPriceChange = (event) => {
     const price = +event.target.value;
-    const isValidPrice =
-      typeof price === 'number' && price >= 0 && price <= 999;
+    const isValidPrice = isProductPriceValid(price);
+
     setUpdatedPrice((prevPrice) => (isValidPrice ? price : prevPrice));
   };
 

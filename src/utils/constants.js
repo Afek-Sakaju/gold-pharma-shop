@@ -7,6 +7,8 @@ export const PLACEHOLDER_PRODUCT_IMAGE =
   '/Afek-Sakaju/grocery-store/cucumber.jpg';
 
 export const CURRENCY_SIGN = '$';
+export const MIN_PRODUCT_PRICE = 0;
+export const MAX_PRODUCT_PRICE = 999;
 
 export const BUTTONS_LABELS = {
   CREATE_PAGE_SUBMIT: 'Create',
