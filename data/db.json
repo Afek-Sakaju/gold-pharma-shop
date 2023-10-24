@@ -1,6 +1,83 @@
 {
   "ProductsData": [
     {
+      "productName": "Throne B-Complex",
+      "price": 20,
+      "productImage": "/Afek-Sakaju/grocery-store/products-images/throne-b-complex.png",
+      "company": "Throne",
+      "id": "12d1a6e1-5a1c-4c4c-84ba-1c6dfc45d2c4"
+    },
+    {
+      "productName": "Throne GI-Relief",
+      "price": 40,
+      "productImage": "/Afek-Sakaju/grocery-store/products-images/throne-gi-relief.png",
+      "company": "Throne",
+      "id": "ba4a6e7e-9a36-4cfa-84ba-1c6dfc45d2c4"
+    },
+    {
+      "productName": "Throne Iron Bisglycinate",
+      "price": 15,
+      "productImage": "/Afek-Sakaju/grocery-store/products-images/throne-iron-bisglycinate.png",
+      "company": "Throne",
+      "id": "c1aa6e71-9a36-4cfa-84ba-1c6dfc45d2c4"
+    },
+    {
+      "productName": "Throne NAC",
+      "price": 31,
+      "productImage": "/Afek-Sakaju/grocery-store/products-images/throne-nac.png",
+      "company": "Throne",
+      "id": "d8b8a8e7-9a36-4cfa-84ba-1c6dfc45d2c4"
+    },
+    {
+      "productName": "Throne Selenium",
+      "price": 12,
+      "productImage": "/Afek-Sakaju/grocery-store/products-images/throne-selenium.png",
+      "company": "Throne",
+      "id": "ea9c8a7b-9a36-4cfa-84ba-1c6dfc45d2c4"
+    },
+    {
+      "productName": "Throne Liver Cleanse",
+      "price": 22,
+      "productImage": "/Afek-Sakaju/grocery-store/products-images/throne-liver-cleanse.png",
+      "company": "Throne",
+      "id": "fbd0b8c8-9a36-4cfa-84ba-1c6dfc45d2c4"
+    },
+    {
+      "productName": "Throne Vitamin C with Flavonoids",
+      "price": 12,
+      "productImage": "/Afek-Sakaju/grocery-store/products-images/throne-vitamin-c.png",
+      "company": "Throne",
+      "id": "fec2c8a4-9a36-4cfa-84ba-1c6dfc45d2c4"
+    },
+    {
+      "productName": "Betain HCL",
+      "price": 27,
+      "productImage": "/Afek-Sakaju/grocery-store/products-images/natures-life-betain-hcl.png",
+      "company": "Nature's Life",
+      "id": "d609cb88-8c6f-4c1e-8d6d-8e3a5cf8b4f0"
+    },
+    {
+      "productName": "Magnesium Malate",
+      "price": 13,
+      "productImage": "/Afek-Sakaju/grocery-store/products-images/natures-life-magnesium-malate.png",
+      "company": "Nature's Life",
+      "id": "1ecaa156-4a69-4cc1-838d-42edca962e4c"
+    },
+    {
+      "productName": "Potassium",
+      "price": 11,
+      "productImage": "/Afek-Sakaju/grocery-store/products-images/natures-life-potassium.jpg",
+      "company": "Nature's Life",
+      "id": "de68caac-9cf2-4a0c-9cfa-1c6efc70dcfa"
+    },
+    {
+      "productName": "Vitamin K2",
+      "price": 22,
+      "productImage": "/Afek-Sakaju/grocery-store/products-images/natures-life-vitamin-k2.png",
+      "company": "Nature's Life",
+      "id": "6a2e8f9b-9a36-4cfa-84ba-1c6dfc45d2c4"
+    },
+    {
       "productName": "Vitamin D3",
       "price": 13,
       "productImage": "/Afek-Sakaju/grocery-store/products-images/countrys-life-vitamin-d3.png",
@@ -69,83 +146,6 @@
       "productImage": "/Afek-Sakaju/grocery-store/products-images/dr-mercola-vitamin-e.png",
       "company": "Dr. Mercola",
       "id": "b3c8ca43-9f3c-4b1d-8bfa-1c6dca0d4d2c"
-    },
-    {
-      "productName": "Betain HCL",
-      "price": 27,
-      "productImage": "/Afek-Sakaju/grocery-store/products-images/natures-life-betain-hcl.png",
-      "company": "Nature's Life",
-      "id": "d609cb88-8c6f-4c1e-8d6d-8e3a5cf8b4f0"
-    },
-    {
-      "productName": "Magnesium Malate",
-      "price": 13,
-      "productImage": "/Afek-Sakaju/grocery-store/products-images/natures-life-magnesium-malate.png",
-      "company": "Nature's Life",
-      "id": "1ecaa156-4a69-4cc1-838d-42edca962e4c"
-    },
-    {
-      "productName": "Potassium",
-      "price": 11,
-      "productImage": "/Afek-Sakaju/grocery-store/products-images/natures-life-potassium.jpg",
-      "company": "Nature's Life",
-      "id": "de68caac-9cf2-4a0c-9cfa-1c6efc70dcfa"
-    },
-    {
-      "productName": "Vitamin K2",
-      "price": 22,
-      "productImage": "/Afek-Sakaju/grocery-store/products-images/natures-life-vitamin-k2.png",
-      "company": "Nature's Life",
-      "id": "6a2e8f9b-9a36-4cfa-84ba-1c6dfc45d2c4"
-    },
-    {
-      "productName": "Throne B-Complex",
-      "price": 20,
-      "productImage": "/Afek-Sakaju/grocery-store/products-images/throne-b-complex.png",
-      "company": "Throne",
-      "id": "12d1a6e1-5a1c-4c4c-84ba-1c6dfc45d2c4"
-    },
-    {
-      "productName": "Throne GI-Relief",
-      "price": 40,
-      "productImage": "/Afek-Sakaju/grocery-store/products-images/throne-gi-relief.png",
-      "company": "Throne",
-      "id": "ba4a6e7e-9a36-4cfa-84ba-1c6dfc45d2c4"
-    },
-    {
-      "productName": "Throne Iron Bisglycinate",
-      "price": 15,
-      "productImage": "/Afek-Sakaju/grocery-store/products-images/throne-iron-bisglycinate.png",
-      "company": "Throne",
-      "id": "c1aa6e71-9a36-4cfa-84ba-1c6dfc45d2c4"
-    },
-    {
-      "productName": "Throne NAC",
-      "price": 31,
-      "productImage": "/Afek-Sakaju/grocery-store/products-images/throne-nac.png",
-      "company": "Throne",
-      "id": "d8b8a8e7-9a36-4cfa-84ba-1c6dfc45d2c4"
-    },
-    {
-      "productName": "Throne Selenium",
-      "price": 12,
-      "productImage": "/Afek-Sakaju/grocery-store/products-images/throne-selenium.png",
-      "company": "Throne",
-      "id": "ea9c8a7b-9a36-4cfa-84ba-1c6dfc45d2c4"
-    },
-    {
-      "productName": "Throne Liver Cleanse",
-      "price": 22,
-      "productImage": "/Afek-Sakaju/grocery-store/products-images/throne-liver-cleanse.png",
-      "company": "Throne",
-      "id": "fbd0b8c8-9a36-4cfa-84ba-1c6dfc45d2c4"
-    },
-    {
-      "productName": "Throne Vitamin C with Flavonoids",
-      "price": 12,
-      "productImage": "/Afek-Sakaju/grocery-store/products-images/throne-vitamin-c.png",
-      "company": "Throne",
-      "id": "fec2c8a4-9a36-4cfa-84ba-1c6dfc45d2c4"
     }
   ]
 }
