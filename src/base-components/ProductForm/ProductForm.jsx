@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-import { removeBgFromImage, CURRENCY_SIGN } from '@utils';
+import {
+  removeBgFromImage,
+  CURRENCY_SIGN,
+  PLACEHOLDER_PRODUCT_IMAGE,
+} from '@utils';
 import {
   FormContainer,
   SubmitButton,
@@ -47,8 +51,7 @@ export default function ProductForm({
     productImage: updatedImage,
   };
 
-  const isImageEmpty =
-    updatedImage === '/Afek-Sakaju/grocery-store/cucumber.jpg';
+  const isImageEmpty = updatedImage === PLACEHOLDER_PRODUCT_IMAGE;
   const isPriceEmpty = !updatedPrice;
   const isNameEmpty = !updatedProductName;
   const isFormMissingInput = isNameEmpty || isPriceEmpty || isImageEmpty;
@@ -101,6 +104,6 @@ ProductForm.defaultProps = {
   onSubmit: undefined,
   productName: '',
   productPrice: 0,
-  productImage: '/Afek-Sakaju/grocery-store/cucumber.jpg',
+  productImage: PLACEHOLDER_PRODUCT_IMAGE,
   submitButtonLabel: undefined,
 };

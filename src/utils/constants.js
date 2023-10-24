@@ -22,3 +22,6 @@ export const TEXT_CONTENT = {
 };
 
 export const CURRENCY_SIGN = '$';
+
+export const PLACEHOLDER_PRODUCT_IMAGE =
+  '/Afek-Sakaju/grocery-store/cucumber.jpg';

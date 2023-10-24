@@ -5,7 +5,7 @@ import {
   LiaCartArrowDownSolid as RemoveFromCartIcon,
 } from 'react-icons/lia';
 
-import { CURRENCY_SIGN } from '@utils';
+import { CURRENCY_SIGN, PLACEHOLDER_PRODUCT_IMAGE } from '@utils';
 import {
   AddProductButton,
   ButtonsContainer,
@@ -73,7 +73,7 @@ Product.defaultProps = {
   onClick: undefined,
   onRemove: undefined,
   price: 0,
-  productImage: '/Afek-Sakaju/grocery-store/cucumber.jpg',
+  productImage: PLACEHOLDER_PRODUCT_IMAGE,
   productName: undefined,
   selectedCount: 0,
 };
