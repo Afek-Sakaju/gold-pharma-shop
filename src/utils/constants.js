@@ -1,6 +1,12 @@
 export const SERVER_URL = process.env.REACT_APP_DB_URL;
+export const REMOVE_BG_API_URL = process.env.REACT_APP_REMOVE_BG_API_URL;
+export const REMOVE_BG_API_KEY = process.env.REACT_APP_REMOVE_BG_API_KEY;
 
 export const LOGO_SRC = '/Afek-Sakaju/grocery-store/shop-logo.png';
+export const PLACEHOLDER_PRODUCT_IMAGE =
+  '/Afek-Sakaju/grocery-store/cucumber.jpg';
+
+export const CURRENCY_SIGN = '$';
 
 export const BUTTONS_LABELS = {
   CREATE_PAGE_SUBMIT: 'Create',
@@ -19,8 +25,3 @@ export const TEXT_CONTENT = {
   CREATE_NEW_PRODUCT_BUTTON: 'Add product',
   EDIT_PAGE_TITLE: 'Product Edit Mode',
 };
-
-export const CURRENCY_SIGN = '$';
-
-export const PLACEHOLDER_PRODUCT_IMAGE =
-  '/Afek-Sakaju/grocery-store/cucumber.jpg';

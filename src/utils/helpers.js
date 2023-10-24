@@ -1,3 +1,5 @@
+import { REMOVE_BG_API_URL, REMOVE_BG_API_KEY } from './constants';
+
 export const blobToBase64 = (blob) => {
   return new Promise((resolve) => {
     const reader = new FileReader();
@@ -11,11 +13,9 @@ export const removeBgFromImage = async (image) => {
   formData.append('image_file', image);
   formData.append('size', 'auto');
 
-  const apiKey = process.env.REACT_APP_REMOVE_BG_API_KEY;
-
-  const transparentBgImage = fetch('https://api.remove.bg/v1.0/removebg', {
+  const transparentBgImage = fetch(REMOVE_BG_API_URL, {
     method: 'POST',
-    headers: { 'X-Api-Key': apiKey },
+    headers: { 'X-Api-Key': REMOVE_BG_API_KEY },
     body: formData,
   })
     .then((res) => res.blob())
