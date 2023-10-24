@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+import { COMPONENTS_CLASSES } from '@utils';
 import Button from '../Button/Button';
 
 export const ProductContainer = styled.div`
@@ -21,11 +22,11 @@ export const ProductContainer = styled.div`
   overflow: hidden;
 
   &:hover {
-    .product-image {
+    .${COMPONENTS_CLASSES.PRODUCT_IMAGE} {
       transform: scale(1.17);
     }
 
-    .product-name {
+    .${COMPONENTS_CLASSES.PRODUCT_NAME} {
       &::before {
         transform-origin: left;
         transform: scaleX(1);
