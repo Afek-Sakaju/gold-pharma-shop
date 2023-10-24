@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 
 import { COMPONENTS_CLASSES } from '@utils';
@@ -8,9 +7,9 @@ export const ProductContainer = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  min-width: 260px;
-  max-width: 260px;
-  height: 275px;
+  min-width: 270px;
+  max-width: 270px;
+  height: 285px;
   flex: 1 1 auto;
   border: 1px solid rgba(black, 0.2);
   border-radius: 74% 26% 68% 32% / 26% 66% 34% 74%;
@@ -24,7 +23,7 @@ export const ProductContainer = styled.div`
 
   &:hover {
     .${COMPONENTS_CLASSES.PRODUCT_IMAGE} {
-      transform: scale(1.17);
+      transform: scale(1.16);
     }
 
     .${COMPONENTS_CLASSES.PRODUCT_NAME} {
@@ -40,7 +39,7 @@ export const ProductContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0.3em 0.7em 0.8em 0.7em;
+  margin-top: 1em;
   z-index: 2;
 `;
 
@@ -74,23 +73,22 @@ export const ProductName = styled.p`
 export const ProductPrice = styled.p`
   font-size: 1em;
   user-select: none;
-  margin-top: 4px;
-  margin-bottom: 5px;
+  margin: 10px 6px 0 0;
 `;
 
 export const ProductImage = styled.img`
   display: flex;
-  width: 60%;
-  height: 60%;
+  height: 47%;
   justify-self: center;
   align-self: center;
+  margin-top: 20px;
   transition: transform 0.25s ease-in-out;
 `;
 
 export const AddProductButton = styled(Button)`
   position: absolute;
-  top: -1.6px;
-  left: 122px;
+  top: 7px;
+  left: 138px;
   justify-content: space-between;
   gap: 10px;
   padding: 5.5px;
@@ -112,49 +110,44 @@ export const AddProductButton = styled(Button)`
   }
 `;
 
-export const RemoveProductButton = styled(({ isDisabledButton, ...props }) => (
-  // eslint-disable-next-line react/jsx-props-no-spreading
-  <Button {...props} />
-))`
-  position: absolute;
-  top: -1.6px;
-  left: 74px;
-  justify-content: space-between;
-  gap: 10px;
-  padding: 5.5px;
-  color: #fe5a3d;
-  background-color: #fafafa;
-  border: 1px solid #fe5a3de3;
-  border-radius: 74% 26% 68% 32% / 24% 59% 41% 76%;
-  box-shadow: 0px 2.5px 5px rgba(254, 90, 61, 0.2),
-    0px 2.5px 5px rgba(254, 90, 61, 0.1);
-  font-size: 1.4em;
-  transition: 0.23s ease-in-out;
+export const RemoveProductButton = styled(Button).withConfig({
+  shouldForwardProp: (prop) => prop !== 'isDisabledButton',
+})(({ isDisabledButton }) => ({
+  position: 'absolute',
+  top: '7px',
+  left: '90px',
+  justifyContent: 'space-between',
+  gap: '10px',
+  padding: '5.5px',
+  color: '#fe5a3d',
+  backgroundColor: '#fafafa',
+  border: '1px solid #fe5a3de3',
+  borderRadius: '74% 26% 68% 32% / 24% 59% 41% 76%',
+  boxShadow:
+    '0px 2.5px 5px rgba(254, 90, 61, 0.2), 0px 2.5px 5px rgba(254, 90, 61, 0.1)',
+  fontSize: '1.4em',
+  transition: '0.23s ease-in-out',
 
-  ${({ isDisabledButton }) =>
-    !isDisabledButton &&
-    `
-		&:hover {
-    	color: #fafafa;
-    	background-color: #fe5a3de3;
-    	border: 1px solid #fe5a3d;
-    	box-shadow: 0px 3px 6px rgba(254, 90, 61, 0.3),
-      0px 3px 6px rgba(254, 90, 61, 0.2);
-  	}
-  `}
-
-  ${({ isDisabledButton }) =>
-    isDisabledButton &&
-    `
-    	cursor: default;
-    	opacity: 0.6;
-  `}
-`;
+  ...(isDisabledButton
+    ? {
+        cursor: 'default',
+        opacity: '0.6',
+      }
+    : {
+        '&:hover': {
+          color: '#fafafa',
+          backgroundColor: '#fe5a3de3',
+          border: '1px solid #fe5a3d',
+          boxShadow:
+            '0px 3px 6px rgba(254, 90, 61, 0.3), 0px 3px 6px rgba(254, 90, 61, 0.2)',
+        },
+      }),
+}));
 
 export const SelectedCount = styled.p`
   position: absolute;
-  top: -11px;
-  right: 50px;
+  top: -8px;
+  right: 56px;
   z-index: 2;
   font-size: 0.95em;
   color: #787878;
