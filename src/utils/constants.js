@@ -15,7 +15,7 @@ export const NAV_PATHS = {
   PRODUCT_PATH: '/product',
 };
 
-export const TITLES_TEXT_CONTENT = {
-  CREATE_PAGE: 'Product Creation Mode',
-  EDIT_PAGE: 'Product Edit Mode',
+export const TEXT_CONTENT = {
+  CREATE_PAGE_TITLE: 'Product Creation Mode',
+  EDIT_PAGE_TITLE: 'Product Edit Mode',
 };

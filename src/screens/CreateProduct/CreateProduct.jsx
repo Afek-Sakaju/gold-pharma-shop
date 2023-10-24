@@ -8,7 +8,7 @@ import {
   LOGO_SRC,
   BUTTONS_LABELS,
   NAV_PATHS,
-  TITLES_TEXT_CONTENT,
+  TEXT_CONTENT,
 } from '@utils';
 import { PageTitle } from './CreateProduct.styled';
 
@@ -23,7 +23,7 @@ export default function CreateProduct() {
   return (
     <div>
       <Nav logoUrl={LOGO_SRC}>
-        <PageTitle>{TITLES_TEXT_CONTENT.CREATE_PAGE}</PageTitle>
+        <PageTitle>{TEXT_CONTENT.CREATE_PAGE_TITLE}</PageTitle>
       </Nav>
       <ProductForm
         submitButtonLabel={BUTTONS_LABELS.CREATE_PAGE_SUBMIT}

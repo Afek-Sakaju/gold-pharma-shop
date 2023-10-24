@@ -7,7 +7,7 @@ import {
   LOGO_SRC,
   BUTTONS_LABELS,
   NAV_PATHS,
-  TITLES_TEXT_CONTENT,
+  TEXT_CONTENT,
 } from '@utils';
 import { PageTitle } from './EditProduct.styled';
 
@@ -42,7 +42,7 @@ export default function EditProduct() {
   return isDataFetched ? (
     <div>
       <Nav logoUrl={LOGO_SRC}>
-        <PageTitle>{TITLES_TEXT_CONTENT.EDIT_PAGE}</PageTitle>
+        <PageTitle>{TEXT_CONTENT.EDIT_PAGE_TITLE}</PageTitle>
       </Nav>
       <ProductForm
         submitButtonLabel={BUTTONS_LABELS.EDIT_PAGE_SUBMIT}
