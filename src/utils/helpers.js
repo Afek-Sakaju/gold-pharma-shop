@@ -6,7 +6,6 @@ export const blobToBase64 = (blob) => {
   });
 };
 
-// eslint-disable-next-line import/prefer-default-export
 export const removeBgFromImage = async (image) => {
   const formData = new FormData();
   formData.append('image_file', image);
