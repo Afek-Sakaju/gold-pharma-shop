@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from 'styled-components';
 
 import { COMPONENTS_CLASSES } from '@utils';
@@ -111,7 +112,10 @@ export const AddProductButton = styled(Button)`
   }
 `;
 
-export const RemoveProductButton = styled(Button)`
+export const RemoveProductButton = styled(({ isDisabledButton, ...props }) => (
+  // eslint-disable-next-line react/jsx-props-no-spreading
+  <Button {...props} />
+))`
   position: absolute;
   top: -1.6px;
   left: 74px;
@@ -127,8 +131,8 @@ export const RemoveProductButton = styled(Button)`
   font-size: 1.4em;
   transition: 0.23s ease-in-out;
 
-  ${({ disabledButton }) =>
-    !disabledButton &&
+  ${({ isDisabledButton }) =>
+    !isDisabledButton &&
     `
 		&:hover {
     	color: #fafafa;
@@ -139,8 +143,8 @@ export const RemoveProductButton = styled(Button)`
   	}
   `}
 
-  ${({ disabledButton }) =>
-    disabledButton &&
+  ${({ isDisabledButton }) =>
+    isDisabledButton &&
     `
     	cursor: default;
     	opacity: 0.6;

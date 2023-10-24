@@ -64,7 +64,7 @@ export default function ProductForm({
       <ImageInputDisplay src={updatedImage} alt={IMAGES_ALTS.PRODUCT_IMAGE} />
       <ImageInput
         htmlFor={COMPONENTS_IDS.UPLOAD_IMAGE_BUTTON}
-        emptyInputValue={isImageEmpty}
+        isEmptyInputValue={isImageEmpty}
       >
         {isImageEmpty
           ? TEXT_CONTENT.UPLOAD_PRODUCT_IMAGE_BUTTON
@@ -81,21 +81,21 @@ export default function ProductForm({
         placeholder={TEXT_CONTENT.PRODUCT_NAME_INPUT}
         type="text"
         value={updatedProductName}
-        emptyInputValue={isNameEmpty}
+        isEmptyInputValue={isNameEmpty}
       />
-      <PriceInputWrapper emptyInputValue={isPriceEmpty}>
+      <PriceInputWrapper isEmptyInputValue={isPriceEmpty}>
         {CURRENCY_SIGN}
         <PriceInputField
           onChange={onPriceChange}
           placeholder={productPrice}
           type="text"
           value={updatedPrice}
-          emptyInputValue={isPriceEmpty}
+          isEmptyInputValue={isPriceEmpty}
         />
       </PriceInputWrapper>
       <SubmitButton
         label={submitButtonLabel}
-        disabledButton={isFormMissingInput}
+        isDisabledButton={isFormMissingInput}
         onClickHandler={() => !isFormMissingInput && onSubmit(data)}
       />
       {children}

@@ -52,7 +52,7 @@ export default function Product({
           </AddProductButton>
           <RemoveProductButton
             onClickHandler={() => !!selectedCount && onRemove()}
-            disabledButton={selectedCount === 0}
+            isDisabledButton={selectedCount === 0}
           >
             <RemoveFromCartIcon />
           </RemoveProductButton>
