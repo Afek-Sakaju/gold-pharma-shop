@@ -18,7 +18,7 @@ export const removeBgFromImage = async (image) => {
     headers: { 'X-Api-Key': REMOVE_BG_API_KEY },
     body: formData,
   })
-    .then((res) => res.blob())
+    .then((res) => res?.blob())
     .then((blob) => {
       const imageBase64 = blobToBase64(blob);
       return imageBase64;

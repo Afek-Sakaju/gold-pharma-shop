@@ -10,10 +10,12 @@ export default class BaseProxy {
 
     await fetch(requestUrl)
       .then((res) => {
-        if (!res.ok) {
-          throw Error(`error:${res.status},method:${method},url:${requestUrl}`);
+        if (!res?.ok) {
+          throw Error(
+            `error:${res?.status},method:${method},url:${requestUrl}`
+          );
         }
-        return res.json();
+        return res?.json();
       })
       .then((data) => {
         response = data;
@@ -33,10 +35,12 @@ export default class BaseProxy {
 
     await fetch(requestUrl)
       .then((res) => {
-        if (!res.ok) {
-          throw Error(`error:${res.status},method:${method},url:${requestUrl}`);
+        if (!res?.ok) {
+          throw Error(
+            `error:${res?.status},method:${method},url:${requestUrl}`
+          );
         }
-        return res.json();
+        return res?.json();
       })
       .then((data) => {
         response = data;
@@ -60,10 +64,12 @@ export default class BaseProxy {
       body: JSON.stringify(data),
     })
       .then((res) => {
-        if (!res.ok) {
-          throw Error(`error:${res.status},method:${method},url:${requestUrl}`);
+        if (!res?.ok) {
+          throw Error(
+            `error:${res?.status},method:${method},url:${requestUrl}`
+          );
         }
-        return res.json();
+        return res?.json();
       })
       .then(() => {
         response = true;
@@ -87,10 +93,12 @@ export default class BaseProxy {
       body: JSON.stringify(data),
     })
       .then((res) => {
-        if (!res.ok) {
-          throw Error(`error:${res.status},method:${method},url:${requestUrl}`);
+        if (!res?.ok) {
+          throw Error(
+            `error:${res?.status},method:${method},url:${requestUrl}`
+          );
         }
-        return res.json();
+        return res?.json();
       })
       .then(() => {
         response = true;
@@ -111,10 +119,12 @@ export default class BaseProxy {
 
     await fetch(requestUrl, { method })
       .then((res) => {
-        if (!res.ok) {
-          throw Error(`error:${res.status},method:${method},url:${requestUrl}`);
+        if (!res?.ok) {
+          throw Error(
+            `error:${res?.status},method:${method},url:${requestUrl}`
+          );
         }
-        return res.json();
+        return res?.json();
       })
       .then(() => {
         response = true;
