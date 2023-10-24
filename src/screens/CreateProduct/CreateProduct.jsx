@@ -16,7 +16,7 @@ export default function CreateProduct() {
   const navigate = useNavigate();
 
   const onSubmitHandler = (data) => {
-    const isCreated = ProductsProxy?.post({ id: uuid(), ...data });
+    const isCreated = ProductsProxy.post({ id: uuid(), ...data });
     if (isCreated) navigate(NAV_PATHS.AFTER_PRODUCT_CREATION);
   };
 

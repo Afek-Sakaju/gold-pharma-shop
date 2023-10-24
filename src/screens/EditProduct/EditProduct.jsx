@@ -23,7 +23,7 @@ export default function EditProduct() {
   });
 
   const onSubmitHandler = (data) => {
-    const isUpdated = ProductsProxy?.put(data, id);
+    const isUpdated = ProductsProxy.put(data, id);
     if (isUpdated) navigate(NAV_PATHS.AFTER_PRODUCT_UPDATE);
   };
 
