@@ -61,7 +61,7 @@ export const ProductName = styled.p`
     width: 100%;
     height: 1px;
     border-radius: 4px;
-    background-color: #4e97207b;
+    background-color: #a4a4a4;
     bottom: 0;
     left: 0;
     transform-origin: right;
