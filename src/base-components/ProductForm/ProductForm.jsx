@@ -13,11 +13,12 @@ import {
 import {
   FormContainer,
   SubmitButton,
-  InputField,
+  TextInputField,
   PriceInputWrapper,
   PriceInputField,
   ImageInput,
   ImageInputDisplay,
+  ProductContentContainer,
 } from './ProductFrom.styled';
 
 export default function ProductForm({
@@ -27,6 +28,7 @@ export default function ProductForm({
   productPrice,
   productImage,
   submitButtonLabel,
+  isReadOnlyMode,
 }) {
   const [updatedProductName, setUpdatedProductName] = useState(productName);
   const [updatedPrice, setUpdatedPrice] = useState(productPrice);
@@ -61,43 +63,59 @@ export default function ProductForm({
   const isFormMissingInput = isNameEmpty || isPriceEmpty || isImageEmpty;
   return (
     <FormContainer>
-      <ImageInputDisplay src={updatedImage} alt={IMAGES_ALTS.PRODUCT_IMAGE} />
-      <ImageInput
-        htmlFor={COMPONENTS_IDS.UPLOAD_IMAGE_BUTTON}
-        isEmptyInputValue={isImageEmpty}
-      >
-        {isImageEmpty
-          ? TEXT_CONTENT.UPLOAD_PRODUCT_IMAGE_BUTTON
-          : TEXT_CONTENT.CHANGE_PRODUCT_IMAGE_BUTTON}
-        <input
-          id={COMPONENTS_IDS.UPLOAD_IMAGE_BUTTON}
-          hidden
-          type="file"
-          onChange={onImageChange}
-        />
-      </ImageInput>
-      <InputField
-        onChange={onProductNameChange}
-        placeholder={TEXT_CONTENT.PRODUCT_NAME_INPUT}
-        type="text"
-        value={updatedProductName}
-        isEmptyInputValue={isNameEmpty}
+      <ImageInputDisplay
+        isReadOnlyMode={isReadOnlyMode}
+        src={updatedImage}
+        alt={IMAGES_ALTS.PRODUCT_IMAGE}
       />
-      <PriceInputWrapper isEmptyInputValue={isPriceEmpty}>
-        {CURRENCY_SIGN}
-        <PriceInputField
-          onChange={onPriceChange}
-          placeholder={productPrice}
+      <ProductContentContainer>
+        {!isReadOnlyMode && (
+          <ImageInput
+            htmlFor={COMPONENTS_IDS.UPLOAD_IMAGE_BUTTON}
+            isEmptyInputValue={isImageEmpty}
+          >
+            {isImageEmpty
+              ? TEXT_CONTENT.UPLOAD_PRODUCT_IMAGE_BUTTON
+              : TEXT_CONTENT.CHANGE_PRODUCT_IMAGE_BUTTON}
+            <input
+              id={COMPONENTS_IDS.UPLOAD_IMAGE_BUTTON}
+              hidden
+              type="file"
+              onChange={onImageChange}
+            />
+          </ImageInput>
+        )}
+        <TextInputField
+          onChange={onProductNameChange}
+          placeholder={TEXT_CONTENT.PRODUCT_NAME_INPUT}
           type="text"
-          value={updatedPrice}
-          isEmptyInputValue={isPriceEmpty}
+          value={updatedProductName}
+          isEmptyInputValue={isNameEmpty}
+          isReadOnlyMode={isReadOnlyMode}
+          readOnly={isReadOnlyMode}
         />
-      </PriceInputWrapper>
-      <SubmitButton
-        label={submitButtonLabel}
-        isDisabledButton={isFormMissingInput}
-        onClickHandler={() => !isFormMissingInput && onSubmit(data)}
-      />
+        <PriceInputWrapper
+          isEmptyInputValue={isPriceEmpty}
+          isReadOnlyMode={isReadOnlyMode}
+        >
+          {CURRENCY_SIGN}
+          <PriceInputField
+            onChange={onPriceChange}
+            placeholder={productPrice}
+            type="text"
+            value={updatedPrice}
+            isEmptyInputValue={isPriceEmpty}
+            readOnly={isReadOnlyMode}
+          />
+        </PriceInputWrapper>
+      </ProductContentContainer>
+      {!isReadOnlyMode && (
+        <SubmitButton
+          label={submitButtonLabel}
+          isDisabledButton={isFormMissingInput}
+          onClickHandler={() => !isFormMissingInput && onSubmit(data)}
+        />
+      )}
       {children}
     </FormContainer>
   );
@@ -105,16 +123,18 @@ export default function ProductForm({
 
 ProductForm.propTypes = {
   onSubmit: PropTypes.func,
+  productImage: PropTypes.string,
   productName: PropTypes.string,
   productPrice: PropTypes.number,
-  productImage: PropTypes.string,
+  isReadOnlyMode: PropTypes.bool,
   submitButtonLabel: PropTypes.string,
 };
 
 ProductForm.defaultProps = {
   onSubmit: undefined,
+  productImage: PLACEHOLDER_PRODUCT_IMAGE,
   productName: '',
   productPrice: 0,
-  productImage: PLACEHOLDER_PRODUCT_IMAGE,
+  isReadOnlyMode: undefined,
   submitButtonLabel: undefined,
 };

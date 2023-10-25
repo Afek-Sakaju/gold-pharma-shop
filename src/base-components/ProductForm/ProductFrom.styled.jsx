@@ -7,6 +7,7 @@ export const FormContainer = styled.div`
   height: 560px;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   padding: 40px 0;
   align-items: center;
   margin: 60px auto;
@@ -16,44 +17,58 @@ export const FormContainer = styled.div`
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-  user-select: none;
   overflow: hidden;
 `;
 
-export const ImageInputDisplay = styled.img`
-  min-width: 270px;
-  min-height: 261px;
-  max-width: 270px;
-  max-height: 261px;
-  z-index: 1;
-  transition: transform 0.3s ease-in-out;
-  &:hover {
-    transform: scale(1.17);
-  }
+export const ProductContentContainer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin-top: 13px;
 `;
 
-export const InputField = styled('input').withConfig({
-  shouldForwardProp: (prop) => prop !== 'isEmptyInputValue',
-})(({ isEmptyInputValue }) => ({
-  width: '177px',
-  margin: '36px 0',
+export const ImageInputDisplay = styled('img').withConfig({
+  shouldForwardProp: (prop) => prop !== 'isReadOnlyMode',
+})(({ isReadOnlyMode }) => ({
+  ...(!isReadOnlyMode ? { minHeight: '261px' } : { minHeight: '305px' }),
+  ...(!isReadOnlyMode ? { maxHeight: '261px' } : { maxHeight: '305px' }),
+  zIndex: '1',
+  transition: 'transform 0.3s ease-in-out',
+
+  '&:hover': {
+    ...(!isReadOnlyMode
+      ? { transform: 'scale(1.17)' }
+      : { transform: 'scale(1.2)' }),
+  },
+}));
+
+export const TextInputField = styled('input').withConfig({
+  shouldForwardProp: (prop) =>
+    prop !== 'isEmptyInputValue' && prop !== 'isReadOnlyMode',
+})(({ isEmptyInputValue, isReadOnlyMode }) => ({
+  ...(!isReadOnlyMode ? { width: '177px' } : { width: 'max-content' }),
+  ...(isReadOnlyMode && { textAlign: 'center' }),
   padding: '5px 6.5px',
+  ...(!isReadOnlyMode ? { marginTop: '10px' } : { marginTop: '0' }),
   border: 'unset',
-  borderBottom: '1px solid #e29d34d4',
+  ...(!isReadOnlyMode && { borderBottom: '1px solid #e29d34d4' }),
   outline: 'none',
-  fontSize: '1.1em',
+  ...(!isReadOnlyMode ? { fontSize: '1.1em' } : { fontSize: '2em' }),
   transition: 'border-color 0.3s ease-in-out',
   ...(isEmptyInputValue && { borderColor: 'lightgray' }),
 }));
 
 export const PriceInputWrapper = styled('div').withConfig({
-  shouldForwardProp: (prop) => prop !== 'isEmptyInputValue',
-})(({ isEmptyInputValue }) => ({
+  shouldForwardProp: (prop) =>
+    prop !== 'isEmptyInputValue' && prop !== 'isReadOnlyMode',
+})(({ isEmptyInputValue, isReadOnlyMode }) => ({
   display: 'flex',
   alignItems: 'center',
   marginBottom: '40px',
-  borderBottom: '1px solid #e29d34d4',
-  fontSize: '1.4em',
+  ...(!isReadOnlyMode && { borderBottom: '1px solid #e29d34d4' }),
+  ...(!isReadOnlyMode ? { fontSize: '1.4em' } : { fontSize: '2em' }),
   transition: 'border-color 0.3s ease-in-out',
   ...(isEmptyInputValue && { borderColor: 'lightgray' }),
 }));
@@ -64,10 +79,9 @@ export const PriceInputField = styled('input').withConfig({
   width: '40px',
   border: 'unset',
   outline: 'none',
-  padding: '0 11.5px 0 4px',
+  padding: '2px 11.5px 0 4px',
   fontSize: '1em',
   textAlign: 'center',
-  marginTop: '2px',
   ...(isEmptyInputValue && { color: 'grey' }),
 }));
 
