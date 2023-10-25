@@ -5,10 +5,12 @@ import {
   COMPONENTS_IDS,
   CURRENCY_SIGN,
   IMAGES_ALTS,
-  isProductPriceValid,
-  PLACEHOLDER_PRODUCT_IMAGE,
-  removeBgFromImage,
   TEXT_CONTENT,
+  MIN_PRODUCT_NAME_LENGTH,
+  PLACEHOLDER_PRODUCT_IMAGE,
+  isProductNameLengthInRange,
+  isProductPriceValid,
+  removeBgFromImage,
 } from '@utils';
 import {
   FormContainer,
@@ -35,14 +37,17 @@ export default function ProductForm({
   const [updatedImage, setUpdatedImage] = useState(productImage);
 
   const onProductNameChange = (event) => {
-    setUpdatedProductName(event.target.value);
+    const name = event.target.value;
+    const isNameInRange = isProductNameLengthInRange(name);
+
+    if (isNameInRange) setUpdatedProductName(name);
   };
 
   const onPriceChange = (event) => {
     const price = +event.target.value;
     const isValidPrice = isProductPriceValid(price);
 
-    setUpdatedPrice((prevPrice) => (isValidPrice ? price : prevPrice));
+    if (isValidPrice) setUpdatedPrice(price);
   };
 
   const onImageChange = async (event) => {
@@ -60,7 +65,10 @@ export default function ProductForm({
   const isImageEmpty = updatedImage === PLACEHOLDER_PRODUCT_IMAGE;
   const isPriceEmpty = !updatedPrice;
   const isNameEmpty = !updatedProductName;
-  const isFormMissingInput = isNameEmpty || isPriceEmpty || isImageEmpty;
+  const isNameLengthBelowMin =
+    updatedProductName?.length < MIN_PRODUCT_NAME_LENGTH;
+  const isFormMissingInput =
+    isNameEmpty || isNameLengthBelowMin || isPriceEmpty || isImageEmpty;
   return (
     <FormContainer>
       <ImageInputDisplay

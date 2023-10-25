@@ -10,6 +10,9 @@ export const CURRENCY_SIGN = '$';
 export const MIN_PRODUCT_PRICE = 0;
 export const MAX_PRODUCT_PRICE = 999;
 
+export const MAX_PRODUCT_NAME_LENGTH = 25;
+export const MIN_PRODUCT_NAME_LENGTH = 3;
+
 export const BUTTONS_LABELS = {
   CREATE_PAGE_SUBMIT: 'Create',
   EDIT_PAGE_SUBMIT: 'Update',

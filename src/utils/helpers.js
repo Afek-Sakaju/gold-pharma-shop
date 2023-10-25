@@ -3,6 +3,7 @@ import {
   REMOVE_BG_API_KEY,
   MAX_PRODUCT_PRICE,
   MIN_PRODUCT_PRICE,
+  MAX_PRODUCT_NAME_LENGTH,
 } from './constants';
 
 export const blobToBase64 = (blob) => {
@@ -31,6 +32,12 @@ export const removeBgFromImage = async (image) => {
     .catch((e) => console.log(e));
 
   return transparentBgImage;
+};
+
+export const isProductNameLengthInRange = (name) => {
+  const isInRange = name.length <= MAX_PRODUCT_NAME_LENGTH;
+
+  return isInRange;
 };
 
 export const isProductPriceValid = (price) => {
