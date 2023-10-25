@@ -12,7 +12,7 @@ import {
   removeFromShoppingCartAction,
 } from '@store';
 import { ProductsProxy, NAV_PATHS } from '@utils';
-import CreateProductButton from '../CreateProductButton/CreateProductButton';
+import NewProductButton from '../NewProductButton/NewProductButton';
 import { ProductListContainer } from './ProductList.styled';
 
 function ProductList({
@@ -40,7 +40,7 @@ function ProductList({
 
   return isDataFetched ? (
     <ProductListContainer>
-      <CreateProductButton />
+      <NewProductButton />
       {products?.map((productData) => {
         const { id, productName, productImage, price } = productData;
 
