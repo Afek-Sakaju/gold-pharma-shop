@@ -15,6 +15,8 @@ export default function EditProduct() {
   const navigate = useNavigate();
   const { id } = useParams();
 
+  const isAdminMode = false;
+
   const [isDataFetched, setIsDataFetched] = useState(false);
   const [productData, setProductData] = useState({
     productName: null,
@@ -50,6 +52,7 @@ export default function EditProduct() {
         productPrice={+productData.price}
         productName={productData.productName}
         productImage={productData.productImage}
+        isReadOnlyMode={!isAdminMode}
       />
     </div>
   ) : (

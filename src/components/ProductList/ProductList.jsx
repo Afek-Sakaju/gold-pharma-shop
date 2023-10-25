@@ -23,6 +23,9 @@ function ProductList({
   selectedProducts,
 }) {
   const navigate = useNavigate();
+
+  const isAdmin = false;
+
   const [isDataFetched, setIsDataFetched] = useState(false);
 
   useEffect(() => {
@@ -40,7 +43,7 @@ function ProductList({
 
   return isDataFetched ? (
     <ProductListContainer>
-      <NewProductButton />
+      {isAdmin && <NewProductButton />}
       {products?.map((productData) => {
         const { id, productName, productImage, price } = productData;
 

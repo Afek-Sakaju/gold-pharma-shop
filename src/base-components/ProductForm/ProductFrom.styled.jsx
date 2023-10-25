@@ -48,7 +48,7 @@ export const TextInputField = styled('input').withConfig({
   shouldForwardProp: (prop) =>
     prop !== 'isEmptyInputValue' && prop !== 'isReadOnlyMode',
 })(({ isEmptyInputValue, isReadOnlyMode }) => ({
-  ...(!isReadOnlyMode ? { width: '177px' } : { width: 'max-content' }),
+  ...(!isReadOnlyMode ? { width: '177px' } : { width: '75%' }),
   ...(isReadOnlyMode && { textAlign: 'center' }),
   padding: '5px 6.5px',
   ...(!isReadOnlyMode ? { marginTop: '10px' } : { marginTop: '0' }),
