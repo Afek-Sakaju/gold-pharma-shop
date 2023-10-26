@@ -7,7 +7,7 @@ import { NavContainer, NavLogo, NavChildrenContainer } from './Nav.styled';
 export default function Nav({ logoUrl, children }) {
   return (
     <NavContainer>
-      <NavLogo src={logoUrl} alt={IMAGES_ALTS.SHOP_LOGO} />
+      <NavLogo alt={IMAGES_ALTS.SHOP_LOGO} src={logoUrl} />
       {children && <NavChildrenContainer>{children}</NavChildrenContainer>}
     </NavContainer>
   );

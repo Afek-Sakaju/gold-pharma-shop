@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 
 import { CURRENCY_SIGN } from '@utils';
 import {
-  SelectedItemsContainer,
   CartContainer,
   CartIcon,
-  TotalSelected,
-  TotalPrice,
   CurrencySign,
+  SelectedItemsContainer,
+  TotalPrice,
+  TotalSelected,
 } from './ShoppingCart.styled';
 
 export default function ShoppingCart({ totalPrice, totalSelected }) {

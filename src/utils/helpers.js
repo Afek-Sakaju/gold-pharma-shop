@@ -1,9 +1,9 @@
 import {
-  REMOVE_BG_API_URL,
-  REMOVE_BG_API_KEY,
+  MAX_PRODUCT_NAME_LENGTH,
   MAX_PRODUCT_PRICE,
   MIN_PRODUCT_PRICE,
-  MAX_PRODUCT_NAME_LENGTH,
+  REMOVE_BG_API_KEY,
+  REMOVE_BG_API_URL,
 } from './constants';
 
 export const blobToBase64 = (blob) => {

@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 
-import { ProductForm, Nav, Loading } from '@base-components';
+import { Loading, Nav, ProductForm } from '@base-components';
 import {
-  ProductsProxy,
-  LOGO_SRC,
   BUTTONS_LABELS,
+  LOGO_SRC,
   NAV_PATHS,
   TEXT_CONTENT,
+  ProductsProxy,
 } from '@utils';
 import { PageTitle } from './EditProduct.styled';
 
@@ -47,12 +47,12 @@ export default function EditProduct() {
         <PageTitle>{TEXT_CONTENT.EDIT_PAGE_TITLE}</PageTitle>
       </Nav>
       <ProductForm
-        submitButtonLabel={BUTTONS_LABELS.EDIT_PAGE_SUBMIT}
-        onSubmit={onSubmitHandler}
-        initialProductPrice={+productData.productPrice}
-        initialProductName={productData.productName}
         initialProductImage={productData.productImage}
+        initialProductName={productData.productName}
+        initialProductPrice={+productData.productPrice}
         isReadOnlyMode={!isAdminMode}
+        onSubmit={onSubmitHandler}
+        submitButtonLabel={BUTTONS_LABELS.EDIT_PAGE_SUBMIT}
       />
     </div>
   ) : (

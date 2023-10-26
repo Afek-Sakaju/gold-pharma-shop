@@ -53,9 +53,9 @@ function ProductList({
             onAdd={() => onAdd(id)}
             onClick={() => navigate(`${NAV_PATHS.PRODUCT_PATH}/${id}`)}
             onRemove={() => onRemove(id)}
+            productImage={productImage}
             productName={productName}
             productPrice={+price}
-            productImage={productImage}
             selectedCount={selectedProducts[id] ?? 0}
           />
         );

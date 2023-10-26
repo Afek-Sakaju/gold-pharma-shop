@@ -4,11 +4,11 @@ import { v4 as uuid } from 'uuid';
 
 import { Nav, ProductForm } from '@base-components';
 import {
-  ProductsProxy,
-  LOGO_SRC,
   BUTTONS_LABELS,
+  LOGO_SRC,
   NAV_PATHS,
   TEXT_CONTENT,
+  ProductsProxy,
 } from '@utils';
 import { PageTitle } from './CreateProduct.styled';
 
@@ -34,8 +34,8 @@ export default function CreateProduct() {
         <PageTitle>{TEXT_CONTENT.CREATE_PAGE_TITLE}</PageTitle>
       </Nav>
       <ProductForm
-        submitButtonLabel={BUTTONS_LABELS.CREATE_PAGE_SUBMIT}
         onSubmit={onSubmitHandler}
+        submitButtonLabel={BUTTONS_LABELS.CREATE_PAGE_SUBMIT}
       />
     </div>
   ) : null;

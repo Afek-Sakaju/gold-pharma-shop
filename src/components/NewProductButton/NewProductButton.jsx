@@ -10,9 +10,9 @@ export default function NewProductButton() {
   return (
     <Product
       onClick={() => navigate(NAV_PATHS.CREATE_NEW_PRODUCT_PAGE)}
+      productName="Create A New Product"
       shouldDisplayButtons={false}
       shouldDisplayPrice={false}
-      productName="Create A New Product"
     />
   );
 }
