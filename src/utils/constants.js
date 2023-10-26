@@ -31,6 +31,16 @@ export const TEXT_CONTENT = {
   EDIT_PAGE_TITLE: 'Product Edit Mode',
   PRODUCT_NAME_INPUT: 'Enter Product Name',
   UPLOAD_PRODUCT_IMAGE_BUTTON: 'Upload Product Image',
+  SHOP_ENTRANCE_OPTIONS_GUIDE: `This online pharma shop web application features two main modes:
+
+		- Admin mode designed for product data management.
+		- Customer mode providing a seamless shopping experience.
+
+		Feel free to explore the app in these two modes to gain a better understanding of the shop's features and the experience it offers.`,
+  SHOP_ENTRANCE_OPTIONS_BUTTONS_TITLE: 'Visit the shop as:',
+  SHOP_ENTRANCE_MAIN_TITLE: 'Entry Options',
+  SHOP_ENTRANCE_CUSTOMER_BUTTON: 'Admin',
+  SHOP_ENTRANCE_ADMIN_BUTTON: 'Customer',
 };
 
 export const COMPONENTS_CLASSES = {
