@@ -9,12 +9,14 @@ import {
 import HomePage from './HomePage/HomePage';
 import EditProduct from './EditProduct/EditProduct';
 import CreateProduct from './CreateProduct/CreateProduct';
+import ProductsListPage from './ProductsListPage/ProductsListPage';
 
 export default function Router() {
   return (
     <BrowserRouter>
       <Switch>
         <Route path="/" element={<HomePage />} />
+        <Route path="/product/shop" element={<ProductsListPage />} />
         <Route path="/product/new" element={<CreateProduct />} />
         <Route path="/product/:id" element={<EditProduct />} />
         <Route path="*" element={<Navigate to="/" />} />
