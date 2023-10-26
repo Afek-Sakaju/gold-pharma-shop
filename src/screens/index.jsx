@@ -16,7 +16,7 @@ export default function Router() {
     <BrowserRouter>
       <Switch>
         <Route path="/" element={<HomePage />} />
-        <Route path="/product/shop" element={<ProductsListPage />} />
+        <Route path="/shop" element={<ProductsListPage />} />
         <Route path="/product/new" element={<CreateProduct />} />
         <Route path="/product/:id" element={<EditProduct />} />
         <Route path="*" element={<Navigate to="/" />} />
