@@ -1,52 +1,45 @@
 {
   "ProductsData": [
     {
-      "productName": "Throne B-Complex",
+      "productName": "B-Complex",
       "productPrice": 20,
       "productImage": "/Afek-Sakaju/grocery-store/products-images/throne-b-complex.png",
-      "company": "Throne",
       "id": "12d1a6e1-5a1c-4c4c-84ba-1c6dfc45d2c4"
     },
     {
-      "productName": "Throne GI-Relief",
+      "productName": "GI-Relief",
       "productPrice": 40,
       "productImage": "/Afek-Sakaju/grocery-store/products-images/throne-gi-relief.png",
-      "company": "Throne",
       "id": "ba4a6e7e-9a36-4cfa-84ba-1c6dfc45d2c4"
     },
     {
-      "productName": "Throne Iron Bisglycinate",
+      "productName": "Iron Bisglycinate",
       "productPrice": 15,
       "productImage": "/Afek-Sakaju/grocery-store/products-images/throne-iron-bisglycinate.png",
-      "company": "Throne",
       "id": "c1aa6e71-9a36-4cfa-84ba-1c6dfc45d2c4"
     },
     {
-      "productName": "Throne NAC",
+      "productName": "NAC",
       "productPrice": 31,
       "productImage": "/Afek-Sakaju/grocery-store/products-images/throne-nac.png",
-      "company": "Throne",
       "id": "d8b8a8e7-9a36-4cfa-84ba-1c6dfc45d2c4"
     },
     {
-      "productName": "Throne Selenium",
+      "productName": "Selenium",
       "productPrice": 12,
       "productImage": "/Afek-Sakaju/grocery-store/products-images/throne-selenium.png",
-      "company": "Throne",
       "id": "ea9c8a7b-9a36-4cfa-84ba-1c6dfc45d2c4"
     },
     {
-      "productName": "Throne Liver Cleanse",
+      "productName": "Liver Cleanse",
       "productPrice": 22,
       "productImage": "/Afek-Sakaju/grocery-store/products-images/throne-liver-cleanse.png",
-      "company": "Throne",
       "id": "fbd0b8c8-9a36-4cfa-84ba-1c6dfc45d2c4"
     },
     {
-      "productName": "Throne Vitamin C with Flavonoids",
+      "productName": "Vitamin C with Flavonoids",
       "productPrice": 12,
       "productImage": "/Afek-Sakaju/grocery-store/products-images/throne-vitamin-c.png",
-      "company": "Throne",
       "id": "fec2c8a4-9a36-4cfa-84ba-1c6dfc45d2c4"
     },
     {
