@@ -60,9 +60,9 @@ export default function ProductForm({
   };
 
   const data = {
-    initialProductName: updatedProductName || initialProductName,
-    price: updatedPrice,
-    initialProductImage: updatedImage,
+    productName: updatedProductName,
+    productPrice: updatedPrice,
+    productImage: updatedImage,
   };
 
   const isImageEmpty = updatedImage === PLACEHOLDER_PRODUCT_IMAGE;
@@ -113,7 +113,6 @@ export default function ProductForm({
           <PriceInputField
             isEmptyInputValue={isPriceEmpty}
             onChange={onPriceChange}
-            placeholder={initialProductPrice}
             readOnly={isReadOnlyMode}
             type="text"
             value={updatedPrice}

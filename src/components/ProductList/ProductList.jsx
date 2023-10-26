@@ -36,7 +36,9 @@ function ProductList({
         initProducts(data);
         setIsDataFetched(true);
       })
-      .catch(() => {});
+      .catch((err) => {
+        console.error(err);
+      });
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -45,7 +47,7 @@ function ProductList({
     <ProductListContainer>
       {isAdmin && <NewProductButton />}
       {products?.map((productData) => {
-        const { id, productName, productImage, price } = productData;
+        const { id, productName, productImage, productPrice } = productData;
 
         return (
           <Product
@@ -55,7 +57,7 @@ function ProductList({
             onRemove={() => onRemove(id)}
             productImage={productImage}
             productName={productName}
-            productPrice={+price}
+            productPrice={+productPrice}
             selectedCount={selectedProducts[id] ?? 0}
           />
         );
