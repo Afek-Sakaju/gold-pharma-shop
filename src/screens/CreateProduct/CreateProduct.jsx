@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { v4 as uuid } from 'uuid';
 
@@ -13,6 +13,8 @@ import {
 import { PageTitle } from './CreateProduct.styled';
 
 export default function CreateProduct() {
+  const isAdmin = false;
+
   const navigate = useNavigate();
 
   const onSubmitHandler = (data) => {
@@ -20,7 +22,13 @@ export default function CreateProduct() {
     if (isCreated) navigate(NAV_PATHS.AFTER_PRODUCT_CREATION);
   };
 
-  return (
+  useEffect(() => {
+    if (!isAdmin) navigate(NAV_PATHS.AFTER_PRODUCT_CREATION);
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isAdmin]);
+
+  return isAdmin ? (
     <div>
       <Nav logoUrl={LOGO_SRC}>
         <PageTitle>{TEXT_CONTENT.CREATE_PAGE_TITLE}</PageTitle>
@@ -30,5 +38,5 @@ export default function CreateProduct() {
         onSubmit={onSubmitHandler}
       />
     </div>
-  );
+  ) : null;
 }
