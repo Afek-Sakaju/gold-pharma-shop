@@ -29,7 +29,7 @@ export const removeBgFromImage = async (image) => {
       const imageBase64 = blobToBase64(blob);
       return imageBase64;
     })
-    .catch((e) => console.log(e));
+    .catch((e) => console.error(e));
 
   return transparentBgImage;
 };
