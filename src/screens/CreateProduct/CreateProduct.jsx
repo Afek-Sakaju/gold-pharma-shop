@@ -19,11 +19,11 @@ export default function CreateProduct() {
 
   const onSubmitHandler = (data) => {
     const isCreated = ProductsProxy.post({ id: uuid(), ...data });
-    if (isCreated) navigate(NAV_PATHS.AFTER_PRODUCT_CREATION);
+    if (isCreated) navigate(NAV_PATHS.HOME_PAGE);
   };
 
   useEffect(() => {
-    if (!isAdmin) navigate(NAV_PATHS.AFTER_PRODUCT_CREATION);
+    if (!isAdmin) navigate(NAV_PATHS.HOME_PAGE);
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isAdmin]);

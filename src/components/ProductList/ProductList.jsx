@@ -54,7 +54,7 @@ function ProductList({
             onClick={() => navigate(`${NAV_PATHS.PRODUCT_PATH}/${id}`)}
             onRemove={() => onRemove(id)}
             productName={productName}
-            price={+price}
+            productPrice={+price}
             productImage={productImage}
             selectedCount={selectedProducts[id] ?? 0}
           />

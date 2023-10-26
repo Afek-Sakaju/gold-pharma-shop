@@ -14,7 +14,7 @@ export const blobToBase64 = (blob) => {
   });
 };
 
-export const removeBgFromImage = async (image) => {
+export const removeBgFromImageBase64 = async (image) => {
   const formData = new FormData();
   formData.append('image_file', image);
   formData.append('size', 'auto');
@@ -36,13 +36,10 @@ export const removeBgFromImage = async (image) => {
 
 export const isProductNameLengthInRange = (name) => {
   const isInRange = name.length <= MAX_PRODUCT_NAME_LENGTH;
-
   return isInRange;
 };
 
-export const isProductPriceValid = (price) => {
-  const isValidNumber = typeof price === 'number';
+export const isProductPriceInRange = (price) => {
   const isInRange = price >= MIN_PRODUCT_PRICE && price <= MAX_PRODUCT_PRICE;
-
-  return isValidNumber && isInRange;
+  return isInRange;
 };

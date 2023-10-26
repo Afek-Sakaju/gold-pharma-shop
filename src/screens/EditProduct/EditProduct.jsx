@@ -20,20 +20,20 @@ export default function EditProduct() {
   const [isDataFetched, setIsDataFetched] = useState(false);
   const [productData, setProductData] = useState({
     productName: null,
-    price: null,
+    productPrice: null,
     productImage: null,
   });
 
   const onSubmitHandler = (data) => {
     const isUpdated = ProductsProxy.put(data, id);
-    if (isUpdated) navigate(NAV_PATHS.AFTER_PRODUCT_UPDATE);
+    if (isUpdated) navigate(NAV_PATHS.HOME_PAGE);
   };
 
   useEffect(() => {
     ProductsProxy.getData(id)
       .then((data) => {
-        const { productName, price, productImage } = data;
-        setProductData({ productName, price, productImage });
+        const { productName, productPrice, productImage } = data;
+        setProductData({ productName, productPrice, productImage });
         setIsDataFetched(true);
       })
       .catch(() => {});
@@ -49,9 +49,9 @@ export default function EditProduct() {
       <ProductForm
         submitButtonLabel={BUTTONS_LABELS.EDIT_PAGE_SUBMIT}
         onSubmit={onSubmitHandler}
-        productPrice={+productData.price}
-        productName={productData.productName}
-        productImage={productData.productImage}
+        initialProductPrice={+productData.productPrice}
+        initialProductName={productData.productName}
+        initialProductImage={productData.productImage}
         isReadOnlyMode={!isAdminMode}
       />
     </div>

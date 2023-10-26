@@ -6,37 +6,37 @@ import {
 } from 'react-icons/lia';
 
 import {
-  CURRENCY_SIGN,
-  PLACEHOLDER_PRODUCT_IMAGE,
   COMPONENTS_CLASSES,
+  CURRENCY_SIGN,
   IMAGES_ALTS,
+  PLACEHOLDER_PRODUCT_IMAGE,
 } from '@utils';
 import {
   AddProductButton,
   ButtonsContainer,
   ProductContainer,
+  ProductContentContainer,
   ProductImage,
   ProductName,
   ProductPrice,
   RemoveProductButton,
-  ProductContentContainer,
   SelectedCount,
 } from './Product.styled';
 
 export default function Product({
+  children,
   className,
   onAdd,
   onClick,
   onRemove,
-  price,
+  productPrice,
   productImage,
   productName,
   selectedCount,
   shouldDisplayButtons,
-  shouldDisplayPrice,
-  shouldDisplayName,
   shouldDisplayImage,
-  children,
+  shouldDisplayName,
+  shouldDisplayPrice,
 }) {
   const shouldDisplayProductContent =
     shouldDisplayPrice || shouldDisplayName || shouldDisplayButtons;
@@ -59,7 +59,7 @@ export default function Product({
             </ProductName>
           )}
           {shouldDisplayPrice && (
-            <ProductPrice>{`${CURRENCY_SIGN} ${price}`}</ProductPrice>
+            <ProductPrice>{`${CURRENCY_SIGN} ${productPrice}`}</ProductPrice>
           )}
           {shouldDisplayButtons && (
             <ButtonsContainer>
@@ -86,14 +86,14 @@ Product.propTypes = {
   onAdd: PropTypes.func,
   onClick: PropTypes.func,
   onRemove: PropTypes.func,
-  price: PropTypes.number,
+  productPrice: PropTypes.number,
   productImage: PropTypes.string,
   productName: PropTypes.string,
   selectedCount: PropTypes.number,
   shouldDisplayButtons: PropTypes.bool,
-  shouldDisplayPrice: PropTypes.bool,
-  shouldDisplayName: PropTypes.bool,
   shouldDisplayImage: PropTypes.bool,
+  shouldDisplayName: PropTypes.bool,
+  shouldDisplayPrice: PropTypes.bool,
 };
 
 Product.defaultProps = {
@@ -101,12 +101,12 @@ Product.defaultProps = {
   onAdd: undefined,
   onClick: undefined,
   onRemove: undefined,
-  price: 0,
+  productPrice: 0,
   productImage: PLACEHOLDER_PRODUCT_IMAGE,
   productName: undefined,
   selectedCount: 0,
   shouldDisplayButtons: true,
-  shouldDisplayPrice: true,
-  shouldDisplayName: true,
   shouldDisplayImage: true,
+  shouldDisplayName: true,
+  shouldDisplayPrice: true,
 };

@@ -19,19 +19,18 @@ export const BUTTONS_LABELS = {
 };
 
 export const NAV_PATHS = {
-  AFTER_PRODUCT_CREATION: '/',
-  AFTER_PRODUCT_UPDATE: '/',
   CREATE_NEW_PRODUCT_PAGE: '/product/new',
+  HOME_PAGE: '/',
   PRODUCT_PATH: '/product',
 };
 
 export const TEXT_CONTENT = {
-  CREATE_PAGE_TITLE: 'Product Creation Mode',
-  CREATE_NEW_PRODUCT_BUTTON: 'Add product',
-  EDIT_PAGE_TITLE: 'Product Edit Mode',
-  UPLOAD_PRODUCT_IMAGE_BUTTON: 'Upload Product Image',
   CHANGE_PRODUCT_IMAGE_BUTTON: 'Change Product Image',
+  CREATE_NEW_PRODUCT_BUTTON: 'Add product',
+  CREATE_PAGE_TITLE: 'Product Creation Mode',
+  EDIT_PAGE_TITLE: 'Product Edit Mode',
   PRODUCT_NAME_INPUT: 'Enter Product Name',
+  UPLOAD_PRODUCT_IMAGE_BUTTON: 'Upload Product Image',
 };
 
 export const COMPONENTS_CLASSES = {
@@ -40,8 +39,8 @@ export const COMPONENTS_CLASSES = {
 };
 
 export const IMAGES_ALTS = {
-  SHOP_LOGO: 'Shop-Logo',
   PRODUCT_IMAGE: 'Product-Image',
+  SHOP_LOGO: 'Shop-Logo',
 };
 
 export const COMPONENTS_IDS = {

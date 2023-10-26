@@ -5,36 +5,37 @@ import {
   COMPONENTS_IDS,
   CURRENCY_SIGN,
   IMAGES_ALTS,
-  TEXT_CONTENT,
   MIN_PRODUCT_NAME_LENGTH,
   PLACEHOLDER_PRODUCT_IMAGE,
+  TEXT_CONTENT,
   isProductNameLengthInRange,
-  isProductPriceValid,
-  removeBgFromImage,
+  isProductPriceInRange,
+  removeBgFromImageBase64,
 } from '@utils';
 import {
   FormContainer,
-  SubmitButton,
-  TextInputField,
-  PriceInputWrapper,
-  PriceInputField,
   ImageInput,
   ImageInputDisplay,
+  PriceInputField,
+  PriceInputWrapper,
   ProductContentContainer,
+  SubmitButton,
+  TextInputField,
 } from './ProductFrom.styled';
 
 export default function ProductForm({
   children,
-  onSubmit,
-  productName,
-  productPrice,
-  productImage,
-  submitButtonLabel,
+  initialProductImage,
+  initialProductName,
+  initialProductPrice,
   isReadOnlyMode,
+  onSubmit,
+  submitButtonLabel,
 }) {
-  const [updatedProductName, setUpdatedProductName] = useState(productName);
-  const [updatedPrice, setUpdatedPrice] = useState(productPrice);
-  const [updatedImage, setUpdatedImage] = useState(productImage);
+  const [updatedProductName, setUpdatedProductName] =
+    useState(initialProductName);
+  const [updatedPrice, setUpdatedPrice] = useState(initialProductPrice);
+  const [updatedImage, setUpdatedImage] = useState(initialProductImage);
 
   const onProductNameChange = (event) => {
     const name = event.target.value;
@@ -45,21 +46,23 @@ export default function ProductForm({
 
   const onPriceChange = (event) => {
     const price = +event.target.value;
-    const isValidPrice = isProductPriceValid(price);
+    const isPriceValidNumber = typeof price === 'number';
 
-    if (isValidPrice) setUpdatedPrice(price);
+    const isPriceInRange = isProductPriceInRange(price);
+
+    if (isPriceValidNumber && isPriceInRange) setUpdatedPrice(price);
   };
 
   const onImageChange = async (event) => {
     const [image] = event.target.files;
-    const removedBgImage = await removeBgFromImage(image);
+    const removedBgImage = await removeBgFromImageBase64(image);
     setUpdatedImage(removedBgImage);
   };
 
   const data = {
-    productName: updatedProductName || productName,
+    initialProductName: updatedProductName || initialProductName,
     price: updatedPrice,
-    productImage: updatedImage,
+    initialProductImage: updatedImage,
   };
 
   const isImageEmpty = updatedImage === PLACEHOLDER_PRODUCT_IMAGE;
@@ -72,9 +75,9 @@ export default function ProductForm({
   return (
     <FormContainer>
       <ImageInputDisplay
+        alt={IMAGES_ALTS.PRODUCT_IMAGE}
         isReadOnlyMode={isReadOnlyMode}
         src={updatedImage}
-        alt={IMAGES_ALTS.PRODUCT_IMAGE}
       />
       <ProductContentContainer>
         {!isReadOnlyMode && (
@@ -86,21 +89,21 @@ export default function ProductForm({
               ? TEXT_CONTENT.UPLOAD_PRODUCT_IMAGE_BUTTON
               : TEXT_CONTENT.CHANGE_PRODUCT_IMAGE_BUTTON}
             <input
-              id={COMPONENTS_IDS.UPLOAD_IMAGE_BUTTON}
               hidden
-              type="file"
+              id={COMPONENTS_IDS.UPLOAD_IMAGE_BUTTON}
               onChange={onImageChange}
+              type="file"
             />
           </ImageInput>
         )}
         <TextInputField
-          onChange={onProductNameChange}
-          placeholder={TEXT_CONTENT.PRODUCT_NAME_INPUT}
-          type="text"
-          value={updatedProductName}
           isEmptyInputValue={isNameEmpty}
           isReadOnlyMode={isReadOnlyMode}
+          onChange={onProductNameChange}
+          placeholder={TEXT_CONTENT.PRODUCT_NAME_INPUT}
           readOnly={isReadOnlyMode}
+          type="text"
+          value={updatedProductName}
         />
         <PriceInputWrapper
           isEmptyInputValue={isPriceEmpty}
@@ -108,12 +111,12 @@ export default function ProductForm({
         >
           {CURRENCY_SIGN}
           <PriceInputField
+            isEmptyInputValue={isPriceEmpty}
             onChange={onPriceChange}
-            placeholder={productPrice}
+            placeholder={initialProductPrice}
+            readOnly={isReadOnlyMode}
             type="text"
             value={updatedPrice}
-            isEmptyInputValue={isPriceEmpty}
-            readOnly={isReadOnlyMode}
           />
         </PriceInputWrapper>
       </ProductContentContainer>
@@ -130,19 +133,19 @@ export default function ProductForm({
 }
 
 ProductForm.propTypes = {
-  onSubmit: PropTypes.func,
-  productImage: PropTypes.string,
-  productName: PropTypes.string,
-  productPrice: PropTypes.number,
+  initialProductImage: PropTypes.string,
+  initialProductName: PropTypes.string,
+  initialProductPrice: PropTypes.number,
   isReadOnlyMode: PropTypes.bool,
+  onSubmit: PropTypes.func,
   submitButtonLabel: PropTypes.string,
 };
 
 ProductForm.defaultProps = {
-  onSubmit: undefined,
-  productImage: PLACEHOLDER_PRODUCT_IMAGE,
-  productName: '',
-  productPrice: 0,
+  initialProductImage: PLACEHOLDER_PRODUCT_IMAGE,
+  initialProductName: '',
+  initialProductPrice: 0,
   isReadOnlyMode: undefined,
+  onSubmit: undefined,
   submitButtonLabel: undefined,
 };
