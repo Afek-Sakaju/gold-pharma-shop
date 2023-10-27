@@ -1,6 +1,7 @@
 # Gold Pharma Shop
 
-### An online application created to offer users the best pharmaceutical shopping experience with an incredible UI, thanks to an intuitive interface and robust functionality. </br> You can choose between two modes when entering the app: </br>- Customer Mode for shopping, browsing products, adding to your cart, and making purchases. </br>- Admin Mode to manage, create, and delete product data within the shop.<img src="./readme-resources/medicine-logo.png" width=120px height=120px align="right">
+### An online application created to offer users the best pharmaceutical shopping experience with an incredible UI, thanks to an intuitive interface and robust functionality. 
+#### You can choose between two modes when entering the app: </br></br>- Customer Mode for shopping, browsing products, adding to your cart, and making purchases. </br>- Admin Mode to manage, create, and delete product data within the shop.<img src="./readme-resources/medicine-logo.png" width=120px height=120px align="right">
 
 ## **Command lines:**
 
