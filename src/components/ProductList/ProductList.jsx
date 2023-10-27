@@ -17,14 +17,13 @@ import { ProductListContainer } from './ProductList.styled';
 
 function ProductList({
   initProducts,
+  isAdmin,
   onAdd,
   onRemove,
   products,
   selectedProducts,
 }) {
   const navigate = useNavigate();
-
-  const isAdmin = false;
 
   const [isDataFetched, setIsDataFetched] = useState(false);
 

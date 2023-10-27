@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import { connect } from 'react-redux';
 
+import { getIsAdminStatusSelector } from '@store';
 import { Loading, Nav, ProductForm } from '@base-components';
 import {
   BUTTONS_LABELS,
@@ -11,11 +13,10 @@ import {
 } from '@utils';
 import { PageTitle } from './EditProduct.styled';
 
-export default function EditProduct() {
+// eslint-disable-next-line react/prop-types
+function EditProduct({ isAdmin }) {
   const navigate = useNavigate();
   const { id } = useParams();
-
-  const isAdminMode = false;
 
   const [isDataFetched, setIsDataFetched] = useState(false);
   const [productData, setProductData] = useState({
@@ -26,7 +27,7 @@ export default function EditProduct() {
 
   const onSubmitHandler = (data) => {
     const isUpdated = ProductsProxy.put(data, id);
-    if (isUpdated) navigate(NAV_PATHS.HOME_PAGE);
+    if (isUpdated) navigate(NAV_PATHS.PRODUCT_LIST_PAGE);
   };
 
   useEffect(() => {
@@ -50,7 +51,7 @@ export default function EditProduct() {
         initialProductImage={productData.productImage}
         initialProductName={productData.productName}
         initialProductPrice={+productData.productPrice}
-        isReadOnlyMode={!isAdminMode}
+        isReadOnlyMode={!isAdmin}
         onSubmit={onSubmitHandler}
         submitButtonLabel={BUTTONS_LABELS.EDIT_PAGE_SUBMIT}
       />
@@ -59,3 +60,11 @@ export default function EditProduct() {
     <Loading />
   );
 }
+
+const mapStateToProps = (state) => ({
+  isAdmin: getIsAdminStatusSelector(state),
+});
+
+const mapDispatchToProps = () => ({});
+
+export default connect(mapStateToProps, mapDispatchToProps)(EditProduct);
