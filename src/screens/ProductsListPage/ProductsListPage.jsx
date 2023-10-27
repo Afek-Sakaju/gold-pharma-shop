@@ -5,8 +5,8 @@ import { useNavigate } from 'react-router-dom';
 import { getIsAdminStatusSelector } from '@store';
 import { ShoppingCartConnected, ProductList } from '@components';
 import { Nav } from '@base-components';
-import { LOGO_SRC, NAV_PATHS } from '@utils';
-import { PageContainer } from './ProductsListPage.styled';
+import { LOGO_SRC, NAV_PATHS, TEXT_CONTENT } from '@utils';
+import { PageContainer, AdminIcon } from './ProductsListPage.styled';
 
 // eslint-disable-next-line react/prop-types
 function ProductsListPage({ isAdmin }) {
@@ -16,8 +16,12 @@ function ProductsListPage({ isAdmin }) {
 
   return (
     <PageContainer>
-      <Nav onLogoClick={logoClickHandler} logoUrl={LOGO_SRC}>
-        <ShoppingCartConnected />
+      <Nav
+        onLogoClick={logoClickHandler}
+        logoUrl={LOGO_SRC}
+        title={isAdmin && TEXT_CONTENT.PRODUCTS_LIST_PAGE_ADMIN_TITLE}
+      >
+        {isAdmin ? <AdminIcon /> : <ShoppingCartConnected />}
       </Nav>
       <ProductList isAdmin={isAdmin} />
     </PageContainer>

@@ -28,10 +28,11 @@ export const NAV_PATHS = {
 export const TEXT_CONTENT = {
   CHANGE_PRODUCT_IMAGE_BUTTON: 'Change Product Image',
   CREATE_NEW_PRODUCT_BUTTON: 'Create A New Product',
-  CREATE_PAGE_TITLE: 'Product Creation Mode',
-  EDIT_PAGE_TITLE: 'Product Edit Mode',
+  CREATE_PAGE_TITLE: 'Create a New Product',
+  EDIT_PAGE_TITLE: 'Edit Product Data',
   LOADER_TEXT: 'Loading data, please wait...',
   PRODUCT_NAME_INPUT: 'Enter Product Name',
+  PRODUCTS_LIST_PAGE_ADMIN_TITLE: 'Admin mode',
   UPLOAD_PRODUCT_IMAGE_BUTTON: 'Upload Product Image',
   SHOP_ENTRANCE_OPTIONS_GUIDE: `This online pharma shop web application features two main modes:
 

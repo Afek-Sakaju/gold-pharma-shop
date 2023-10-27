@@ -16,12 +16,13 @@ export const NavContainer = styled.div`
 `;
 
 export const NavChildrenContainer = styled.div`
-  margin-right: 20px;
+  position: absolute;
+  right: 20px;
 `;
 
 export const NavTitle = styled.p`
   margin: 0 auto;
-  font-size: 1.9em;
+  font-size: 1.6em;
 `;
 
 export const NavLogo = styled('img').withConfig({

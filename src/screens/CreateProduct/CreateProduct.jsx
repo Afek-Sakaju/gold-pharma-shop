@@ -12,6 +12,7 @@ import {
   TEXT_CONTENT,
   ProductsProxy,
 } from '@utils';
+import { AdminIcon } from './CreateProduct.styled';
 
 // eslint-disable-next-line react/prop-types
 function CreateProduct({ isAdmin }) {
@@ -36,7 +37,9 @@ function CreateProduct({ isAdmin }) {
         logoUrl={LOGO_SRC}
         onLogoClick={logoClickHandler}
         title={isAdmin && TEXT_CONTENT.CREATE_PAGE_TITLE}
-      />
+      >
+        {isAdmin && <AdminIcon />}
+      </Nav>
       <ProductForm
         onSubmit={onSubmitHandler}
         submitButtonLabel={BUTTONS_LABELS.CREATE_PAGE_SUBMIT}
