@@ -16,7 +16,7 @@
 
 ### **Get a glimpse of the app in action:**
 
-https://github.com/Afek-Sakaju/grocery-store/assets/100536372/1ffd42b2-d4b2-4a71-a241-83103bc35ff8
+https://github.com/Afek-Sakaju/grocery-store/assets/100536372/d3fd1149-a56c-4e7c-abe1-fa3d48d0a436
 
 ---
 
