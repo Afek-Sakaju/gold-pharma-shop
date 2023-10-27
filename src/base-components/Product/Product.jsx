@@ -63,11 +63,11 @@ export default function Product({
           )}
           {shouldDisplayButtons && (
             <ButtonsContainer>
-              <AddProductButton onClickHandler={onAdd}>
+              <AddProductButton onClick={onAdd}>
                 <AddToCartIcon />
               </AddProductButton>
               <RemoveProductButton
-                onClickHandler={() => !!selectedCount && onRemove()}
+                onClick={() => !!selectedCount && onRemove()}
                 isDisabledButton={selectedCount === 0}
               >
                 <RemoveFromCartIcon />

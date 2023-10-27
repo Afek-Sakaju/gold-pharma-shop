@@ -7,7 +7,7 @@ export default function Button({
   children,
   className,
   label,
-  onClickHandler,
+  onClick,
   style,
   type,
 }) {
@@ -16,7 +16,7 @@ export default function Button({
       className={className}
       onClick={(event) => {
         event.stopPropagation();
-        onClickHandler?.();
+        onClick?.();
       }}
       style={style}
       type={type}
@@ -30,7 +30,7 @@ export default function Button({
 Button.propTypes = {
   className: PropTypes.string,
   label: PropTypes.string,
-  onClickHandler: PropTypes.func,
+  onClick: PropTypes.func,
   style: PropTypes.object,
   type: PropTypes.string,
 };
@@ -38,7 +38,7 @@ Button.propTypes = {
 Button.defaultProps = {
   className: '',
   label: undefined,
-  onClickHandler: undefined,
+  onClick: undefined,
   style: {},
   type: 'button',
 };

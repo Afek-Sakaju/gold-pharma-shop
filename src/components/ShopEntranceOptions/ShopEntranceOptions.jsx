@@ -34,12 +34,12 @@ export default function ShopEntranceOptions({ setIsAdminEntranceOption }) {
         </ButtonsTitle>
         <ButtonsContainer>
           <EntranceOptionButton
-            onClickHandler={() => onEntranceModeClickHandler(false)}
+            onClick={() => onEntranceModeClickHandler(false)}
           >
             {TEXT_CONTENT.SHOP_ENTRANCE_CUSTOMER_BUTTON}
           </EntranceOptionButton>
           <EntranceOptionButton
-            onClickHandler={() => onEntranceModeClickHandler(true)}
+            onClick={() => onEntranceModeClickHandler(true)}
           >
             {TEXT_CONTENT.SHOP_ENTRANCE_ADMIN_BUTTON}
           </EntranceOptionButton>

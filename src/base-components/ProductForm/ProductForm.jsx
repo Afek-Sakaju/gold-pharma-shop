@@ -123,7 +123,7 @@ export default function ProductForm({
         <SubmitButton
           label={submitButtonLabel}
           isDisabledButton={isFormMissingInput}
-          onClickHandler={() => !isFormMissingInput && onSubmit(data)}
+          onClick={() => !isFormMissingInput && onSubmit(data)}
         />
       )}
       {children}
