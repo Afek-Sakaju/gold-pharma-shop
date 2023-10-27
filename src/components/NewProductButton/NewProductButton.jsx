@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { NAV_PATHS } from '@utils';
+import { NAV_PATHS, TEXT_CONTENT } from '@utils';
 import { Product } from '@base-components';
 
 export default function NewProductButton() {
@@ -10,7 +10,7 @@ export default function NewProductButton() {
   return (
     <Product
       onClick={() => navigate(NAV_PATHS.CREATE_NEW_PRODUCT_PAGE)}
-      productName="Create A New Product"
+      productName={TEXT_CONTENT.CREATE_NEW_PRODUCT_BUTTON}
       shouldDisplayButtons={false}
       shouldDisplayPrice={false}
     />
