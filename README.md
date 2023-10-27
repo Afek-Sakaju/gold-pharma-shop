@@ -32,7 +32,7 @@ https://github.com/Afek-Sakaju/gold-pharma-shop/assets/100536372/b9dd5211-e631-4
 
 ### In addition, the project incorporates the following features:
 
-- [x] _**Responsiveness**_: The application is intentionally designed to adapt to screens of various sizes by utilizing _media queries_ within its components. This ensures that the user interface adjusts seamlessly to different screen dimensions.
+- [x] _**Responsiveness**_: the application is intentionally designed to adapt to screens of various sizes by utilizing _media queries_ within its components. This ensures that the user interface adjusts seamlessly to different screen dimensions.
 - [x] _**Integration with remove.bg API**_: for background removal of uploaded products’ images to enhance the UI and overall aesthetics.
 
 ---
