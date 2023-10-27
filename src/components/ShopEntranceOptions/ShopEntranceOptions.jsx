@@ -6,7 +6,6 @@ import { useNavigate } from 'react-router-dom';
 import { TEXT_CONTENT, NAV_PATHS } from '@utils';
 import {
   MainContainer,
-  MainTitle,
   ModeSelectionContainer,
   UserGuideText,
   ButtonsTitle,
@@ -24,7 +23,6 @@ export default function ShopEntranceOptions({ setIsAdminEntranceOption }) {
 
   return (
     <MainContainer>
-      <MainTitle>{TEXT_CONTENT.SHOP_ENTRANCE_MAIN_TITLE}</MainTitle>
       <ModeSelectionContainer>
         <UserGuideText>
           {TEXT_CONTENT.SHOP_ENTRANCE_OPTIONS_GUIDE}

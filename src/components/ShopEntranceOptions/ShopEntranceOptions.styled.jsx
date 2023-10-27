@@ -8,11 +8,6 @@ export const MainContainer = styled.div`
   flex-direction: column;
 `;
 
-export const MainTitle = styled.p`
-  margin: 0;
-  font-size: 2em;
-`;
-
 export const ModeSelectionContainer = styled.div`
   max-width: 40%;
   display: flex;
