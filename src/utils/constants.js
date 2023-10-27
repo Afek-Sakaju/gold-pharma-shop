@@ -2,9 +2,9 @@ export const SERVER_URL = process.env.REACT_APP_DB_URL;
 export const REMOVE_BG_API_URL = process.env.REACT_APP_REMOVE_BG_API_URL;
 export const REMOVE_BG_API_KEY = process.env.REACT_APP_REMOVE_BG_API_KEY;
 
-export const LOGO_SRC = '/Afek-Sakaju/grocery-store/shop-logo.png';
+export const LOGO_SRC = '/Afek-Sakaju/gold-pharma-shop/shop-logo.png';
 export const PLACEHOLDER_PRODUCT_IMAGE =
-  '/Afek-Sakaju/grocery-store/placeholder-product-image.png';
+  '/Afek-Sakaju/gold-pharma-shop/placeholder-product-image.png';
 
 export const CURRENCY_SIGN = '$';
 export const MIN_PRODUCT_PRICE = 0;

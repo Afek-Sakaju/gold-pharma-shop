@@ -1,8 +1,8 @@
 {
-  "name": "grocery-store",
+  "name": "gold-pharma-shop",
   "description": "This project created for buying grocery store products.",
   "author": "afek-sakaju",
-  "homepage": "https://github.com/Afek-Sakaju/grocery-store",
+  "homepage": "https://github.com/Afek-Sakaju/gold-pharma-shop",
   "keywords": [
     "grocery",
     "shop-app",
@@ -13,7 +13,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/Afek-Sakaju/grocery-store"
+    "url": "https://github.com/Afek-Sakaju/gold-pharma-shop"
   },
   "scripts": {
     "start": "craco start",

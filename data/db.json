@@ -3,140 +3,140 @@
     {
       "productName": "B-Complex",
       "productPrice": 20,
-      "productImage": "/Afek-Sakaju/grocery-store/products-images/throne-b-complex.png",
+      "productImage": "/Afek-Sakaju/gold-pharma-shop/products-images/throne-b-complex.png",
       "id": "12d1a6e1-5a1c-4c4c-84ba-1c6dfc45d2c4"
     },
     {
       "productName": "GI-Relief",
       "productPrice": 40,
-      "productImage": "/Afek-Sakaju/grocery-store/products-images/throne-gi-relief.png",
+      "productImage": "/Afek-Sakaju/gold-pharma-shop/products-images/throne-gi-relief.png",
       "id": "ba4a6e7e-9a36-4cfa-84ba-1c6dfc45d2c4"
     },
     {
       "productName": "Iron Bisglycinate",
       "productPrice": 15,
-      "productImage": "/Afek-Sakaju/grocery-store/products-images/throne-iron-bisglycinate.png",
+      "productImage": "/Afek-Sakaju/gold-pharma-shop/products-images/throne-iron-bisglycinate.png",
       "id": "c1aa6e71-9a36-4cfa-84ba-1c6dfc45d2c4"
     },
     {
       "productName": "NAC",
       "productPrice": 31,
-      "productImage": "/Afek-Sakaju/grocery-store/products-images/throne-nac.png",
+      "productImage": "/Afek-Sakaju/gold-pharma-shop/products-images/throne-nac.png",
       "id": "d8b8a8e7-9a36-4cfa-84ba-1c6dfc45d2c4"
     },
     {
       "productName": "Selenium",
       "productPrice": 12,
-      "productImage": "/Afek-Sakaju/grocery-store/products-images/throne-selenium.png",
+      "productImage": "/Afek-Sakaju/gold-pharma-shop/products-images/throne-selenium.png",
       "id": "ea9c8a7b-9a36-4cfa-84ba-1c6dfc45d2c4"
     },
     {
       "productName": "Liver Cleanse",
       "productPrice": 22,
-      "productImage": "/Afek-Sakaju/grocery-store/products-images/throne-liver-cleanse.png",
+      "productImage": "/Afek-Sakaju/gold-pharma-shop/products-images/throne-liver-cleanse.png",
       "id": "fbd0b8c8-9a36-4cfa-84ba-1c6dfc45d2c4"
     },
     {
       "productName": "Vitamin C with Flavonoids",
       "productPrice": 12,
-      "productImage": "/Afek-Sakaju/grocery-store/products-images/throne-vitamin-c.png",
+      "productImage": "/Afek-Sakaju/gold-pharma-shop/products-images/throne-vitamin-c.png",
       "id": "fec2c8a4-9a36-4cfa-84ba-1c6dfc45d2c4"
     },
     {
       "productName": "Betain HCL",
       "productPrice": 27,
-      "productImage": "/Afek-Sakaju/grocery-store/products-images/natures-life-betain-hcl.png",
+      "productImage": "/Afek-Sakaju/gold-pharma-shop/products-images/natures-life-betain-hcl.png",
       "company": "Nature's Life",
       "id": "d609cb88-8c6f-4c1e-8d6d-8e3a5cf8b4f0"
     },
     {
       "productName": "Magnesium Malate",
       "productPrice": 13,
-      "productImage": "/Afek-Sakaju/grocery-store/products-images/natures-life-magnesium-malate.png",
+      "productImage": "/Afek-Sakaju/gold-pharma-shop/products-images/natures-life-magnesium-malate.png",
       "company": "Nature's Life",
       "id": "1ecaa156-4a69-4cc1-838d-42edca962e4c"
     },
     {
       "productName": "Potassium",
       "productPrice": 11,
-      "productImage": "/Afek-Sakaju/grocery-store/products-images/natures-life-potassium.jpg",
+      "productImage": "/Afek-Sakaju/gold-pharma-shop/products-images/natures-life-potassium.jpg",
       "company": "Nature's Life",
       "id": "de68caac-9cf2-4a0c-9cfa-1c6efc70dcfa"
     },
     {
       "productName": "Vitamin K2",
       "productPrice": 22,
-      "productImage": "/Afek-Sakaju/grocery-store/products-images/natures-life-vitamin-k2.png",
+      "productImage": "/Afek-Sakaju/gold-pharma-shop/products-images/natures-life-vitamin-k2.png",
       "company": "Nature's Life",
       "id": "6a2e8f9b-9a36-4cfa-84ba-1c6dfc45d2c4"
     },
     {
       "productName": "Vitamin D3",
       "productPrice": 13,
-      "productImage": "/Afek-Sakaju/grocery-store/products-images/countrys-life-vitamin-d3.png",
+      "productImage": "/Afek-Sakaju/gold-pharma-shop/products-images/countrys-life-vitamin-d3.png",
       "company": "Country's Life",
       "id": "3ee6ccbd-0b46-4c9b-8b0d-29ecba3c91bb"
     },
     {
       "productName": "Calcium Citrate",
       "productPrice": 9,
-      "productImage": "/Afek-Sakaju/grocery-store/products-images/countrys-life-calcium-citrate.png",
+      "productImage": "/Afek-Sakaju/gold-pharma-shop/products-images/countrys-life-calcium-citrate.png",
       "company": "Country's Life",
       "id": "b4ca42b6-6f87-4ac1-9fc6-56aef43762c0"
     },
     {
       "productName": "Maxi Hair for Men",
       "productPrice": 30,
-      "productImage": "/Afek-Sakaju/grocery-store/products-images/countrys-life-maxi-hair-for-men.png",
+      "productImage": "/Afek-Sakaju/gold-pharma-shop/products-images/countrys-life-maxi-hair-for-men.png",
       "company": "Country's Life",
       "id": "f8c44ec1-0d46-4c2c-94ea-71af2d46e9e1"
     },
     {
       "productName": "Multi-Vitamin for Women",
       "productPrice": 25,
-      "productImage": "/Afek-Sakaju/grocery-store/products-images/countrys-life-multivitamin-for-women.png",
+      "productImage": "/Afek-Sakaju/gold-pharma-shop/products-images/countrys-life-multivitamin-for-women.png",
       "company": "Country's Life",
       "id": "ab674ffc-9da9-4e9f-96ad-44ea4f9c5c1b"
     },
     {
       "productName": "PABA",
       "productPrice": 14,
-      "productImage": "/Afek-Sakaju/grocery-store/products-images/countrys-life-paba.png",
+      "productImage": "/Afek-Sakaju/gold-pharma-shop/products-images/countrys-life-paba.png",
       "company": "Country's Life",
       "id": "3427a6e7-1a0c-832d-9xf2-1dfzh2e3bba7"
     },
     {
       "productName": "Bone Support",
       "productPrice": 20,
-      "productImage": "/Afek-Sakaju/grocery-store/products-images/dr-mercola-bone-support.jpg",
+      "productImage": "/Afek-Sakaju/gold-pharma-shop/products-images/dr-mercola-bone-support.jpg",
       "company": "Dr. Mercola",
       "id": "25ee4f0e-d2a9-4e3c-8ea7-8365cf570bb1"
     },
     {
       "productName": "Calcium with Vitamin D3 and K2",
       "productPrice": 33,
-      "productImage": "/Afek-Sakaju/grocery-store/products-images/dr-mercola-calcium-with-vitamin-d3-and-k2.png",
+      "productImage": "/Afek-Sakaju/gold-pharma-shop/products-images/dr-mercola-calcium-with-vitamin-d3-and-k2.png",
       "company": "Dr. Mercola",
       "id": "d80d2887-4a59-41ae-8bdf-8efb4a1e2c1d"
     },
     {
       "productName": "Gallbladder Enzymes",
       "productPrice": 19,
-      "productImage": "/Afek-Sakaju/grocery-store/products-images/dr-mercola-gallbladder-enzymes.png",
+      "productImage": "/Afek-Sakaju/gold-pharma-shop/products-images/dr-mercola-gallbladder-enzymes.png",
       "company": "Dr. Mercola",
       "id": "40e8cc21-08e3-4c1e-92af-02ca0c3b7b6f"
     },
     {
       "productName": "Vitamin B Complex",
       "productPrice": 85,
-      "productImage": "/Afek-Sakaju/grocery-store/products-images/dr-mercola-vitamin-b-complex.png",
+      "productImage": "/Afek-Sakaju/gold-pharma-shop/products-images/dr-mercola-vitamin-b-complex.png",
       "company": "Dr. Mercola",
       "id": "fa27a0e7-12f7-4ed5-8a68-1df9c9e3bba7"
     },
     {
       "productName": "Vitamin E",
       "productPrice": 72,
-      "productImage": "/Afek-Sakaju/grocery-store/products-images/dr-mercola-vitamin-e.png",
+      "productImage": "/Afek-Sakaju/gold-pharma-shop/products-images/dr-mercola-vitamin-e.png",
       "company": "Dr. Mercola",
       "id": "b3c8ca43-9f3c-4b1d-8bfa-1c6dca0d4d2c"
     }
