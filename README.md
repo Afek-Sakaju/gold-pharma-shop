@@ -2,7 +2,7 @@
 
 ### Introducing my grocery store site project, where you can conveniently purchase products, edit existing items, and add new products to the store. The project has been meticulously developed to prioritize optimal functionality and offer a user-friendly design.<br />
 
-<img src="./readme-resources/shops.png" width=150px height=150px align="right">
+<img src="./readme-resources/shop-logo.png" width=150px height=150px align="right">
 
 ---
 
