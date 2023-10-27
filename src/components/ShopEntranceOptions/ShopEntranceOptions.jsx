@@ -1,8 +1,9 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
+import { connect } from 'react-redux';
 
+import { resetShoppingCartAction } from '@store';
 import { TEXT_CONTENT, NAV_PATHS } from '@utils';
 import {
   MainContainer,
@@ -13,10 +14,11 @@ import {
   ButtonsContainer,
 } from './ShopEntranceOptions.styled';
 
-export default function ShopEntranceOptions({ setIsAdminEntranceOption }) {
+function ShopEntranceOptions({ resetCartData, setIsAdminEntranceOption }) {
   const navigate = useNavigate();
 
   const onEntranceModeClickHandler = (isAdmin) => {
+    if (!isAdmin) resetCartData();
     setIsAdminEntranceOption(isAdmin);
     navigate(NAV_PATHS.PRODUCT_LIST_PAGE);
   };
@@ -47,10 +49,15 @@ export default function ShopEntranceOptions({ setIsAdminEntranceOption }) {
   );
 }
 
-ShopEntranceOptions.propTypes = {
-  setIsAdminEntranceOption: PropTypes.func,
-};
+const mapStateToProps = () => ({});
 
-ShopEntranceOptions.defaultProps = {
-  setIsAdminEntranceOption: undefined,
-};
+const mapDispatchToProps = (dispatch) => ({
+  resetCartData: () => {
+    dispatch(resetShoppingCartAction());
+  },
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ShopEntranceOptions);

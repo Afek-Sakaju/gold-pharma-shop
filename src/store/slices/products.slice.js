@@ -34,6 +34,10 @@ const productSlice = createSlice({
         Number(state.totalPrice - productPrice).toFixed(2)
       );
     },
+    resetShoppingCart(state) {
+      state.selectedProducts = {};
+      state.totalPrice = 0;
+    },
   },
 });
 
@@ -41,6 +45,7 @@ export const {
   initProducts: initProductsAction,
   addToShoppingCart: addToShoppingCartAction,
   removeFromShoppingCart: removeFromShoppingCartAction,
+  resetShoppingCart: resetShoppingCartAction,
 } = productSlice.actions;
 
 export default productSlice;
