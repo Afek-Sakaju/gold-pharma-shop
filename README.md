@@ -1,12 +1,10 @@
 # Gold Pharma Shop
 
-### An online application created to offer users the best pharmaceutical shopping experience with an incredible UI, thanks to an intuitive interface and robust functionality. </br>You can choose between two modes when entering the app: </br>- Customer Mode for shopping, browsing products, adding to your cart, and making purchases. </br>- Admin Mode to manage, create, and delete product data within the shop.</br> This application boasts an incredible UI for an online pharmacy, thanks to an intuitive interface and robust functionality.
+### An online application created to offer users the best pharmaceutical shopping experience with an incredible UI, thanks to an intuitive interface and robust functionality.<img src="./readme-resources/medicine-logo.png" width=120px height=120px align="right">
 
-<img src="./readme-resources/shop-logo.png" width=150px height=90px align="right">
+### You can choose between two modes when entering the app: </br>- Customer Mode for shopping, browsing products, adding to your cart, and making purchases. </br>- Admin Mode to manage, create, and delete product data within the shop.<img src="./readme-resources/leaf-logo.png" width=70px height=70px align="right">
 
----
-
-**Command lines:**
+## **Command lines:**
 
 - `npm install` <br /> Install all the necessary packages for running and developing the project.
 - `npm run json-server`<br /> To run the project's database.
