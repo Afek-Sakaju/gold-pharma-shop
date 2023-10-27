@@ -69,7 +69,7 @@ AdjustSize.argTypes = {
   },
   selectedCount: { control: false },
   productName: { control: false },
-  price: { control: false },
+  productPrice: { control: false },
 };
 
 const Template = (args) => <Product {...args} />;
@@ -81,7 +81,7 @@ Custom.argTypes = {
     control: { type: 'number', min: 0, max: 1000, step: 5 },
     defaultValue: 10,
   },
-  price: {
+  productPrice: {
     control: { type: 'number', min: 0, max: 9999, step: 10 },
     defaultValue: 5,
   },

@@ -14,24 +14,24 @@ const productSlice = createSlice({
     addToShoppingCart(state, action) {
       const { id } = action.payload;
 
-      const { price } = state.productList.find((p) => p.id === id);
+      const { productPrice } = state.productList.find((p) => p.id === id);
 
       state.selectedProducts[id] ||= 0;
       state.selectedProducts[id]++;
       state.totalPrice = parseFloat(
-        Number(state.totalPrice + +price).toFixed(2)
+        Number(state.totalPrice + +productPrice).toFixed(2)
       );
     },
     removeFromShoppingCart(state, action) {
       const { id } = action.payload;
-      const { price } = state.productList.find((p) => p.id === id);
+      const { productPrice } = state.productList.find((p) => p.id === id);
 
       if (state.selectedProducts[id]) {
         state.selectedProducts[id]--;
       }
 
       state.totalPrice = parseFloat(
-        Number(state.totalPrice - price).toFixed(2)
+        Number(state.totalPrice - productPrice).toFixed(2)
       );
     },
   },
