@@ -32,15 +32,15 @@ export const ProductContentContainer = styled.div`
 export const ImageInputDisplay = styled('img').withConfig({
   shouldForwardProp: (prop) => prop !== 'isReadOnlyMode',
 })(({ isReadOnlyMode }) => ({
-  ...(!isReadOnlyMode ? { minHeight: '261px' } : { minHeight: '305px' }),
-  ...(!isReadOnlyMode ? { maxHeight: '261px' } : { maxHeight: '305px' }),
   zIndex: '1',
   transition: 'transform 0.3s ease-in-out',
+  ...(isReadOnlyMode ? { minHeight: '305px' } : { minHeight: '261px' }),
+  ...(isReadOnlyMode ? { maxHeight: '305px' } : { maxHeight: '261px' }),
 
   '&:hover': {
-    ...(!isReadOnlyMode
-      ? { transform: 'scale(1.17)' }
-      : { transform: 'scale(1.2)' }),
+    ...(isReadOnlyMode
+      ? { transform: 'scale(1.2)' }
+      : { transform: 'scale(1.17)' }),
   },
 }));
 
@@ -48,15 +48,16 @@ export const TextInputField = styled('input').withConfig({
   shouldForwardProp: (prop) =>
     prop !== 'isEmptyInputValue' && prop !== 'isReadOnlyMode',
 })(({ isEmptyInputValue, isReadOnlyMode }) => ({
-  ...(!isReadOnlyMode ? { width: '177px' } : { width: '75%' }),
-  ...(isReadOnlyMode && { textAlign: 'center' }),
   padding: '5px 6.5px',
-  ...(!isReadOnlyMode ? { marginTop: '10px' } : { marginTop: '0' }),
   border: 'unset',
-  ...(!isReadOnlyMode && { borderBottom: '1px solid #e29d34d4' }),
   outline: 'none',
-  ...(!isReadOnlyMode ? { fontSize: '1.1em' } : { fontSize: '2em' }),
+  borderBottom: '1px solid #e29d34d4',
   transition: 'border-color 0.3s ease-in-out',
+  ...(isReadOnlyMode ? { width: '75%' } : { width: '177px' }),
+  ...(isReadOnlyMode && { textAlign: 'center' }),
+  ...(isReadOnlyMode ? { marginTop: '0' } : { marginTop: '10px' }),
+  ...(isReadOnlyMode && { borderBottom: 'unset' }),
+  ...(isReadOnlyMode ? { fontSize: '2em' } : { fontSize: '1.1em' }),
   ...(isEmptyInputValue && { borderColor: 'lightgray' }),
 }));
 
@@ -67,9 +68,10 @@ export const PriceInputWrapper = styled('div').withConfig({
   display: 'flex',
   alignItems: 'center',
   marginBottom: '40px',
-  ...(!isReadOnlyMode && { borderBottom: '1px solid #e29d34d4' }),
-  ...(!isReadOnlyMode ? { fontSize: '1.4em' } : { fontSize: '2em' }),
+  borderBottom: '1px solid #e29d34d4',
   transition: 'border-color 0.3s ease-in-out',
+  ...(isReadOnlyMode && { borderBottom: 'unset' }),
+  ...(isReadOnlyMode ? { fontSize: '2em' } : { fontSize: '1.4em' }),
   ...(isEmptyInputValue && { borderColor: 'lightgray' }),
 }));
 
