@@ -12,7 +12,6 @@ import {
   TEXT_CONTENT,
   ProductsProxy,
 } from '@utils';
-import { PageTitle } from './CreateProduct.styled';
 
 // eslint-disable-next-line react/prop-types
 function CreateProduct({ isAdmin }) {
@@ -31,9 +30,10 @@ function CreateProduct({ isAdmin }) {
 
   return isAdmin ? (
     <div>
-      <Nav logoUrl={LOGO_SRC}>
-        <PageTitle>{TEXT_CONTENT.CREATE_PAGE_TITLE}</PageTitle>
-      </Nav>
+      <Nav
+        logoUrl={LOGO_SRC}
+        title={isAdmin && TEXT_CONTENT.CREATE_PAGE_TITLE}
+      />
       <ProductForm
         onSubmit={onSubmitHandler}
         submitButtonLabel={BUTTONS_LABELS.CREATE_PAGE_SUBMIT}

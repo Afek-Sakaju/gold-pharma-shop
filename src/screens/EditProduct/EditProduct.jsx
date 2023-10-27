@@ -11,7 +11,6 @@ import {
   TEXT_CONTENT,
   ProductsProxy,
 } from '@utils';
-import { PageTitle } from './EditProduct.styled';
 
 // eslint-disable-next-line react/prop-types
 function EditProduct({ isAdmin }) {
@@ -44,9 +43,7 @@ function EditProduct({ isAdmin }) {
 
   return isDataFetched ? (
     <div>
-      <Nav logoUrl={LOGO_SRC}>
-        <PageTitle>{TEXT_CONTENT.EDIT_PAGE_TITLE}</PageTitle>
-      </Nav>
+      <Nav logoUrl={LOGO_SRC} title={isAdmin && TEXT_CONTENT.EDIT_PAGE_TITLE} />
       <ProductForm
         initialProductImage={productData.productImage}
         initialProductName={productData.productName}

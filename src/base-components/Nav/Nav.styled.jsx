@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 
 export const NavContainer = styled.div`
+  position: relative;
   width: 100vw;
+  min-height: 82px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   z-index: 3;
 
   background-color: white;
@@ -18,8 +19,14 @@ export const NavChildrenContainer = styled.div`
   margin-right: 20px;
 `;
 
+export const NavTitle = styled.p`
+  margin: 0 auto;
+  font-size: 1.9em;
+`;
+
 export const NavLogo = styled.img`
+  position: absolute;
+  left: 18px;
   width: 130px;
-  margin-left: 18px;
   padding-bottom: 8px;
 `;
