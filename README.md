@@ -21,6 +21,7 @@ https://github.com/Afek-Sakaju/gold-pharma-shop/assets/100536372/b9dd5211-e631-4
 ### The technologies used in this project include:
 
 - [x] _**ReactJS**_ : the project is built on the _ReactJS_ framework.
+- [x] _**JSON-Server**_ Used to work with the database as a JSON file, sending API requests to retrieve, edit, create, or delete data.
 - [x] _**Styled-Components**_ : the project's styling is implemented using _styled-components_.
 - [x] _**Redux-toolkit**_ : by employing _Redux-toolkit_, the project achieves resilient state management, enabling seamless data flow and heightened functionality.
 - [x] _**React-router-dom**_ : enabling the creation of multiple pages and configuring different page for each path.
