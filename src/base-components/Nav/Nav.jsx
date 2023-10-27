@@ -9,10 +9,21 @@ import {
   NavTitle,
 } from './Nav.styled';
 
-export default function Nav({ logoUrl, title, centerChildren, children }) {
+export default function Nav({
+  centerChildren,
+  children,
+  logoUrl,
+  onLogoClick,
+  title,
+}) {
   return (
     <NavContainer>
-      <NavLogo alt={IMAGES_ALTS.SHOP_LOGO} src={logoUrl} />
+      <NavLogo
+        alt={IMAGES_ALTS.SHOP_LOGO}
+        src={logoUrl}
+        onClick={onLogoClick}
+        isClickable={onLogoClick}
+      />
       <NavTitle>{title}</NavTitle>
       {children && (
         <NavChildrenContainer centerChildren={centerChildren}>
@@ -24,13 +35,15 @@ export default function Nav({ logoUrl, title, centerChildren, children }) {
 }
 
 Nav.propTypes = {
-  logoUrl: PropTypes.string,
-  title: PropTypes.string,
   centerChildren: PropTypes.bool,
+  logoUrl: PropTypes.string,
+  onLogoClick: PropTypes.func,
+  title: PropTypes.string,
 };
 
 Nav.defaultProps = {
+  onLogoClick: undefined,
+  centerChildren: undefined,
   logoUrl: undefined,
   title: undefined,
-  centerChildren: undefined,
 };

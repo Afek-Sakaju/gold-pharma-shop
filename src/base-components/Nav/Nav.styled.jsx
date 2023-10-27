@@ -24,9 +24,12 @@ export const NavTitle = styled.p`
   font-size: 1.9em;
 `;
 
-export const NavLogo = styled.img`
-  position: absolute;
-  left: 18px;
-  width: 130px;
-  padding-bottom: 8px;
-`;
+export const NavLogo = styled('img').withConfig({
+  shouldForwardProp: (prop) => prop !== 'isClickable',
+})(({ isClickable }) => ({
+  position: 'absolute',
+  left: '18px',
+  width: '130px',
+  paddingBottom: '8px',
+  ...(isClickable && { cursor: 'pointer' }),
+}));

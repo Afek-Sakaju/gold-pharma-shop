@@ -22,6 +22,8 @@ function CreateProduct({ isAdmin }) {
     if (isCreated) navigate(NAV_PATHS.PRODUCT_LIST_PAGE);
   };
 
+  const logoClickHandler = () => navigate(NAV_PATHS.PRODUCT_LIST_PAGE);
+
   useEffect(() => {
     if (!isAdmin) navigate(NAV_PATHS.PRODUCT_LIST_PAGE);
 
@@ -32,6 +34,7 @@ function CreateProduct({ isAdmin }) {
     <div>
       <Nav
         logoUrl={LOGO_SRC}
+        onLogoClick={logoClickHandler}
         title={isAdmin && TEXT_CONTENT.CREATE_PAGE_TITLE}
       />
       <ProductForm

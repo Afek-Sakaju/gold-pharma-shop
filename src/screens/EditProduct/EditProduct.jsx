@@ -29,6 +29,8 @@ function EditProduct({ isAdmin }) {
     if (isUpdated) navigate(NAV_PATHS.PRODUCT_LIST_PAGE);
   };
 
+  const logoClickHandler = () => navigate(NAV_PATHS.PRODUCT_LIST_PAGE);
+
   useEffect(() => {
     ProductsProxy.getData(id)
       .then((data) => {
@@ -43,7 +45,11 @@ function EditProduct({ isAdmin }) {
 
   return isDataFetched ? (
     <div>
-      <Nav logoUrl={LOGO_SRC} title={isAdmin && TEXT_CONTENT.EDIT_PAGE_TITLE} />
+      <Nav
+        logoUrl={LOGO_SRC}
+        onLogoClick={logoClickHandler}
+        title={isAdmin && TEXT_CONTENT.EDIT_PAGE_TITLE}
+      />
       <ProductForm
         initialProductImage={productData.productImage}
         initialProductName={productData.productName}
