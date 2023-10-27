@@ -58,6 +58,7 @@ function ProductList({
             productName={productName}
             productPrice={+productPrice}
             selectedCount={selectedProducts[id] ?? 0}
+            shouldDisplayButtons={!isAdmin}
           />
         );
       })}
