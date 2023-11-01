@@ -36,7 +36,7 @@ function ProductList({
         /* This timeout is implemented to give the application extra milliseconds for loading images.
 				To ensure that the images are preloaded, appearing as the user views the product data
 				rather than loading in real-time as the user watches. */
-        setTimeout(() => setIsDataFetched(true), 120);
+        setTimeout(() => setIsDataFetched(true), 200);
       })
       .catch((err) => {
         console.error(err);
