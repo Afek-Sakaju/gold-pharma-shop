@@ -12,9 +12,9 @@
 
 ---
 
-### **Get a glimpse of the app in action:**
+### **Get a glimpse of the app in action**
 
-https://github.com/Afek-Sakaju/gold-pharma-shop/assets/100536372/b9dd5211-e631-4c07-9704-4187f4d53856
+https://github.com/Afek-Sakaju/gold-pharma-shop/assets/100536372/c4622093-9dbe-487c-8f3b-c988262b18f2
 
 ---
 
@@ -34,6 +34,12 @@ https://github.com/Afek-Sakaju/gold-pharma-shop/assets/100536372/b9dd5211-e631-4
 
 - [x] _**Responsiveness**_: the application is intentionally designed to adapt to screens of various sizes by utilizing _media queries_ within its components. This ensures that the user interface adjusts seamlessly to different screen dimensions.
 - [x] _**Integration with remove.bg API**_: for background removal of uploaded products’ images to enhance the UI and overall aesthetics.
+
+---
+
+### **A brief illustration showcasing how the app appears on various screens**
+
+https://github.com/Afek-Sakaju/gold-pharma-shop/assets/100536372/51226ef2-43d1-46bf-b7b9-783e50443a0d
 
 ---
 
