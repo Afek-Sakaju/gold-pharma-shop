@@ -18,6 +18,22 @@ export const FormContainer = styled.div`
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   overflow: hidden;
+
+  @media screen and (max-width: 670px) {
+    width: 500px;
+    height: 450px;
+    justify-content: center;
+    margin: 90px auto;
+  }
+
+  @media screen and (max-width: 550px) {
+    width: 85%;
+    border-radius: 8px;
+  }
+
+  @media screen and (max-width: 300px) {
+    width: 90%;
+  }
 `;
 
 export const ProductContentContainer = styled.div`
@@ -27,6 +43,15 @@ export const ProductContentContainer = styled.div`
   align-items: center;
   gap: 30px;
   margin-top: 13px;
+
+  @media screen and (max-width: 670px) {
+    gap: 15px;
+    margin-top: 5px;
+  }
+
+  @media screen and (max-width: 550px) {
+    margin-top: 20px;
+  }
 `;
 
 export const ImageInputDisplay = styled('img').withConfig({
@@ -41,6 +66,37 @@ export const ImageInputDisplay = styled('img').withConfig({
     ...(isReadOnlyMode
       ? { transform: 'scale(1.2)' }
       : { transform: 'scale(1.17)' }),
+  },
+
+  '@media (max-width: 670px)': {
+    ...(isReadOnlyMode ? { minHeight: '255px' } : { minHeight: '210px' }),
+    ...(isReadOnlyMode ? { maxHeight: '255px' } : { maxHeight: '210px' }),
+
+    '&:hover': {
+      ...(isReadOnlyMode
+        ? { transform: 'scale(1.16)' }
+        : { transform: 'scale(1.13)' }),
+    },
+  },
+}));
+
+export const ImageInput = styled('label').withConfig({
+  shouldForwardProp: (prop) => prop !== 'isEmptyInputValue',
+})(({ isEmptyInputValue }) => ({
+  width: '190px',
+  textAlign: 'center',
+  paddingBottom: '5px',
+  marginTop: '15px',
+  zIndex: 2,
+  backgroundColor: 'unset',
+  borderBottom: '1px solid #e29d34d4',
+  fontSize: '1.1em',
+  cursor: 'pointer',
+  transition: 'border-color 0.3s ease-in-out',
+  ...(isEmptyInputValue && { color: 'grey', borderColor: 'lightgray' }),
+
+  '@media (max-width: 670px)': {
+    fontSize: '1em',
   },
 }));
 
@@ -59,6 +115,11 @@ export const TextInputField = styled('input').withConfig({
   ...(isReadOnlyMode && { borderBottom: 'unset' }),
   ...(isReadOnlyMode ? { fontSize: '2em' } : { fontSize: '1.1em' }),
   ...(isEmptyInputValue && { borderColor: 'lightgray' }),
+
+  '@media (max-width: 670px)': {
+    ...(isReadOnlyMode && { marginTop: '30px' }),
+    ...(isReadOnlyMode ? { fontSize: '2em' } : { fontSize: '1em' }),
+  },
 }));
 
 export const PriceInputWrapper = styled('div').withConfig({
@@ -73,6 +134,13 @@ export const PriceInputWrapper = styled('div').withConfig({
   ...(isReadOnlyMode && { borderBottom: 'unset' }),
   ...(isReadOnlyMode ? { fontSize: '2em' } : { fontSize: '1.4em' }),
   ...(isEmptyInputValue && { borderColor: 'lightgray' }),
+
+  '@media (max-width: 670px)': {
+    ...(isReadOnlyMode ? { marginTop: '0' } : { marginTop: '7px' }),
+    ...(isReadOnlyMode ? { marginBottom: '0' } : { marginBottom: '20px' }),
+    ...(isReadOnlyMode && { marginLeft: '5px' }),
+    ...(isReadOnlyMode ? { fontSize: '1.8em' } : { fontSize: '1.2em' }),
+  },
 }));
 
 export const PriceInputField = styled('input').withConfig({
@@ -85,22 +153,6 @@ export const PriceInputField = styled('input').withConfig({
   fontSize: '1em',
   textAlign: 'center',
   ...(isEmptyInputValue && { color: 'grey' }),
-}));
-
-export const ImageInput = styled('label').withConfig({
-  shouldForwardProp: (prop) => prop !== 'isEmptyInputValue',
-})(({ isEmptyInputValue }) => ({
-  width: '190px',
-  textAlign: 'center',
-  paddingBottom: '5px',
-  marginTop: '15px',
-  zIndex: 2,
-  backgroundColor: 'unset',
-  borderBottom: '1px solid #e29d34d4',
-  fontSize: '1.1em',
-  cursor: 'pointer',
-  transition: 'border-color 0.3s ease-in-out',
-  ...(isEmptyInputValue && { color: 'grey', borderColor: 'lightgray' }),
 }));
 
 export const SubmitButton = styled(Button).withConfig({
@@ -133,4 +185,10 @@ export const SubmitButton = styled(Button).withConfig({
             '0px 3px 6px rgba(255, 188, 88, 0.4), 0px 3px 6px rgba(255, 188, 88, 0.3)',
         },
       }),
+
+  '@media (max-width: 670px)': {
+    minHeight: '60px',
+    width: '65px',
+    fontSize: '0.95em',
+  },
 }));
