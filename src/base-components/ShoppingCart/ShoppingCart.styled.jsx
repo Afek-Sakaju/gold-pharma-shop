@@ -23,11 +23,19 @@ export const SelectedItemsContainer = styled.div`
 export const CartIcon = styled(PiShoppingCartSimple)`
   color: #ffbd59;
   font-size: 3.2em;
+
+  @media screen and (max-width: 670px) {
+    font-size: 3em;
+  }
 `;
 
 export const TotalPrice = styled.p`
   margin: 0;
   font-size: 1.35em;
+
+  @media screen and (max-width: 670px) {
+    font-size: 1.15em;
+  }
 `;
 
 export const CurrencySign = styled.p`
@@ -35,6 +43,10 @@ export const CurrencySign = styled.p`
   margin-right: 3px;
   color: #ffbd59;
   font-size: 1.3em;
+
+  @media screen and (max-width: 670px) {
+    font-size: 1.1em;
+  }
 `;
 
 export const TotalSelected = styled.div`
@@ -44,4 +56,10 @@ export const TotalSelected = styled.div`
   width: 35px;
   text-align: center;
   font-size: 0.9em;
+
+  @media screen and (max-width: 670px) {
+    top: -6.5px;
+    right: 7px;
+    font-size: 0.86em;
+  }
 `;
