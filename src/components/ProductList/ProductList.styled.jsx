@@ -19,4 +19,23 @@ export const ProductListContainer = styled.div`
   &::-webkit-scrollbar-thumb {
     background-color: grey;
   }
+
+  @media screen and (max-width: 1300px) {
+    gap: 50px;
+    padding: 15px 40px;
+  }
+
+  @media screen and (max-width: 1000px) {
+    gap: 70px;
+    padding: 20px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    gap: 40px;
+  }
+
+  @media screen and (max-width: 400px) {
+    gap: 20px;
+    padding: 20px 0px;
+  }
 `;

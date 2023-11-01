@@ -33,6 +33,12 @@ export const ProductContainer = styled.div`
       }
     }
   }
+
+  @media screen and (max-width: 400px) {
+    min-width: 245px;
+    max-width: 245px;
+    height: 260px;
+  }
 `;
 
 export const ProductContentContainer = styled.div`
@@ -41,6 +47,10 @@ export const ProductContentContainer = styled.div`
   align-items: center;
   margin-top: 1em;
   z-index: 2;
+
+  @media screen and (max-width: 400px) {
+    margin-top: 0.8em;
+  }
 `;
 
 export const ButtonsContainer = styled.div`
@@ -74,6 +84,10 @@ export const ProductPrice = styled.p`
   font-size: 1em;
   user-select: none;
   margin: 10px 6px 0 0;
+
+  @media screen and (max-width: 400px) {
+    margin: 5px 6px 0 0;
+  }
 `;
 
 export const ProductImage = styled.img`
@@ -107,6 +121,13 @@ export const AddProductButton = styled(Button)`
     border: 1px solid #13690a;
     box-shadow: 0px 3px 6px rgba(19, 105, 10, 0.3),
       0px 3px 6px rgba(19, 105, 10, 0.2);
+  }
+
+  @media screen and (max-width: 400px) {
+    top: 5.5px;
+    left: 129px;
+    padding: 4px;
+    font-size: 1.3em;
   }
 `;
 
@@ -142,6 +163,13 @@ export const RemoveProductButton = styled(Button).withConfig({
             '0px 3px 6px rgba(254, 90, 61, 0.3), 0px 3px 6px rgba(254, 90, 61, 0.2)',
         },
       }),
+
+  '@media (max-width: 400px)': {
+    top: '5.5px',
+    left: '83px',
+    padding: '4px',
+    fontSize: '1.3em',
+  },
 }));
 
 export const SelectedCount = styled.p`
