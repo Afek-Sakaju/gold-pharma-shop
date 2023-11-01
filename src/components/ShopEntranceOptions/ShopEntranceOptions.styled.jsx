@@ -114,4 +114,8 @@ export const EntranceOptionButton = styled(Button)`
     padding: 5px 0;
     font-size: 1em;
   }
+
+  @media screen and (max-width: 300px) {
+    min-width: 90px;
+  }
 `;
