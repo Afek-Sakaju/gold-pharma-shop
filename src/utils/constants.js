@@ -30,7 +30,7 @@ export const TEXT_CONTENT = {
   CREATE_NEW_PRODUCT_BUTTON: 'Create A New Product',
   CREATE_PAGE_TITLE: 'Create a New Product',
   EDIT_PAGE_TITLE: 'Edit Product Data',
-  LOADER_TEXT: 'Loader data, please wait...',
+  LOADER_TEXT: 'Loading Data...',
   PRODUCT_NAME_INPUT: 'Enter Product Name',
   PRODUCTS_LIST_PAGE_ADMIN_TITLE: 'Admin mode',
   UPLOAD_PRODUCT_IMAGE_BUTTON: 'Upload Product Image',
