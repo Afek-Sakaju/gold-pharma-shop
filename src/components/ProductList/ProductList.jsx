@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
-import { Loading, Product } from '@base-components';
+import { Loader, Product } from '@base-components';
 import {
   addToShoppingCartAction,
   getProductsSelector,
@@ -67,7 +67,7 @@ function ProductList({
       })}
     </ProductListContainer>
   ) : (
-    <Loading />
+    <Loader />
   );
 }
 

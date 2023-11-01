@@ -1,10 +1,10 @@
 import React from 'react';
 
-import Loading from '../Loading';
+import Loader from '../Loader';
 
 export default {
-  title: 'base-components/Loading',
-  component: Loading,
+  title: 'base-components/Loader',
+  component: Loader,
   decorators: [
     (Story) => (
       <div
@@ -22,7 +22,7 @@ export default {
   ],
 };
 
-export const Default = () => <Loading />;
+export const Default = () => <Loader />;
 Default.decorators = [
   (Story) => (
     <div
@@ -50,7 +50,7 @@ export const AdjustSize = (props) => (
       border: '2px red solid',
     }}
   >
-    <Loading />
+    <Loader />
   </div>
 );
 AdjustSize.argTypes = {

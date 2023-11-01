@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import { getIsAdminStatusSelector } from '@store';
-import { Loading, Nav, ProductForm } from '@base-components';
+import { Loader, Nav, ProductForm } from '@base-components';
 import {
   BUTTONS_LABELS,
   LOGO_SRC,
@@ -61,7 +61,7 @@ function EditProduct({ isAdmin }) {
       />
     </div>
   ) : (
-    <Loading />
+    <Loader />
   );
 }
 
