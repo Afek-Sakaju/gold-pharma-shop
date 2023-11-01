@@ -28,8 +28,8 @@ export const NAV_PATHS = {
 export const TEXT_CONTENT = {
   CHANGE_PRODUCT_IMAGE_BUTTON: 'Change Product Image',
   CREATE_NEW_PRODUCT_BUTTON: 'Create A New Product',
-  CREATE_PAGE_TITLE: 'Create a New Product',
-  EDIT_PAGE_TITLE: 'Edit Product Data',
+  CREATE_PAGE_TITLE: 'Create a New \nProduct',
+  EDIT_PAGE_TITLE: 'Edit Product \nData',
   LOADER_TEXT: 'Loading Data...',
   PRODUCT_NAME_INPUT: 'Enter Product Name',
   PRODUCTS_LIST_PAGE_ADMIN_TITLE: 'Admin mode',

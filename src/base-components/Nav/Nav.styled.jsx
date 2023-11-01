@@ -31,6 +31,10 @@ export const NavChildrenContainer = styled.div`
     position: initial;
     margin: auto 20px auto auto;
   }
+
+  @media screen and (max-width: 400px) {
+    margin: auto 10px auto auto;
+  }
 `;
 
 export const NavTitle = styled.p`
@@ -40,6 +44,11 @@ export const NavTitle = styled.p`
   @media screen and (max-width: 670px) {
     margin: auto;
     font-size: 1.3em;
+  }
+
+  @media screen and (max-width: 350px) {
+    font-size: 1em;
+    white-space: pre;
   }
 `;
 
@@ -60,8 +69,9 @@ export const NavLogo = styled('img').withConfig({
   },
 
   '@media (max-width: 400px)': {
-    display: 'none',
-    visibility: 'hidden',
+    width: '80px',
+    margin: 'auto auto auto 8px',
+    paddingBottom: '8px',
   },
 }));
 
