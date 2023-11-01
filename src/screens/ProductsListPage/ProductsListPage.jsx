@@ -6,7 +6,7 @@ import { getIsAdminStatusSelector } from '@store';
 import { ShoppingCartConnected, ProductList } from '@components';
 import { Nav } from '@base-components';
 import { LOGO_SRC, NAV_PATHS, TEXT_CONTENT } from '@utils';
-import { PageContainer, AdminIcon } from './ProductsListPage.styled';
+import { PageContainer } from './ProductsListPage.styled';
 
 // eslint-disable-next-line react/prop-types
 function ProductsListPage({ isAdmin }) {
@@ -20,8 +20,9 @@ function ProductsListPage({ isAdmin }) {
         onLogoClick={logoClickHandler}
         logoUrl={LOGO_SRC}
         title={isAdmin && TEXT_CONTENT.PRODUCTS_LIST_PAGE_ADMIN_TITLE}
+        shouldAddAdminIcon={isAdmin}
       >
-        {isAdmin ? <AdminIcon /> : <ShoppingCartConnected />}
+        {!isAdmin && <ShoppingCartConnected />}
       </Nav>
       <ProductList isAdmin={isAdmin} />
     </PageContainer>

@@ -11,7 +11,6 @@ import {
   TEXT_CONTENT,
   ProductsProxy,
 } from '@utils';
-import { AdminIcon } from './EditProduct.styled';
 
 // eslint-disable-next-line react/prop-types
 function EditProduct({ isAdmin }) {
@@ -50,9 +49,8 @@ function EditProduct({ isAdmin }) {
         logoUrl={LOGO_SRC}
         onLogoClick={logoClickHandler}
         title={isAdmin && TEXT_CONTENT.EDIT_PAGE_TITLE}
-      >
-        {isAdmin && <AdminIcon />}
-      </Nav>
+        shouldAddAdminIcon={isAdmin}
+      />
       <ProductForm
         initialProductImage={productData.productImage}
         initialProductName={productData.productName}
