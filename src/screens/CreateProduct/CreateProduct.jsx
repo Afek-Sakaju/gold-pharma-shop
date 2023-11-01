@@ -35,7 +35,7 @@ function CreateProduct({ isAdmin }) {
       <Nav
         logoUrl={LOGO_SRC}
         onLogoClick={logoClickHandler}
-        title={isAdmin && TEXT_CONTENT.CREATE_PAGE_TITLE}
+        title={isAdmin ? TEXT_CONTENT.CREATE_PAGE_TITLE : ''}
         shouldAddAdminIcon={isAdmin}
       />
       <ProductForm

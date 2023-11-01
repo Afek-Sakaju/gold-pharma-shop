@@ -19,7 +19,7 @@ function ProductsListPage({ isAdmin }) {
       <Nav
         onLogoClick={logoClickHandler}
         logoUrl={LOGO_SRC}
-        title={isAdmin && TEXT_CONTENT.PRODUCTS_LIST_PAGE_ADMIN_TITLE}
+        title={isAdmin ? TEXT_CONTENT.PRODUCTS_LIST_PAGE_ADMIN_TITLE : ''}
         shouldAddAdminIcon={isAdmin}
       >
         {!isAdmin && <ShoppingCartConnected />}

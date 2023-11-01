@@ -48,7 +48,7 @@ function EditProduct({ isAdmin }) {
       <Nav
         logoUrl={LOGO_SRC}
         onLogoClick={logoClickHandler}
-        title={isAdmin && TEXT_CONTENT.EDIT_PAGE_TITLE}
+        title={isAdmin ? TEXT_CONTENT.EDIT_PAGE_TITLE : ''}
         shouldAddAdminIcon={isAdmin}
       />
       <ProductForm
