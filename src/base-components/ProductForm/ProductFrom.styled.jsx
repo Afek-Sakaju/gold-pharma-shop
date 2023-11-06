@@ -119,6 +119,8 @@ export const TextInputField = styled('input').withConfig({
   '@media (max-width: 670px)': {
     ...(isReadOnlyMode && { marginTop: '30px' }),
     ...(isReadOnlyMode ? { fontSize: '2em' } : { fontSize: '1em' }),
+    ...(isReadOnlyMode ? { width: '75%' } : { width: '162px' }),
+    ...(!isReadOnlyMode && { padding: '5px 14px' }),
   },
 }));
 
