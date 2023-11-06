@@ -37,7 +37,7 @@
       "id": "fbd0b8c8-9a36-4cfa-84ba-1c6dfc45d2c4"
     },
     {
-      "productName": "Vitamin C with Flavonoids",
+      "productName": "Vitamin C",
       "productPrice": 12,
       "productImage": "/Afek-Sakaju/gold-pharma-shop/products-images/throne-vitamin-c.png",
       "id": "fec2c8a4-9a36-4cfa-84ba-1c6dfc45d2c4"
@@ -92,10 +92,9 @@
       "id": "f8c44ec1-0d46-4c2c-94ea-71af2d46e9e1"
     },
     {
-      "productName": "Multi-Vitamin for Women",
+      "productName": "Multi-Vit for Women",
       "productPrice": 25,
       "productImage": "/Afek-Sakaju/gold-pharma-shop/products-images/countrys-life-multivitamin-for-women.png",
-      "company": "Country's Life",
       "id": "ab674ffc-9da9-4e9f-96ad-44ea4f9c5c1b"
     },
     {
@@ -113,10 +112,9 @@
       "id": "25ee4f0e-d2a9-4e3c-8ea7-8365cf570bb1"
     },
     {
-      "productName": "Calcium with Vitamin D3 and K2",
+      "productName": "Calcium with Vitamins",
       "productPrice": 33,
       "productImage": "/Afek-Sakaju/gold-pharma-shop/products-images/dr-mercola-calcium-with-vitamin-d3-and-k2.png",
-      "company": "Dr. Mercola",
       "id": "d80d2887-4a59-41ae-8bdf-8efb4a1e2c1d"
     },
     {
