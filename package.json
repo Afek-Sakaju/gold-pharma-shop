@@ -1,13 +1,14 @@
 {
   "name": "gold-pharma-shop",
-  "description": "This project created for buying grocery store products.",
+  "description": "An online application created to offer users the best pharmaceutical shopping experience",
   "author": "afek-sakaju",
   "homepage": "https://github.com/Afek-Sakaju/gold-pharma-shop",
   "keywords": [
-    "grocery",
-    "shop-app",
+    "pharma",
+    "react",
     "json-server",
-    "web-shop"
+    "online-shop",
+    "e-commerce"
   ],
   "version": "1.0.0",
   "private": true,
