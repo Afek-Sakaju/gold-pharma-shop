@@ -17,7 +17,7 @@ export default function Nav({
   onLogoClick,
   shouldAddAdminIcon,
   title,
-	...props
+  ...props
 }) {
   const shouldAddChildrenContainer = children || shouldAddAdminIcon;
   const adminIcon = <AdminIcon />;

@@ -8,7 +8,7 @@ import {
   PLACEHOLDER_PRODUCT_IMAGE,
 } from '@utils';
 import {
-	AddToCartIcon,
+  AddToCartIcon,
   AddProductButton,
   ButtonsContainer,
   ProductContainer,
@@ -16,7 +16,7 @@ import {
   ProductImage,
   ProductName,
   ProductPrice,
-	RemoveFromCartIcon,
+  RemoveFromCartIcon,
   RemoveProductButton,
   SelectedCount,
 } from './Product.styled';

@@ -67,7 +67,7 @@ function ProductList({
       })}
     </ProductListContainer>
   ) : (
-    <Loader color="#faa321d5"/>
+    <Loader color="#faa321d5" />
   );
 }
 

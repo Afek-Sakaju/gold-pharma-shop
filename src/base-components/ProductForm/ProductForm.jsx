@@ -84,7 +84,7 @@ export default function ProductForm({
             htmlFor={COMPONENTS_IDS.UPLOAD_IMAGE_BUTTON}
             isEmptyInputValue={isImageEmpty}
           >
-             {isImageEmpty
+            {isImageEmpty
               ? TEXT_CONTENT.UPLOAD_PRODUCT_IMAGE_BUTTON
               : TEXT_CONTENT.CHANGE_PRODUCT_IMAGE_BUTTON}
             <input

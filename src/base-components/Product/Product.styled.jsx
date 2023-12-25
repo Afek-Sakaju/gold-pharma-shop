@@ -72,7 +72,7 @@ export const ProductName = styled.p`
   &::before {
     content: '';
     position: absolute;
-		bottom: 0;
+    bottom: 0;
     left: 0;
     width: 100%;
     height: 1px;
@@ -86,9 +86,8 @@ export const ProductName = styled.p`
 
 export const ProductPrice = styled.p`
   margin: 10px 6px 0 0;
-	font-size: 1em;
+  font-size: 1em;
   user-select: none;
-  
 
   @media screen and (max-width: 400px) {
     margin: 5px 6px 0 0;
@@ -112,7 +111,7 @@ export const AddProductButton = styled(Button)`
   gap: 10px;
   padding: 5.5px;
   font-size: 1.4em;
-	color: #13690a;
+  color: #13690a;
   background-color: #fafafa;
   border: 1px solid #13690ac8;
   border-radius: 74% 26% 68% 32% / 24% 59% 41% 76%;
@@ -142,12 +141,12 @@ export const RemoveProductButton = styled(Button).withConfig({
   position: 'absolute',
   top: '7px',
   left: '90px',
-	// Check necessity
+  // Check necessity
   justifyContent: 'space-between',
   gap: '10px',
   padding: '5.5px',
   fontSize: '1.4em',
-	color: '#fe5a3d',
+  color: '#fe5a3d',
   backgroundColor: '#fafafa',
   border: '1px solid #fe5a3de3',
   borderRadius: '74% 26% 68% 32% / 24% 59% 41% 76%',
@@ -186,7 +185,6 @@ export const SelectedCount = styled.p`
   font-size: 0.95em;
   color: #787878;
 `;
-
 
 export const AddToCartIcon = RiAddToCartIcon;
 

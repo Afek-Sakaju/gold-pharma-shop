@@ -13,8 +13,8 @@ export const LoaderContainer = styled.div`
 export const LoaderTitle = styled('h2').withConfig({
   shouldForwardProp: (prop) => prop !== 'titleColor',
 })(({ titleColor }) => ({
-  fontSize: "1.7em", 
-	...(titleColor ? { color: 'titleColor' } : {color:'rgba(0,0,0,0.7)'})
+  fontSize: '1.7em',
+  ...(titleColor ? { color: 'titleColor' } : { color: 'rgba(0,0,0,0.7)' }),
 }));
 
 export const AnimatedLoader = styled(RingLoader)`
