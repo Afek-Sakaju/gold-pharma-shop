@@ -10,10 +10,12 @@ export const LoaderContainer = styled.div`
   width: 99vw;
 `;
 
-export const LoaderTitle = styled.h2`
-  color: rgba(0, 0, 0, 0.7);
-  font-size: 1.7em;
-`;
+export const LoaderTitle = styled('h2').withConfig({
+  shouldForwardProp: (prop) => prop !== 'titleColor',
+})(({ titleColor }) => ({
+  fontSize: "1.7em", 
+	...(titleColor ? { color: 'titleColor' } : {color:'rgba(0,0,0,0.7)'})
+}));
 
 export const AnimatedLoader = styled(RingLoader)`
   margin-bottom: 20px;

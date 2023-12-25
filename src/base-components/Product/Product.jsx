@@ -1,9 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  LiaCartPlusSolid as AddToCartIcon,
-  LiaCartArrowDownSolid as RemoveFromCartIcon,
-} from 'react-icons/lia';
 
 import {
   COMPONENTS_CLASSES,
@@ -12,6 +8,7 @@ import {
   PLACEHOLDER_PRODUCT_IMAGE,
 } from '@utils';
 import {
+	AddToCartIcon,
   AddProductButton,
   ButtonsContainer,
   ProductContainer,
@@ -19,6 +16,7 @@ import {
   ProductImage,
   ProductName,
   ProductPrice,
+	RemoveFromCartIcon,
   RemoveProductButton,
   SelectedCount,
 } from './Product.styled';
@@ -46,9 +44,9 @@ export default function Product({
       {!!selectedCount && <SelectedCount>({selectedCount})</SelectedCount>}
       {shouldDisplayImage && (
         <ProductImage
-          src={productImage}
           alt={IMAGES_ALTS.PRODUCT_IMAGE}
           className={COMPONENTS_CLASSES.PRODUCT_IMAGE}
+          src={productImage}
         />
       )}
       {shouldDisplayProductContent && (

@@ -47,7 +47,6 @@ export default function ProductForm({
   const onPriceChange = (event) => {
     const price = +event.target.value;
     const isPriceValidNumber = typeof price === 'number';
-
     const isPriceInRange = isProductPriceInRange(price);
 
     if (isPriceValidNumber && isPriceInRange) setUpdatedPrice(price);
@@ -85,7 +84,7 @@ export default function ProductForm({
             htmlFor={COMPONENTS_IDS.UPLOAD_IMAGE_BUTTON}
             isEmptyInputValue={isImageEmpty}
           >
-            {isImageEmpty
+             {isImageEmpty
               ? TEXT_CONTENT.UPLOAD_PRODUCT_IMAGE_BUTTON
               : TEXT_CONTENT.CHANGE_PRODUCT_IMAGE_BUTTON}
             <input

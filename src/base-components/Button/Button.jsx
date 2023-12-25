@@ -10,6 +10,7 @@ export default function Button({
   onClick,
   style,
   type,
+	...props
 }) {
   return (
     <StyledButton
@@ -20,6 +21,7 @@ export default function Button({
       }}
       style={style}
       type={type}
+			{...props}
     >
       {label}
       {children}

@@ -8,9 +8,9 @@ export const FormContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding: 40px 0;
-  align-items: center;
+	align-items: center;
   margin: 60px auto;
+	padding: 40px 0;
   border: 1px solid rgba(black, 0.2);
   border-radius: 74% 26% 68% 32% / 26% 66% 34% 74%;
   background-color: white;

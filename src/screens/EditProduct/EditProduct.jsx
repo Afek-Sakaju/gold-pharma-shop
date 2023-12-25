@@ -61,7 +61,7 @@ function EditProduct({ isAdmin }) {
       />
     </div>
   ) : (
-    <Loader />
+    <Loader color="#faa321d5" />
   );
 }
 

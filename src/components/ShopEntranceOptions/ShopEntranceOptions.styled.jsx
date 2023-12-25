@@ -4,8 +4,8 @@ import { Button } from '@base-components';
 
 export const MainContainer = styled.div`
   display: flex;
-  align-items: center;
   flex-direction: column;
+	align-items: center;
 `;
 
 export const ModeSelectionContainer = styled.div`
@@ -89,12 +89,12 @@ export const EntranceOptionButton = styled(Button)`
   display: flex;
   justify-content: center;
   padding: 8px 0;
-  color: #5c5c5c;
+  font-size: 1.2em;
+	color: #5c5c5c;
   background-color: #fafafa;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  font-size: 1.2em;
   transition: 0.2s ease-in-out;
 
   &:hover {
@@ -111,8 +111,8 @@ export const EntranceOptionButton = styled(Button)`
 
   @media screen and (max-width: 400px) {
     min-width: 110px;
-    padding: 5px 0;
     font-size: 1em;
+		padding: 5px 0;
   }
 
   @media screen and (max-width: 300px) {

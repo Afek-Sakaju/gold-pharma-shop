@@ -17,12 +17,13 @@ export default function Nav({
   onLogoClick,
   shouldAddAdminIcon,
   title,
+	...props
 }) {
   const shouldAddChildrenContainer = children || shouldAddAdminIcon;
   const adminIcon = <AdminIcon />;
 
   return (
-    <NavContainer>
+    <NavContainer {...props}>
       <NavLogo
         alt={IMAGES_ALTS.SHOP_LOGO}
         src={logoUrl}

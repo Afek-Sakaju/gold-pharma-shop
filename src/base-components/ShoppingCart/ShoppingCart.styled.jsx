@@ -21,8 +21,8 @@ export const SelectedItemsContainer = styled.div`
 `;
 
 export const CartIcon = styled(PiShoppingCartSimple)`
-  color: #ffbd59;
   font-size: 3.2em;
+	color: #ffbd59;
 
   @media screen and (max-width: 670px) {
     font-size: 3em;
@@ -41,8 +41,8 @@ export const TotalPrice = styled.p`
 export const CurrencySign = styled.p`
   margin: 0;
   margin-right: 3px;
-  color: #ffbd59;
   font-size: 1.3em;
+	color: #ffbd59;
 
   @media screen and (max-width: 670px) {
     font-size: 1.1em;
